@@ -130,14 +130,17 @@ html {
   font-weight: 600;
   padding: 4px 15px;
 }
-.btn-standard:hover{
+
+.btn-standard:hover {
   background: var(--main-color);
   color: white;
 }
+
 /* data */
-.DataTitle{
+.DataTitle {
   margin-bottom: .5rem;
 }
+
 /* ================================================================================ signature style   ======================================================================================= */
 .signature-modal-content {
   width: 300px;
@@ -390,16 +393,19 @@ html {
   box-shadow: none !important;
   border: 2px solid #facd9c !important;
 }
-.hidden-inputs{
+
+.hidden-inputs {
   border: none;
   color: var(--primary-color);
   font-size: .875rem;
 
 }
-.hidden-inputs:focus{
+
+.hidden-inputs:focus {
   box-shadow: none !important;
   border: none !important;
 }
+
 .textarea-inputs {
   resize: none;
   text-align: start;
@@ -652,7 +658,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-/* ================================================================================  Company => Branches     ======================================================================================= */
+/* ================================================================================  Pages layout     ======================================================================================= */
 /* ================================================================================================================================================================================== */
 
 
@@ -862,12 +868,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* /////////////////////////////////////////////////////////// */
 
-.data-container{
+.data-container {
   text-align: left;
 }
-.doc-save-align{
+
+.doc-save-align {
   text-align: left;
 }
+
 .Branch-doc-td {
   position: relative;
 }
@@ -876,6 +884,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-decoration: none;
   color: inherit;
 }
+
 .dropdown-content {
   background: #ffffff;
   display: none;
@@ -932,7 +941,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-/* ================================================================================  Company => add new Branch     ======================================================================================= */
+/* ================================================================================  Signature   ======================================================================================= */
 /* ================================================================================================================================================================================== */
 #Signature-imageInput {
   display: none;
@@ -954,18 +963,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 0;
 }
 
-/* ================================================================================  Company => update owner      ======================================================================================= */
+/* ================================================================================ ======================================================================================= */
 /* ================================================================================================================================================================================== */
-#owners-table p {
-  margin-bottom: .2rem;
-}
 
 .checkbox:checked {
   background-color: #39629c;
   border-color: #39629c;
 }
 
-/* ================================================================================  services => alert     ======================================================================================= */
+/* ================================================================================  increment-decrement inputs     ======================================================================================= */
 /* ================================================================================================================================================================================== */
 .alert-col {
   display: flex;
@@ -1071,6 +1077,77 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .alert-input {
   -moz-appearance: textfield;
 }
+
+/* ================================================================================ Upload Drop zone   ======================================================================================= */
+/* ================================================================================================================================================================================== */
+.dropzone-Card {
+  width: 150px;
+  box-shadow: 0px 0.5px 4px 0px #FF962640;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drop-zone {
+  max-width: 150px;
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  color: #504949d2;
+  border: 2px dashed #666666e0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.fileNameDiv {
+  color: white;
+  background: #666666;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff00;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.layer{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background: #ffffffde;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+}
+
+
+
 
 /* ================================================================================  services => Membership    ======================================================================================= */
 /* ================================================================================================================================================================================== */
@@ -1303,10 +1380,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* ================================================================================  reports  ======================================================================================= */
 /* ================================================================================================================================================================================== */
-.DailyReport-icon{
-    box-shadow: 1px 1px 9px 0px #107c4236;
-    border-radius: 8px;
+.DailyReport-icon {
+  box-shadow: 1px 1px 9px 0px #107c4236;
+  border-radius: 8px;
 }
+
 .secondLineP {
   font-size: .8rem;
 }
@@ -1323,7 +1401,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 50vh;
   min-height: 350px;
 }
-.scroll-Detaild-div{
+
+.scroll-Detaild-div {
   height: 45vh;
   min-height: 350px;
 }
@@ -1356,34 +1435,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .time {
   color: var(--primary-color);
 }
-.car-name-color{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    gap: 5px;
-    align-items: center;
+
+.car-name-color {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 5px;
+  align-items: center;
 }
-.car-name-color-subtitle{
+
+.car-name-color-subtitle {
   display: flex;
   flex-direction: row-reverse;
   gap: 5px;
   align-items: baseline;
   justify-content: flex-end;
 }
-.CarColor{
+
+.CarColor {
   height: 15px;
   width: 15px;
   border-radius: 50%;
   display: inline-block;
 }
-.employee{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #D9D9D9;
-    border-radius: 50%;
-    position: relative;
+
+.employee {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D9D9D9;
+  border-radius: 50%;
+  position: relative;
 }
-.active_statue{
+
+.active_statue {
   width: 10px;
   height: 10px;
   background: #1cc83a;
@@ -1393,13 +1477,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 0px;
   border: 1px solid white;
 }
-.DataCard{
+
+.DataCard {
   padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 1px 4px 3px #FF96263D;
-    font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 3px #FF96263D;
+  font-size: 14px;
 }
-.custom-margin{
+
+.custom-margin {
   margin-left: 40px;
 }
 
@@ -1411,20 +1497,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .modalClose {
   color: #FF9626;
   padding: 0;
-    background-color: transparent;
-    border: 0;
-    float: right;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    text-shadow: 0 1px 0 #fff;
-    opacity: .5;
+  background-color: transparent;
+  border: 0;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
 }
-.card-title{
-    text-shadow: 1px 4px 4px rgb(187 187 187 / 68%);
-    font-size: 1.2rem;
-    letter-spacing: 0.32px
+
+.card-title {
+  text-shadow: 1px 4px 4px rgb(187 187 187 / 68%);
+  font-size: 1.2rem;
+  letter-spacing: 0.32px
 }
+
 .data-details {
   border: 1px solid #39629C;
   margin: 4px;
@@ -1435,48 +1523,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
 
 }
-.pdf-icons{
+
+.pdf-icons {
   width: 50px;
   height: 50px;
 }
-.pdf-Tableicons{
+
+.pdf-Tableicons {
   width: 30px;
   height: 30px;
 }
-.hidden-data{
+
+.hidden-data {
   display: none;
 }
+
 /* ================================================================================  statistics  ======================================================================================= */
 /* ================================================================================================================================================================================== */
-.headLines{
+.headLines {
   font-size: 16px;
   font-weight: 600;
 }
-.active-stat-btn{
+
+.active-stat-btn {
   color: var(--primary-color) !important;
 }
-.stat-btn{
+
+.stat-btn {
   padding-right: 0;
 }
-.stat-btn:hover{
-background-color: #DAE3F1
+
+.stat-btn:hover {
+  background-color: #DAE3F1
 }
-.charts-border{
-    border: 1px solid #80808029;
-    border-radius: 8px;
-    box-shadow: 0px 1px 4px 0px #a1a1a16e;
+
+.charts-border {
+  border: 1px solid #80808029;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px #a1a1a16e;
 }
-@media(min-width : 991px){
-  #myChart{
+
+@media(min-width : 991px) {
+  #myChart {
     max-height: 400px;
   }
 }
+
 /* ================================================================================  acoount lists  ======================================================================================= */
 /* ================================================================================================================================================================================== */
-.scroll-custody-div{
+.scroll-custody-div {
   height: 40vh;
   min-height: 350px;
 }
+
 /* ================================================================================  general media   ======================================================================================= */
 /* ================================================================================================================================================================================== */
 

@@ -32,7 +32,6 @@ toggles1.forEach(({ toggle, sidebarToToggle, sidebarToClose}) => {
     setTimeout(() => {
       sidebarToToggle.classList.toggle("close");
       sidebar1Col.classList.toggle("close");
-      sidebarToClose.classList.add("close2");
       if (window.innerWidth > 1700) {
         
       if (mainPageIcon) {
