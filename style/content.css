@@ -1568,7 +1568,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     max-height: 400px;
   }
 }
-
+/* ================================================================================  car colors  ======================================================================================= */
+/* ================================================================================================================================================================================== */
+.drop{
+	padding: 0;
+	box-shadow: 0px 0px 1px 1px rgb(137 137 137 / 44%);
+	width: 25px;
+	height: 25px;		
+	border-radius:0% 100% 100% 100%;
+	-webkit-transform: rotate(45deg);
+}
+.color-drop-td{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ColorRectangle{
+  width: fit-content;
+}
+#color-picker{
+  box-shadow: 0px 0.5px 2px 0px #0000003D;
+}
+.pickr .pcr-button{
+  box-shadow: 0px 0.5px 2px 0px #0000003D !important;
+}
+#ColorRectangle-update{
+  width: 1.5em;
+  height: 1.5em;
+  box-shadow: 0px 0px 1px 1px gray !important;
+  border-radius: 4px;
+}
 /* ================================================================================  acoount lists  ======================================================================================= */
 /* ================================================================================================================================================================================== */
 .scroll-custody-div {
