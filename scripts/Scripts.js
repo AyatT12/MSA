@@ -3,18 +3,29 @@
 const body = document.querySelector("body"),
  sidebar = body.querySelector(".sidebar"),
  mainPageIcon = document.querySelector(".main-page-icon"),
- newPageIcon = document.querySelector(".new-Page-icon")
+ newPageIcon = document.querySelector(".new-Page-icon"),
 
+ sidebar2 = body.querySelector(".sidebar2");
  const sidebar1Col = document.querySelector(".sidebar1-col");
+ const sidebar2Col = document.querySelector(".sidebar2-col");
 
 toggles1 = [
   {
     toggle: body.querySelector(".toggle"),
     sidebarToToggle: sidebar,
+    sidebarToClose: sidebar2,
   },
   {
     toggle: body.querySelector(".toggle4"),
     sidebarToToggle: sidebar,
+    sidebarToClose: sidebar2,
+  },
+];
+toggles2 = [
+  {
+    toggle: body.querySelector(".toggle2"),
+    sidebarToToggle: sidebar2,
+    sidebarToClose: sidebar,
   },
 ];
 // Event Listeners
@@ -32,6 +43,8 @@ toggles1.forEach(({ toggle, sidebarToToggle, sidebarToClose}) => {
     setTimeout(() => {
       sidebarToToggle.classList.toggle("close");
       sidebar1Col.classList.toggle("close");
+      sidebarToClose.classList.add("close2");
+      sidebar2Col.classList.add("close2");
       if (window.innerWidth > 1700) {
         
       if (mainPageIcon) {
@@ -51,6 +64,38 @@ toggles1.forEach(({ toggle, sidebarToToggle, sidebarToClose}) => {
   });
 });
 
+toggles2.forEach(({ toggle, sidebarToToggle, sidebarToClose }) => {
+  toggle.addEventListener("click", () => {
+    sidebarToToggle.classList.toggle("close2");
+    sidebarToToggle.classList.add("open");
+    sidebar2Col.classList.toggle("close2");
+    sidebar2Col.classList.add("open");
+    const collapsibleElements = sidebar.querySelectorAll(".collapse");
+    collapsibleElements.forEach((element) => {
+      const collapseInstance = bootstrap.Collapse.getInstance(element);
+      if (collapseInstance) {
+        collapseInstance.hide();
+      }
+    });
+    setTimeout(() => {
+      sidebarToClose.classList.add("close");
+      sidebar1Col.classList.add("close");
+
+      if (window.innerWidth > 1700) {
+        
+        if (mainPageIcon) {
+          if (sidebarToToggle.classList.contains("close2")) {
+            mainPageIcon.style.left = ""; 
+            mainPageIcon.style.bottom = ""; 
+          } else {
+            mainPageIcon.style.left = "-60px";
+            mainPageIcon.style.bottom = "60px";
+          }
+        }
+        }
+    },300);
+  });
+});
 
 // *******************************************************************************************************************************************************//
 
@@ -58,6 +103,8 @@ sidebar.addEventListener("mouseenter", function () {
   sidebar.classList.remove("close");
   sidebar1Col.classList.remove("close");
 
+  sidebar2.classList.add("close2");
+  sidebar2Col.classList.add("close2");
 
   if (window.innerWidth > 1700) {
     if (mainPageIcon) {
@@ -137,6 +184,20 @@ collapsibleElements.forEach((element) => {
   });
 });
 
+//**************************************************************************alert sidebar collapse script******************************************************************************* */
+
+const collapse = document.querySelectorAll(".accordion-item");
+
+collapse.forEach((item) => {
+  item.querySelector(".accordion-item-header").addEventListener("click", () => {
+    item.classList.toggle("open");
+    collapse.forEach((otherElement) => {
+      if (otherElement !== item) {
+        otherElement.classList.remove("open");
+      }
+    });
+  });
+});
 
 //*****************************************************************initialize tooltips*************************************************************************************** */
 
@@ -345,7 +406,30 @@ document.querySelectorAll('input, select, textarea').forEach(el => {
   el.setAttribute('autocomplete', 'off');
 });
 
+// //********************************************************************** warning message script ********************************************************************************** */
+document.addEventListener('DOMContentLoaded', function() {
+  const warning = document.querySelector('.wornings');
+  const sidebar1 = document.querySelector('.sidebar');
+  const sidebar2 = document.querySelector('.sidebar2');
 
+  function adjustSidebarsHeight() {
+      if (window.getComputedStyle(warning).display === 'none') {
+          sidebar1.style.height = 'calc(100vh - 92px)';
+          sidebar2.style.height = 'calc(100vh - 92px)';
+      } else {
+          const warningHeight = warning.offsetHeight;
+          sidebar1.style.height = `calc(100vh - 92px - ${warningHeight}px)`;
+          sidebar2.style.height = `calc(100vh - 92px - ${warningHeight}px)`;
+      }
+  }
+
+  adjustSidebarsHeight();
+
+  const observer = new MutationObserver(adjustSidebarsHeight);
+  observer.observe(warning, { attributes: true, childList: true, subtree: true });
+
+  window.addEventListener('resize', adjustSidebarsHeight);
+});
 // //********************************************************************** number inputs script prevent entering negitive values ********************************************************************************** */
 document.querySelectorAll('input[type="number"]').forEach(function(input) {
   input.addEventListener('keydown', function(event) {
