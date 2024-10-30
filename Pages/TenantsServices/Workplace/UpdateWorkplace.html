@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان -  تحديث بيانات اللون  </title>
+    <title> نظام بنان - تحديث بيانات جهة عمل    </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -169,7 +169,7 @@
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item active" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
@@ -194,7 +194,6 @@
                                             <a class="collapse-item" href="#">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات الإضافية  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item active" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
 
                                         </div>
@@ -280,7 +279,7 @@
                                     <div class="col-lg-9">
                                         <div class="row g-3 my-2">
                                             <div class="col-md-6">
-                                                <h3>   تحديث بيانات اللون   </h3>
+                                                <h3>  تحديث بيانات جهة العمل   </h3>
                                             </div>
                                             <div class="col-md-6 save-col">
                                                 <button type="submit" class="custom-img-btn"> <img
@@ -289,7 +288,7 @@
                                                         src="../../../images/stop.svg" /></button>
                                                 <button type="button" class="custom-img-btn"> <img
                                                         src="../../../images/delete.svg" /></button>
-                                                        <button type="button" class="custom-img-btn" > <a href="Colors.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
+                                                        <button type="button" class="custom-img-btn" > <a href="Workplace.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
                                                     </div>
                                         </div>
 
@@ -304,16 +303,8 @@
                                                                      <p class="DataTitle">الرمز  </p>
                                                                 </div>
                                                                 <div class="col-auto ">
-                                                                  <p class="Saved-data">10</p>
+                                                                  <p class="Saved-data">1400000003</p>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="row">
-                                                               <div class="col-md-12">
-                                                                <label for="Color-dgree" class="form-label"> درجة اللون</label>
-                                                                <div class="color" id="ColorRectangle-update" style="background-color: black;"></div>
-                                                               </div>
                                                             </div>
                                                         </div>
 
@@ -321,24 +312,29 @@
                                                 </div>
 
                                                 <div class="col-md-12">
-                                                    <div class="row">
+                                                    <div class="row align-items-center">
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">اللون عربي   </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data"> أسود </p>
+                                                            <label for="AR-workplace" class="form-label"> جهة العمل  عربي
+
+                                                            </label>
+                                                            <input type="text" id="AR-workplace"
+                                                                class="form-control inputs arabic-input"
+                                                                name="AR-workplace" maxlength="100" value="وزارة الصحة" >
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">اللون إنجليزي  </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data"> Black </p>
+                                                            <label for="EN-workplace" class="form-label"> جهة العمل  انجليزي
+                                                            </label>
+                                                            <input type="text" id="EN-workplace"
+                                                                class="form-control inputs english-input"
+                                                                name="EN-workplace" maxlength="100" value="Ministry of Health" >
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback" >
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>

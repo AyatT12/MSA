@@ -34,6 +34,7 @@ body {
 .navbar{
   background-color: #ffce94;
   z-index: 9;
+ 
 }
 .navbar-nav .dropdown-menu{
     position: absolute;
@@ -101,7 +102,7 @@ body {
 
 .sidebar1-col {
   padding:0px ;
-  width: 250px;
+  width: 300px;
   background: var(--sidebar-color);
   border-left: 2px solid #39629C;
   transition: var(--tran-05);
@@ -119,7 +120,7 @@ body {
   top: 0rem;
   z-index: 9;
   height: calc(100vh - 92px);
-  width: 250px;
+  width: 300px;
   padding: 10px 14px;
   background: var(--sidebar-color);
   border: none;
@@ -146,7 +147,7 @@ body {
   width: 30px;
   min-width: 60px;
   border-radius: 6px;
-  height:30px;
+  height:22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,7 +546,7 @@ body.dark .sidebar li a:hover .text {
   font-weight: 600;
 }
 .Company-Logo-img{
-  width: 140px;
+  width: 75px;
 }
 .bell{
   width: 25px;
@@ -559,6 +560,14 @@ body.dark .sidebar li a:hover .text {
     flex-direction: row-reverse;
     gap: 20px;
     flex-wrap: wrap;
+}
+.RequirdStar{
+  font-size: 7px;
+  color: #C32222;
+}
+.invalid-feedback{
+  color: #C32222;
+
 }
 .mobile-icon{
   display: none;
@@ -574,7 +583,7 @@ body.dark .sidebar li a:hover .text {
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   max-width: 500px;
 }
 
@@ -703,7 +712,6 @@ body.dark .sidebar li a:hover .text {
       left: 0;
       right: auto;
   }
-
 }
 @media (max-width: 1300px) {
   .navbar{
