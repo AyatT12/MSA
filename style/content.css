@@ -409,6 +409,7 @@ html {
 .textarea-inputs {
   resize: none;
   text-align: start;
+  margin-top: 6px;
 }
 
 .requird-field-row-last {
