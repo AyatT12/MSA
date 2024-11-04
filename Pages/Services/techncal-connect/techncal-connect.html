@@ -236,10 +236,10 @@
                                     </li>
                                     <div id="Contract-items" class="collapse" >
                                         <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="">  الاضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
+                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الاضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         </div>
                                     </div>
 
@@ -251,12 +251,13 @@
                                     </li>
                                     <div id="services-items" class="collapse" >
                                         <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item active" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  المفاتيح الدولية  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  ترجمة الأرقام  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  رسائل الموظفين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                            
                                         </div>
@@ -279,10 +280,10 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-9">
                                        <div class="row g-3 my-2">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <h3>  الربط التقني </h3>
                                         </div>
-                                        <div class="col-md-6 save-col">
+                                        <div class="col-md-auto save-col">
                                             <button type="submit" class="custom-img-btn"> <img
                                                     src="../../../images/save.svg" /></button>
                                         </div>
@@ -505,13 +506,13 @@
                                                             <hr class="accordion-items-hr">
                                                             <div class="container-fluid ">
                                                                 <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-7">
                                                                        <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <label for="UserName-whatsapp"
-                                                                            class="form-label"> User Name </label>
-                                                                        <input type="text" id="UserName-whatsapp"
-                                                                            class="form-control inputs" name="UserName-whatsapp" maxlength="100"required>
+                                                                        <div class="col-md-10">
+                                                                            <label for="DeviceName-whatsapp"
+                                                                            class="form-label"> Device Name </label>
+                                                                        <input type="text" id="DeviceName-whatsapp"
+                                                                            class="form-control inputs" name="DeviceName-whatsapp" maxlength="100"required>
                                                                         <div class="invaild  techncal-connect-error   ">
                                                                             <div class="invalid-feedback">
                                                                                 الحقل مطلوب
@@ -520,7 +521,30 @@
                                                                         </div>
                                                                        </div>
                                                                        <div class="row">
-                                                                        <div class="col-md-12">
+                                                                        <div class="col-md-10">
+                                                                            <label for="phone2" class="form-label"> Mobile Number <i class="fa-solid fa-star-of-life RequirdStar"></i> 
+                                                                            </label>
+                                                                            <div class="input-group input-group-en ">
+                                                                                <input type="tel"
+                                                                                    class="form-control inputs tel-input-English"
+                                                                                    id="phone2" name="phone2" maxlength="20" required>
+                                                                                <select
+                                                                                    class="input-group-text select-style counterCode-English"
+                                                                                    name="counterCode-phone2">
+                                                                                    <option value="+966">+966</option>
+                                                                                    <option value="+962">+962</option>
+                                                                                    <option value="+20">+20</option>
+                                                                                </select>
+                                                                                <div class="invaild">
+                                                                                    <div class="invalid-feedback">
+                                                                                        الحقل مطلوب
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                       </div>
+                                                                       <div class="row">
+                                                                        <div class="col-md-10">
                                                                             <label for="API-Token-whatsapp"
                                                                             class="form-label"> API-Token </label>
                                                                         <input type="text" id="API-Token-whatsapp"
@@ -533,11 +557,11 @@
                                                                         </div>
                                                                        </div>
                                                                     </div>
-                                                                    <div class="col-md-6 d-flex flex-column text-center" >
+                                                                    <div class="col-lg-5 d-flex flex-column text-center" style="min-height: 190px;" >
                                                                      <div class="d-flex align-items-center justify-content-center h-100" id="QRArea">
                                                                             <button type="button" class="border-0 bg-transparent" id="RegenerateQR"><img src="../../../images/qrcode 1.svg" ></button>
+                                                                           
                                                                      </div>
-                                                                     <p>  <img src="../../../images/Frame 2608853.svg">   مسح رمز الإستجابة السريعة </p>
                                                                     </div>
                                                                 </div>  
                                                             </div>
@@ -571,8 +595,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
     <script>
-        let QRGenerated = false;
-        let QRScanned = true;
+        let QRGenerated = true;
+        let QRScanned = false;
     
         function setupRegenerateButton() {
             const RegenerateQR = document.getElementById('RegenerateQR');
@@ -584,7 +608,12 @@
     
                 setTimeout(() => {
                     if (QRGenerated) {
-                        QRArea.innerHTML = `<img src="../../../images/qrcode 2.svg">`;
+                        QRArea.innerHTML = `
+                                         <div class="col-auto d-flex  flex-column justify-content-center align-items-center">
+                                         <img src="../../../images/qrcode 2.svg"> 
+                                           <br>
+                                           <p>  <img src="../../../images/Frame 2608853.svg">   مسح الرمز  </p>
+                                         <div>`;
     
                         if (QRScanned) {
                             setTimeout(() => {
@@ -599,7 +628,7 @@
                                         <div class="col-auto">
                                             <img src="../../../images/benan-icon.svg">
                                         </div>
-                                        <p>... جاري ربطك بنظام بنان</p>
+                                        <p>...جارٍ ربط الشركة بالواتساب</p>
                                     </div>`;
                             }, 3000); 
     
@@ -607,22 +636,28 @@
                                 QRArea.innerHTML = `
                                     <div class="col-auto d-flex gap-2 flex-column justify-content-center align-items-center">
                                         <img src="../../../images/done.svg" style="width: 50px;">
-                                        <p>أنت الآن متصل ببنان</p>
+                                        <p>أنت الآن متصل بالواتساب </p>
                                     </div>`;
                             }, 6000);
                         } else {
+                            setTimeout(() => {
+
                             QRArea.innerHTML = `
-                                <button type="button" class="border-0 bg-transparent" id="RegenerateQR">
-                                    <img src="../../../images/qrcode 1.svg">
-                                </button>`;
+                                  <div class="col-auto d-flex gap-3 flex-column justify-content-center align-items-center" style = "cursor:pointer;">
+                                        <img src="../../../images/NotScannedQR.svg" id="RegenerateQR" >
+                                        <p> انتهت صلاحية الرمز اضغط لإعادة التحميل </p>
+                                    </div>`;
+                            QRScanned = true;  
                             setupRegenerateButton();
+                        }, 3000); 
+
                         }
                     } else {
                         QRArea.innerHTML = `
                             <button type="button" class="border-0 bg-transparent" id="RegenerateQR">
                                 <img src="../../../images/qrcode 1.svg">
                             </button>`;
-                        QRGenerated = true; 
+                        QRGenerated = true;  
                         setupRegenerateButton();
                     }
                 }, 1000); 

@@ -233,10 +233,10 @@
                                     </li>
                                     <div id="Contract-items" class="collapse" >
                                         <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="">  الاضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
+                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الاضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         </div>
                                     </div>
 
@@ -247,13 +247,14 @@
                                         </a>
                                     </li>
                                     <div id="services-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href=""> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                           <div class="bg-white gap-3 collapse-inner rounded">
                                             <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href=""> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  المفاتيح الدولية  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  ترجمة الأرقام  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  رسائل الموظفين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                            
                                         </div>
@@ -275,11 +276,11 @@
 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-9">
-                                        <div class="row g-3 my-2">
-                                            <div class="col-md-6">
+                                         <div class="row g-3 my-2">
+                                            <div class="col">
                                                 <h3>  إضافة دولة </h3>
                                             </div>
-                                            <div class="col-md-6 save-col">
+                                            <div class="col-md-auto save-col">
                                                 <button type="submit" class="custom-img-btn"> <img
                                                         src="../../../images/save.svg" /></button>
                                                         <button type="button" class="custom-img-btn" > <a href="Countries.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
@@ -311,7 +312,7 @@
                                                             </label>
                                                             <input type="text" id="AR-Country"
                                                                 class="form-control inputs arabic-input"
-                                                                name="AR-Country"  maxlength="30" required>
+                                                                name="AR-Country"  maxlength="50" required>
                                                             <div class="invaild">
                                                                 <div class="invalid-feedback">
                                                                     الحقل مطلوب
@@ -324,7 +325,7 @@
                                                             </label>
                                                             <input type="text" id="EN-Country"
                                                                 class="form-control inputs english-input"
-                                                                name="EN-Country" maxlength="30" required>
+                                                                name="EN-Country" maxlength="50" required>
                                                             <div class="invaild">
                                                                 <div class="invalid-feedback">
                                                                     الحقل مطلوب
@@ -335,6 +336,20 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="row align-items-center">
+                                                        <div class="col-md-6 ">
+                                                            <label for="Category" class="form-label"> التصنيف <i class="fa-solid fa-star-of-life RequirdStar"></i> </label>
+                                                            <select class="form-select select-style " name="Category"
+                                                                id="Category"  required>
+                                                                <option> </option>
+                                                                <option value="أ"> أ  </option>
+                                                                <option value="ب">  ب    </option>                
+                                                            </select>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="col-md-6">
                                                             <label for="Country-code" class="form-label"> مفتاح الدولة
                                                                 <i class="fa-solid fa-star-of-life RequirdStar"></i>
