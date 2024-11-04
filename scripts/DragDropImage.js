@@ -1,18 +1,19 @@
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
+  const dropZoneCard = inputElement.closest(".dropzone-Card");
   const layerElement = dropZoneElement.querySelector(".layer");
-  const RemoveImage = document.getElementById("removeImage");
+  const removeImageButton = dropZoneElement.querySelector(".removeImage"); 
+  var fileNameP = dropZoneCard.querySelector(".fileNameP"); 
+  if (fileNameP) fileNameP.dataset.originalText = fileNameP.innerHTML;
 
-  const fileNameP = document.querySelector("#fileNameP");
-  fileNameP.dataset.originalText = fileNameP.innerHTML;
-  layerElement.addEventListener("click", (e) => {
+  layerElement.addEventListener("mouseenter", (e) => {
     e.stopPropagation();
-
-    if (!RemoveImage.hasAttribute("data-listener")) {
-      RemoveImage.setAttribute("data-listener", "true"); 
-      RemoveImage.addEventListener("click", (e) => {
-        e.stopPropagation(); 
-        removeImage(dropZoneElement, inputElement);
+    if (!removeImageButton.hasAttribute("data-listener")) {
+      removeImageButton.setAttribute("data-listener", "true");
+      removeImageButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        removeImage(dropZoneElement,dropZoneCard, inputElement);
+        console.log("removed")
       });
     }
   });
@@ -25,7 +26,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 
   inputElement.addEventListener("change", (e) => {
     if (inputElement.files.length) {
-      updateThumbnail(dropZoneElement, inputElement.files[0]);
+      updateThumbnail(dropZoneElement,dropZoneCard, inputElement.files[0]);
     }
   });
 
@@ -45,7 +46,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 
     if (e.dataTransfer.files.length) {
       inputElement.files = e.dataTransfer.files;
-      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+      updateThumbnail(dropZoneElement,dropZoneCard, e.dataTransfer.files[0]);
     }
 
     dropZoneElement.classList.remove("drop-zone--over");
@@ -60,19 +61,10 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   dropZoneElement.addEventListener("mouseleave", () => {
     layerElement.style.display = "none";
   });
-  // Touch event listeners
-  dropZoneElement.addEventListener("touchstart", () => {
-    if (inputElement.files.length) {
-      layerElement.style.display = "flex";
-    }
-  });
 
-  dropZoneElement.addEventListener("touchend", () => {
-    layerElement.style.display = "none";
-  });
 });
 
-function removeImage(dropZoneElement, inputElement) {
+function removeImage(dropZoneElement ,dropZoneCard, inputElement) {
   inputElement.value = "";
   const layerElement = dropZoneElement.querySelector(".layer");
   layerElement.style.display = "none";
@@ -87,18 +79,22 @@ function removeImage(dropZoneElement, inputElement) {
     newPromptElement.innerHTML = `<img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة`;
     dropZoneElement.appendChild(newPromptElement);
   }
-  document.querySelector("#fileNameP").innerHTML =
-    document.querySelector("#fileNameP").dataset.originalText;
+
+  var fileNameP = dropZoneCard.querySelector(".fileNameP");
+  if (fileNameP) fileNameP.innerHTML = fileNameP.dataset.originalText;
+
   dropZoneElement.style.border = "";
-  const fileNameDiv = document.querySelector(".fileNameDiv");
-  fileNameDiv.style.background = "";
+  var fileNameDiv = dropZoneCard.querySelector(".fileNameDiv");
+  if (fileNameDiv) fileNameDiv.style.background = "";
 }
 
-function updateThumbnail(dropZoneElement, file) {
+function updateThumbnail(dropZoneElement,dropZoneCard, file) {
+ 
   let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
 
-  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-    dropZoneElement.querySelector(".drop-zone__prompt").remove();
+  const promptElement = dropZoneElement.querySelector(".drop-zone__prompt");
+  if (promptElement) {
+    promptElement.remove();
   }
 
   if (!thumbnailElement) {
@@ -108,14 +104,20 @@ function updateThumbnail(dropZoneElement, file) {
     dropZoneElement.style.border = "none";
   }
 
-  let fileNameP = document.querySelector("#fileNameP");
-  let fileNameDiv = document.querySelector(".fileNameDiv");
-  fileNameP.innerHTML = file.name;
-  fileNameDiv.style.background = "#39629C";
+  const fileNameP = dropZoneCard.querySelector(".fileNameP");
+  const fileNameDiv = dropZoneCard.querySelector(".fileNameDiv");
+
+ 
+
+  if (fileNameP) {
+    fileNameP.innerHTML = file.name;  
+  }
+  if (fileNameDiv) {
+    fileNameDiv.style.background = "#39629C";  
+  }
 
   if (file.type.startsWith("image/")) {
     const reader = new FileReader();
-    console.log(file.type);
     reader.readAsDataURL(file);
     reader.onload = () => {
       thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
@@ -124,3 +126,4 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 }
+
