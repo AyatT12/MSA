@@ -53,7 +53,7 @@ html {
   background-color: white;
   box-shadow: 2px 3px 4px 0px #afb7c27d;
   border-radius: 8px;
-  padding: 6px 15px;
+  padding:6px 15px 15px;
 }
 
 .filter1 {
@@ -417,6 +417,12 @@ html {
   height: 15px;
 }
 
+.form-label{
+  margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .requird-field {
   /* margin-bottom: 0px; */
   font-size: 13px;
@@ -433,7 +439,6 @@ html {
 .tel-input {
 
   border-radius: 0px 8px 8px 0px !important;
-
 }
 
 .counterCode {
@@ -445,6 +450,21 @@ html {
 
 }
 
+.tel-input-English{
+  border-radius: 0px 8px 8px 0px !important
+
+}
+.counterCode-English{
+  height: 37px;
+  border-radius:8px 0px 0px 8px !important;
+  border-right: none;
+  background-color: white;
+  color: var(--primary-color);
+  direction: ltr;
+}
+.input-group-en{
+  flex-direction: row-reverse;
+}
 .english-input {
   text-align: left;
 }
@@ -1251,6 +1271,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ================================================================================================================================================================================== */
 .techncal-connect-rows {
   direction: ltr;
+  justify-content: space-between;
 }
 
 .techncal-connect-error {
@@ -1607,6 +1628,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 /* ================================================================================   QR loader1  ======================================================================================= */
 /* ================================================================================================================================================================================== */
+#QRArea{
+  border:1px solid var(--main-color) ;
+  border-radius: 8px;
+}
 .loader {
   font-size: 10px;
   width: 1em;
@@ -1697,7 +1722,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .NewUpdate-container form::-webkit-scrollbar-track {
-    background: rgba(255, 150, 38, 0.089);
+    background: rgba(230, 229, 228, 0.089);
     border-radius: 5px;
 
 
