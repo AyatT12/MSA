@@ -299,12 +299,15 @@
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">الرمز  </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">20</p>
+                                                            <label for="Code" class="form-label"> الرمز
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="Code" value="20"
+                                                                class="form-control inputs"
+                                                                name="Code"  maxlength="" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -313,24 +316,30 @@
                                                 </div>
 
                                                 <div class="col-md-12">
-                                                    <div class="row">
+                                                    <div class="row align-items-center">
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">طريقة الدفع عربي   </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">مدى</p>
+                                                            <label for="AR-PayementMethod" class="form-label"> طريقة الدفع  عربي
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="AR-PayementMethod" value="مدى"
+                                                                class="form-control inputs arabic-input"
+                                                                name="AR-PayementMethod"  maxlength="20" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">طريقة الدفع إنجليزي  </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">  Mada </p>
+                                                            <label for="EN-PayementMethod" class="form-label"> طريقة الدفع  انجليزي
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="EN-PayementMethod" value="Mada"
+                                                                class="form-control inputs english-input"
+                                                                name="EN-PayementMethod" maxlength="20" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -338,13 +347,17 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">  التصنيف </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">ماكينة</p>
+                                                        <div class="col-md-6 ">
+                                                            <label for="Category" class="form-label"> التصنيف <i class="fa-solid fa-star-of-life RequirdStar"></i> </label>
+                                                            <select class="form-select select-style " name="Category"
+                                                                id="Category"  required>
+                                                                <option> </option>
+                                                                <option value="ماكينة" selected> ماكينة </option>
+                                                                <option value="نقدا">  نقدا    </option>                
+                                                            </select>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
