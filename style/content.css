@@ -1489,16 +1489,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
 }
 
-.active_statue {
-  width: 10px;
-  height: 10px;
-  background: #1cc83a;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  border: 1px solid white;
-}
 
 .DataCard {
   padding: 15px;
@@ -1757,7 +1747,27 @@ border: 1px solid rgba(217, 217, 217, 1);
       transform: rotate(360deg);
     }
 }
-/*  */
+/* empolyees*/
+
+.active_statue {
+  width: 10px;
+  height: 10px;
+  background: #1cc83a;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1px;
+  right: 10px;
+  border: 1px solid white;
+}
+.EmployeePicDiv{
+  position: relative;
+}
+.EmployeePic{
+width: 65px;
+height: 65px;
+border-radius: 50%;
+border: 1px solid rgba(217, 217, 217, 1);
+}
 /* ================================================================================  general media   ======================================================================================= */
 /* ================================================================================================================================================================================== */
 
