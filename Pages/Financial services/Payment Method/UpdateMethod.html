@@ -178,7 +178,7 @@
                                 </li>
                                 <div id="tenant-items" class="collapse" >
                                     <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
@@ -268,7 +268,7 @@
                                             <a class="collapse-item" href=""> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href=""> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href=""> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="">  المفاتيح الدولية  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            
                                             <a class="collapse-item" href="">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             
@@ -316,15 +316,16 @@
                                                             <label for="Code" class="form-label"> الرمز
                                                                 <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                             </label>
-                                                            <input type="text" id="Code" value="20"
-                                                                class="form-control inputs"
-                                                                name="Code"  maxlength="" required>
+                                                            <input type="text" id="Code" value=""
+                                                                class="form-control inputs" name="Code" maxlength="3"
+                                                                oninput="validateCodeLength(this)" required>
                                                             <div class="invaild">
                                                                 <div class="invalid-feedback">
                                                                     الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
+
 
                                                     </div>
                                                 </div>
@@ -443,6 +444,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
+    <script>
+        function validateCodeLength(input) {
+            input.value = input.value.replace(/\D/g, '');
+        }
+    </script>
 
 </body>
 
