@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان - قائمة الموظفين </title>
+    <title> نظام بنان -إضافة عضوية   </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -165,7 +165,7 @@
                                 <div id="employes-items" class="collapse" >
                                     <div class="bg-white gap-3 collapse-inner rounded">
                                         <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item active" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item active" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
 
@@ -285,99 +285,100 @@
                 </div>
                 <div class="col my-2 d-flex align-items-center justify-content-center">
                     <div class="container main-container">
-                        <form action="">
-                            <div class="row g-3 mb-2">
-                                <div class="col">
-                                    <h3> قائمة الموظفين  </h3>
-                                </div>
-                                <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="row  mt-3 g-3">
 
-                                    <div class="col-12 col-md-8 search-input-col">
-                                        <div class="form-outline w-100" data-mdb-input-init>
-                                            <span class="fa fa-search"></span>
-                                            <input type="search" id="search" class="form-control inputs search-input"
-                                                name="search" aria-label="Search" autofocus autocomplete="off" />
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9">
+                                         <div class="row g-3 my-2">
+                                            <div class="col">
+                                                <h3>  إضافة عضوية </h3>
+                                            </div>
+                                            <div class="col-md-auto save-col">
+                                                <button type="submit" class="custom-img-btn"> <img
+                                                        src="../../../images/save.svg" /></button>
+                                                <button type="button" class="custom-img-btn" > <a href="Membership.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
+                                             </div>
                                         </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-12 filters-col">
-                                    <div class="filters-custom-order">
-                                       
-                                        <label class="form-check-label" for="all">الكل</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="all"
-                                        value="All" checked />
-                                    </div>
-
-                                    <div class="filters-custom-order">
-                                      
-                                        <label class="form-check-label filter2" for="Active">نشط</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="Active"
-                                        value="Active" />
-                                    </div>
-
-                                    <div class="filters-custom-order">
-                                       
-                                        <label class="form-check-label  filter1" for="Stoped">موقوف</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="Stoped"
-                                        value="Stoped" />
-                                    </div>
-                                    <div class="filters-custom-order">
-                                      
-                                        <label class="form-check-label filter3" for="deleted">محذوف</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="deleted"
-                                        value="deleted" />
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row table-row px-3">
-                                <div class="col  scroll-table-div  table-responsive-sm  w-100  ">
-                                    <table class=" tables-style table table-borderless " id="Table">
-                                        <thead class="sticky-top">
-                                            <tr>
-                                                 <th class="DifferAlign"> البريد الالكتروني</th>
-                                                 <th class="DifferAlign"> المسمى الوظيفي</th>
-                                                 <th class="DifferAlign"> الموظف   </th>
-                                                <th class="DifferAlign"> رقم الموظف</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="DifferAlign">
-                                                    <p>mariamadel9420@gmail.com</p>
-                                                </td>
-                                                <td class="DifferAlign">
-                                                    <p>مصممة واجهات المستخدم</p>
-                                                </td>
-                                                <td class="DifferAlign">
-                                                    <p>مريم عادل عبدالرازق</p>
-                                                </td>
-                                                <td class="DifferAlign">
-                                                    <p>M103</p>
-                                                </td>
-                                                <td>
-                                                    <div class="filter-number-td">
-
-                                                        <div class="filters filter2-div"></div>
-
-                                                        <div>1</div>
+                                            <div class="container-fluid">
+                                            <div class="row  mt-3 g-3 ">
+                                                <div class="col-md-12">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-6">
+                                                            <label for="AR-MemberShip" class="form-label"> العضوية عربي
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="AR-MemberShip"
+                                                                class="form-control inputs arabic-input"
+                                                                name="AR-MemberShip"  maxlength="20" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EN-MemberShip" class="form-label"> العضوية إنجليزي
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="EN-MemberShip"
+                                                                class="form-control inputs english-input"
+                                                                name="EN-MemberShip" maxlength="20" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="rental-system-number" class="form-label"> رقم نظام التأجير</label>
+                                                            <input type="text" id="rental-system-number" 
+                                                            class="form-control inputs number-input" 
+                                                            name="rental-system-number" 
+                                                            maxlength="10" 
+                                                            oninput="validateNumberLength(this)">
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="rental-system-pin" class="form-label">رمز نظام التأجير</label>
+                                                            <input type="text" id="rental-system-pin"
+                                                                class="form-control number-input inputs "
+                                                                name="rental-system-pin"
+                                                                maxlength="10" 
+                                                                oninput="validateNumberLength(this)">
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="row ">
+                                                        <div class="col-lg-12">
+                                                            <label>ملاحظات</label>
+                                                            <textarea class=" form-control textarea-inputs" rows="1"
+                                                                maxlength="100" name="notes" type="text"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
-                        <a href="../../../index.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-custom-class="custom-tooltip" data-bs-title="العودة الي الرئيسية" class="new-Page-icon"><img
-                                src="../../../images/back to main.svg" alt="man"></a>
+                       
                     </div>
                 </div>
             </div>
@@ -395,24 +396,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var table = document.getElementById("Table");
-            var rows = table.getElementsByTagName("tr");
-
-            for (var i = 0; i < rows.length; i++) {
-                var cells = rows[i].getElementsByTagName("td");
-
-                for (var j = 0; j < cells.length; j++) {
-                    cells[j].addEventListener("click", function () {
-                        window.location.href = "SystemPermissions.html";
-                    });
-                }
-            }
-        });
-    </script>
-   
-
 </body>
 
 </html>
