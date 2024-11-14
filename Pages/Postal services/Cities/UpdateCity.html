@@ -118,8 +118,8 @@
                                 </li>
                                 <div id="tenant-list-items" class="collapse" >
                                     <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href=""> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                     </div>
                                 </div>
                                 <li class="nav-link">
@@ -265,7 +265,6 @@
                                     <div id="services-items" class="collapse" >
                                            <div class="bg-white gap-3 collapse-inner rounded">
                                             <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
@@ -309,7 +308,8 @@
 
                                         <div class="container-fluid">
 
-                                            <div class="row g-3 mt-3">
+                                            <div class="row  mt-3 g-3 ">
+
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -322,16 +322,16 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        
                                                     </div>
                                                 </div>
-
                                                 <div class="col-md-12">
                                                     <div class="row align-items-center">
                                                         <div class="col-md-6">
                                                             <label for="AR-city" class="form-label"> المدينة  عربي
                                                                 <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                             </label>
-                                                            <input type="text" id="AR-city" value="مكة المكرمة / مكة المكرمة "
+                                                            <input type="text" id="AR-city"
                                                                 class="form-control inputs arabic-input"
                                                                 name="AR-city"  maxlength="30" required>
                                                             <div class="invaild">
@@ -344,7 +344,7 @@
                                                             <label for="EN-city" class="form-label"> المدينة  انجليزي
                                                                 <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                             </label>
-                                                            <input type="text" id="EN-city" value="Mecca / Mecca"
+                                                            <input type="text" id="EN-city"
                                                                 class="form-control inputs english-input"
                                                                 name="EN-city" maxlength="30" required>
                                                             <div class="invaild">
@@ -356,8 +356,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6">
                                                             <label for="location" class="form-label"> الموقع 
                                                             </label>
                                                             <input type="text" id="location"
@@ -368,32 +366,30 @@
                                                                     الحقل مطلوب
                                                                 </div>
                                                             </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-6">
+                                                            <label for="Longitude" class="form-label">  خط الطول
+                                                            </label>
+                                                            <input type="text" id="Longitude"
+                                                                class="form-control inputs"
+                                                                name="Longitude"  maxlength="" >
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <div class="row align-items-center">
-                                                                <div class="col-md-6">
-                                                                    <label for="Longitude" class="form-label">  خط الطول
-                                                                    </label>
-                                                                    <input type="text" id="Longitude"
-                                                                        class="form-control inputs"
-                                                                        name="Longitude"  maxlength="" >
-                                                                    <div class="invaild">
-                                                                        <div class="invalid-feedback">
-                                                                            الحقل مطلوب
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label for="latitude" class="form-label">   خط العرض
-                                                                    </label>
-                                                                    <input type="text" id="latitude"
-                                                                        class="form-control inputs"
-                                                                        name="latitude" maxlength="" >
-                                                                    <div class="invaild">
-                                                                        <div class="invalid-feedback">
-                                                                            الحقل مطلوب
-                                                                        </div>
-                                                                    </div>
+                                                            <label for="latitude" class="form-label">   خط العرض
+                                                            </label>
+                                                            <input type="text" id="latitude"
+                                                                class="form-control inputs"
+                                                                name="latitude" maxlength="" >
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -408,11 +404,7 @@
                                                             name="rental-system-number" 
                                                             maxlength="10" 
                                                             oninput="validateNumberLength(this)">
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="rental-system-pin" class="form-label">رمز نظام التأجير</label>
@@ -421,24 +413,18 @@
                                                                 name="rental-system-pin"
                                                                 maxlength="10" 
                                                                 oninput="validateNumberLength(this)">
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
+                                                          
                                                         </div>
 
                                                     </div>
                                                 </div>
-                                            
                                                 <div class="col-md-12">
-                                                    <div class="row align-items-center ">
-                                                        <div class="col-md-12">
+                                                    <div class="row ">
+                                                        <div class="col-lg-12">
                                                             <label>ملاحظات</label>
                                                             <textarea class=" form-control textarea-inputs" rows="1"
                                                                 maxlength="100" name="notes" type="text"></textarea>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
