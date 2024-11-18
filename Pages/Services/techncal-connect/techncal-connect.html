@@ -99,11 +99,11 @@
                                  <div id="company-items" class="collapse" >
                                 <div class="bg-white gap-3 collapse-inner rounded">
                                     <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href=""> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                     <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                      <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                     <a class="collapse-item" href="">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                     <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
                                </div>
                                <li class="nav-link">
@@ -739,7 +739,7 @@ function startQRSteps(QRArea) {
         } else {
             setTimeout(() => {
                 QRArea.innerHTML = `
-                    <div class="col-auto d-flex gap-3 flex-column justify-content-center align-items-center" style="cursor:pointer;" onclick="startQRSteps(QRArea)">
+                    <div class="col-auto d-flex gap-4 flex-column justify-content-center align-items-center" style="cursor:pointer;" onclick="startQRSteps(QRArea)">
                         <img src="../../../images/NotScannedQR.svg" >
                         <p>انتهت صلاحية الرمز اضغط لإعادة التحميل</p>
                     </div>`;
