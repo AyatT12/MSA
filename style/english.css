@@ -187,6 +187,19 @@ direction: ltr;
     background-position:right .75rem center;
     padding: .375rem 2.25rem .375rem .75rem !important;
   }
+  /* message input  */
+  .messageinput {
+    padding-right: 30px;
+    padding-left: 6px;
+  }
+  
+  .input-container i {
+    right: 10px;
+    left: auto;
+  }
+  .sendmessage{
+    transform: rotate(180deg);
+  }
 /* ================================================================================  services => technical connect     ======================================================================================= */
 /* ================================================================================================================================================================================== */
 .techncal-connect-error{
