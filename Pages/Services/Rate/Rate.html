@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> نظام بنان -  التقييم</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../../../style/Layout.css">
+    <link rel="stylesheet" href="../../../style/content.css">
+     <!-- <link rel="stylesheet" href="../../../style/english.css">  -->
+
+</head>
+
+<body>
+    <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="nav-container container-fluid">
+                <!-- Company Logo -->
+                <div class="navbar-brand d-flex align-items-center gap-4" >
+                    <a href="../../../index.html" class="Company-Logo"><img src="../../../images/C 1.svg" alt="Company Logo" class="Company-Logo-img" ></a>
+                    <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
+                </div>
+
+                <!-- User Information -->
+                <div class="icons-content">
+                    <div class="d-flex">
+                        <div class="navbar-nav">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="ms-2  text-start">
+                                        <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
+                                        <p class="m-0">مشرف علي الفروع</p>
+                                    </div>
+                                    <img src="../../../images/pic (3).svg" alt="User Avatar"
+                                        class="rounded-circle User-Avatar">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/Account.html">حسابي <img src="../../../images/Frame (2).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img src="../../../images/Frame (1).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options" href="https://ayatt12.github.io/test-page/"> الأنظمه <img src="../../../images/Frame (3).svg"/></a></li>
+
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item userDropdown-options " href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img class="logout" src="../../../images/Frame (4).svg"/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center" style="gap:15px">
+                        <div class="col lang-button-col">
+                            <input type="checkbox" id="myCheckbox" class="d-none">
+                            <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- end of tobar -->
+        <div class="container-fluid h-100 main-container-fluid">
+            <div class="row h-100 flex-nowrap">
+                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
+                    <!-- Sidebar -->
+                    <nav class="sidebar close">
+                        <header>
+                            <i class='bx bx-chevron-right toggle'></i>
+                        </header>
+
+                        <div class="menu-bar">
+                            <div class="menu">
+                                <ul class="menu-links">
+                                    <li class="nav-link" >
+                                        <a>
+                                            <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
+                                        </a>
+                                    </li>
+                                     <div id="company-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                       <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                         <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                   </div>
+                                   <li class="nav-link">
+                                    <a>
+                                        <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
+                                    </a>
+                                </li>
+                                <div id="Bnan-list-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                   <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
+                                    </a>
+                                </li>
+                                <div id="tenant-list-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
+                                    </a>
+                                </li>
+                                <div id="reports-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                       <a class="collapse-item" href=""> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
+                                    </a>
+                                </li>
+                                <div id="stat-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href=""> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href=""> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
+                                    </a>
+                                </li>
+                                <div id="employes-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                   <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                    </a>
+                                </li>
+                                <div id="tenant-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+
+                                    </div>
+                                   </div>
+                                    <li class="nav-link">
+                                        <a >
+                                            <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
+                                        </a>
+                                    </li>
+                                    <div id="Cars-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+
+                                        </div>
+                                       </div>
+                                    <li class="nav-link">
+                                        <a >
+                                            <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
+                                        </a>
+                                    </li>
+                                    <div id="Mail-items" class="collapse" >
+                                       <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+        
+                                        </div>
+                                       </div>
+                                    <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
+                                        </a>
+                                    </li>
+                                    <div id="Financial-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                          
+                                        </div>
+                                       </div>
+       
+                                       <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
+                                        </a>
+                                    </li>
+                                    <div id="Contract-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
+                                        </a>
+                                    </li>
+                                    <div id="services-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item active" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            
+                                           
+                                        </div>
+                                       </div>
+                                
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </nav>
+                </div>
+
+                <div class="col my-2 d-flex align-items-center justify-content-center">
+                    <div class="container NewUpdate-container">
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="row mt-3 g-3">
+                               
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9">
+                                       <div class="row g-3 my-2">
+                                        <div class="col">
+                                            <h3>التقييم</h3>
+                                        </div>
+                                        <div class="col-md-auto save-col">
+                                            <button type="submit" class="custom-img-btn"> <img src="../../../images/save.svg" /></button>
+                                        </div>
+                                       </div>
+                                        <main class="mt-3 g-3">
+                                            <div class="accordion inputs-accordion">
+                                                <div class=" inputs-accordion-item">
+                                                    <div class=" inputs-accordion-item-header">
+                                                        <span class="accordion-item-header-title"> <i
+                                                                class="fa-solid fa-check data-check"></i> تقييم الشركة
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
+                                                            <path d="m6 9 6 6 6-6" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="accordion-item-description-wrapper">
+                                                        <div class="accordion-item-description">
+                                                            <hr class="accordion-items-hr">
+                                                            <div class="container-fluid ">
+                                                                <div class="row g-2 justify-content-around">
+                                                                
+                                                                    <table class="table" id="RateTable">
+                                                                        <thead>
+                                                                          <tr>
+                                                                            <th scope="col">الرمز</th>
+                                                                            <th scope="col">التقييم عربي
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+                                                                            </th>
+                                                                            <th scope="col">التقييم إنجليزي
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+
+                                                                            </th>
+                                                                            <th scope="col">القيمة
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+                                                                            </th>
+                                                                            <th></th>
+                                                                          </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                          <tr>
+                                                                            <td class="pt-3">50</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="راضٍ جدًا"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Very Satisfied"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="0"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">51</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="راضٍ"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Satisfied"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="5"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">52</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="محايد"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Neutral"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="4"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">53</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="غير راضٍ"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Not Satisfied"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="3"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">54</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="مستاء"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Upset"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="2"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">55</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="مستاء جدًا"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Very Upset"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="1"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">55</th>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="مستاء"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Upset"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="2"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                        </tbody>
+                                                                      </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inputs-accordion-item">
+                                                    <div class="inputs-accordion-item-header">
+                                                        <span class="accordion-item-header-title"> <i
+                                                                class="fa-solid fa-check data-check"></i>تقييم المستأجر 
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
+                                                            <path d="m6 9 6 6 6-6" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="accordion-item-description-wrapper">
+                                                        <div class="accordion-item-description">
+                                                            <hr class="accordion-items-hr">
+                                                            <div class="container-fluid ">
+                                                                <div class="row g-2 justify-content-around">
+                                                                    <table class="table" id="RateTable">
+                                                                        <thead>
+                                                                          <tr>
+                                                                            <th scope="col">الرمز</th>
+                                                                            <th scope="col">التقييم عربي
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+                                                                            </th>
+                                                                            <th scope="col">التقييم إنجليزي
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+
+                                                                            </th>
+                                                                            <th scope="col">القيمة
+                                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>    
+                                                                            </th>
+                                                                            <th></th>
+                                                                          </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                          <tr>
+                                                                            <td class="pt-3">10</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="جديد"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="New"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="0"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">11</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="ممتاز"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Excellent"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="5"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">12</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="جيد جدًا"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Vey Good"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="4"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">13</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="متوسط"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Average"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="3"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">14</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="مقبول"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Acceptable"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="2"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td class="pt-3">15</td>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="سيء"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Bad"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="1"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <th scope="row">16</th>
+                                                                            <td>
+                                                                                <input type="text" id="Ar-Company-Rate"
+                                                                                class="form-control inputs arabic-input" 
+                                                                                value="محظور"
+                                                                                name="Ar-Company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                            </td>
+                                                                            <td><input type="text" id="En-company-Rate"
+                                                                                class="form-control inputs english-input" 
+                                                                                value="Banned"
+                                                                                name="En-company-Rate " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td>
+                                                                                <input type="text" id="Value"
+                                                                                class="form-control inputs " 
+                                                                                value="2"
+                                                                                name="Value " maxlength="" required >
+                                                                            <div class="invaild">
+                                                                                <div class="invalid-feedback">
+                                                                                    الحقل مطلوب
+                                                                                </div>
+                                                                            </div>
+                                                                          </td>
+                                                                            <td class="pt-0">
+                                                                           <div class="RateImg">
+                                                                            <img src="../../../images/اسم عربي.svg">
+                                                                           </div>
+                                                                            </td>
+                                                                          </tr>
+                                                                        </tbody>
+                                                                      </table>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
+                                        </main>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <a href="../../../index.html" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip" data-bs-title="العودة الي الرئيسية" class="new-Page-icon"><img
+                            src="../../../images/back to main.svg" alt="man"></a>
+                    </div>
+                </div>
+             
+            </div>
+
+
+        </div>
+           <!-- signature modal -->
+           <div class="modal fade" id="signature-modal" tabindex="-1" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+                <div class="modal-content signature-modal-content p-3">
+                    <div class="modal-body Signature-modal-body">
+                        <div class="SignatureCard">
+                            <div class="image-main-container" id="removeSignatureImg"></div>
+                            <div class="upload-container">
+   
+   
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="sinature-Btn-Card p-2">
+                                    <img src="../../../images/signature/save.svg" class="w-100" id="save">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                               <div class="sinature-Btn-Card p-2">
+                                   <img src="../../../images/signature/Frame.svg" class="w-100" id="clear">
+                               </div>
+                           </div>
+                            <div class="col-3">
+                               <div class="sinature-Btn-Card p-2">
+                                   <img src="../../../images/signature/file-signature_9795523 1.svg"
+                                       class="w-100" id="WriteSignature">
+                               </div>
+                           </div>
+                            <div class="col-3">
+                               <div class="sinature-Btn-Card p-2">
+                                   <img src="../../../images/signature/Pic.svg" class="w-100"
+                                       id="UploadSigntaurePic">
+                                   <input type="file" id="imageUpload" accept="image/*"
+                                       style="display: none;">
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../../scripts/Scripts.js"></script>  
+    <script src="../../../scripts/signature.js"></script>
+ 
+    <!-- local scripts  -->
+
+</body>
+
+</html>

@@ -306,16 +306,18 @@
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">الرمز  </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">6000000001</p>
+                                                            <label for="Code" class="form-label"> الرمز
+                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                            </label>
+                                                            <input type="text" id="Code" value=""
+                                                                class="form-control inputs" name="Code" maxlength=""
+                                                                oninput="validateCodeLength(this)" required>
+                                                            <div class="invaild">
+                                                                <div class="invalid-feedback">
+                                                                    الحقل مطلوب
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
@@ -357,11 +359,7 @@
                                                             name="rental-system-number" 
                                                             maxlength="10" 
                                                             oninput="validateNumberLength(this)">
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="rental-system-pin" class="form-label">رمز نظام التأجير</label>
@@ -370,11 +368,7 @@
                                                                 name="rental-system-pin"
                                                                 maxlength="10" 
                                                                 oninput="validateNumberLength(this)">
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
 
                                                     </div>
@@ -470,7 +464,12 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
     <script src="../../../scripts/DragDropImage.js"></script>
-
+<!-- local script -->
+<script>
+    function validateCodeLength(input) {
+        input.value = input.value.replace(/\D/g, '');
+    }
+</script>
 </body>
 
 </html>
