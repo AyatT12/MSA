@@ -579,7 +579,7 @@
                     <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                   <form action="">
+                   <form action="" id="MessageForm">
                     <div class="row justify-content-evenly">
                         <div class="col-auto">
                             <div class="row flex-column g-3">
@@ -612,14 +612,14 @@
                         <div class="col col-md-9 d-flex align-items-end">
                             <div class="d-flex gap-3 w-100 align-items-end">
                                 <div class="d-flex flex-column w-100 gap-3">
-                                    <!-- files to be selected -->
+                                    <!-- Files to be selected -->
                                     <input type="file" class="file-input hide" name="file-input" id="file-input" multiple>
                                     <div class="row">
-                                        <div class="col-md-6 d-flex align-items-end" id="emailSubjectContainer">
+                                        <div class="col-md-6 d-flex align-items-end" id="TitleSubjectContainer">
                                             <!-- Email Subject input will be appended dynamically here -->
                                         </div>
                                         <div class="col-md-6 d-flex align-items-end justify-content-end">
-                                            <div class="filename-container hide"></div>
+                                            <div class="filename-container hide"></div> <!-- This will hold the file items (images) -->
                                         </div>
                                     </div>
                                     <div class="input-container">
@@ -633,6 +633,7 @@
                                     <img src="../../../images/Frame (10).svg" alt="Send">
                                 </button>
                             </div>
+                            
                         </div>
                     </div>
                    </form>
@@ -669,7 +670,7 @@
             console.log(checkedValues);
         });
     </script>
-<!-- adding active ti the slected send way  -->
+<!-- adding active to the slected send way  -->
     <script>
         const radioButtons = document.querySelectorAll('input[name="sendway"]');
         
@@ -679,49 +680,6 @@
                 
                 if (this.checked) {
                     this.closest('.messageWay').classList.add('active');
-                }
-            });
-        });
-    </script>
-
-    <!-- script for uploding and display images , files using the clip inside the message input -->
-    <script>
-        $(document).ready(function() {
-            $('.file-input').change(function(e) {
-                var files = e.target.files;
-                var filenameContainer = $('.filename-container');
-                filenameContainer.empty(); 
-                filenameContainer.show(); 
-    
-                for (var i = 0; i < files.length; i++) {
-                    var file = files[i];
-    
-                    if (file) {
-                        var fileWrapper = $('<div>').addClass('file-item position-relative');
-    
-                        if (file.type.startsWith('image/')) {
-                            var reader = new FileReader();
-                            reader.onload = (function(file) {
-                                return function(event) {
-                                    var imgElement = $('<img>').attr('src', event.target.result).addClass('file-thumbnail');
-    
-                                    var removeButton = $('<span>').addClass('remove-file-btn');
-                                    removeButton.html('<i class="fa-solid fa-xmark"></i>'); 
-                                    imgElement.append(removeButton);  
-    
-                                    fileWrapper.append(imgElement);
-    
-                                    filenameContainer.append(fileWrapper);
-                                };
-                            })(file); 
-                            reader.readAsDataURL(file); 
-                        } else {
-                            var icon = $('<i>').addClass('fa fa-file').addClass('file-icon');
-                            var fileName = $('<div>').addClass('file-name').text(file.name);
-                            fileWrapper.append(icon).append(fileName);
-                            filenameContainer.append(fileWrapper);
-                        }
-                    }
                 }
             });
         });
@@ -739,31 +697,126 @@
             if (selectedOption === 'whatsapp') {
 
                 $('#clip').removeClass('d-none');
-                $('#emailSubjectContainer').empty(); 
+                $('#TitleSubjectContainer').empty(); 
             } else if (selectedOption === 'email') {
 
                 $('#clip').removeClass('d-none');
                 
-                if ($('#emailSubjectContainer').children().length === 0) {
-                    var emailSubjectInput = $('<input>', {
-                        type: 'email',
-                        id: 'emailSubject',
-                        class: 'form-control emailInput',
-                        name: 'emailSubject',
+                if ($('#TitleSubjectContainer').children().length === 0) {
+                    var TitleSubjectInput = $('<input>', {
+                        type: 'text',
+                        id: 'TitleSubject',
+                        class: 'form-control TitleInput',
+                        name: 'TitleSubject',
                         placeholder: 'العنوان',
-                        required: true
                     });
-                    $('#emailSubjectContainer').append(emailSubjectInput);
+                    $('#TitleSubjectContainer').append(TitleSubjectInput);
                 }
             } else {
                 $('#clip').addClass('d-none');
-                $('#emailSubjectContainer').empty(); 
+                $('#TitleSubjectContainer').empty(); 
             }
         });
 
         $('input[name="sendway"]:checked').trigger('change');
     });
 </script>
+
+    <!-- script for uploding and display images , files using the clip inside the message input -->
+    <script>
+   $(document).ready(function() {
+    var selectedFiles = []; 
+
+    $('.file-input').change(function(e) {
+        var files = e.target.files;
+        var filenameContainer = $('.filename-container');
+        filenameContainer.empty();  
+        selectedFiles = []; 
+
+        for (var i = 0; i < files.length; i++) {
+            (function(file) {
+                selectedFiles.push(file);
+
+                var fileWrapper = $('<div>').addClass('file-item');
+
+                if (file) {
+                    if (file.type.startsWith('image/')) {
+                        var reader = new FileReader();
+                        reader.onload = function(event) {
+                            var imgElement = $('<img>').attr('src', event.target.result).addClass('file-thumbnail');
+                            var overlay = $('<div>').addClass('overlay');
+                            var removeButton = $('<span>').addClass('remove-file-btn');
+                            removeButton.html('<i class="fa-solid fa-xmark"></i>');
+
+                            removeButton.on('click', function() {
+                                fileWrapper.remove(); 
+                                selectedFiles = selectedFiles.filter(f => f !== file);
+                            });
+
+                            fileWrapper.append(overlay); 
+                            fileWrapper.append(removeButton); 
+                            fileWrapper.append(imgElement); 
+                            filenameContainer.append(fileWrapper);
+                        };
+                        reader.readAsDataURL(file);  
+                    } else {
+                        var icon = $('<i>').addClass('fa fa-file file-icon');  
+                        var overlay = $('<div>').addClass('overlay');
+                        var fileName = $('<div>').addClass('file-name').text(file.name);
+                        var removeButton = $('<span>').addClass('remove-file-btn');
+                        removeButton.html('<i class="fa-solid fa-xmark"></i>');
+
+                        removeButton.on('click', function() {
+                            fileWrapper.remove();
+                            selectedFiles = selectedFiles.filter(f => f !== file);
+                        });
+                        fileWrapper.append(overlay); 
+                        fileWrapper.append(icon).append(fileName).append(removeButton);
+                        filenameContainer.append(fileWrapper);
+                    }
+                }
+            })(files[i]); 
+        }
+    });
+
+    // Handle form submission
+    $('#MessageForm').submit(function(event) {
+        event.preventDefault();
+
+        // Create a new FormData object to hold the files
+        var formData = new FormData();
+        selectedFiles.forEach(function(file) {
+            formData.append('files[]', file); 
+        });
+
+        // Log the files being sent
+        console.log('Files to be submitted:');
+        selectedFiles.forEach(function(file) {
+            console.log('File Name:', file.name, 'File Size:', file.size, 'File Type:', file.type);
+        });
+
+        // Uncomment this section to perform the actual AJAX request 
+        /*
+        $.ajax({
+            url: 'your-submit-url', // Replace with your URL
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                // Handle success
+                console.log('Files submitted successfully:', response);
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.error('Submission failed:', error);
+            }
+        });
+        */
+        $("#MessagesModal").modal("hide");
+    });
+});
+    </script>
 </body>
 
 </html>
