@@ -2147,3 +2147,6 @@ transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 .RateImg img{
   width: 100%;
 }
+.Rate-page-inputs{
+  min-width: 110px;
+}
