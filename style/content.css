@@ -2137,3 +2137,13 @@ transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 #RateTable th{
   font-weight: 600;
 }
+.RateImg{
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+}
+.RateImg img{
+  width: 100%;
+}
