@@ -544,6 +544,10 @@ body.dark .sidebar li a:hover .text {
 .Company-name{
   margin: 0;
   font-weight: 600;
+  order: 3;
+}
+.Company-Logo {
+  order: 2; 
 }
 .Company-Logo-img{
   width: 75px;
@@ -702,11 +706,7 @@ body.dark .sidebar li a:hover .text {
 }
 /* ================================================================================    Media   ======================================================================================= */
 /* ================================================================================================================================================================================== */
-@media (max-width: 992px) {
-  .Company-name{
-    display: none;
-  }
-}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .dropdown-menu {
       left: 0;
@@ -723,15 +723,11 @@ body.dark .sidebar li a:hover .text {
     justify-content: center;
     text-align: center !important;
 }
-.Company-name{
-  display: none;
-}
+
 .mobile-icon{
   display: block;
 }
-.Company-Logo{
-  display: none;
-}
+
 .sidebar , .sidebar2{
   position: fixed;
   z-index: 10000;
@@ -789,6 +785,17 @@ body.dark .sidebar li a:hover .text {
   }
 }
 
+@media (max-width: 768px) {
+  .Company-name{
+    display: none;
+  }
+  .Company-Logo{
+    display: none;
+  }
+  .navbar-brand {
+   align-items: center; 
+}   
+}
 
 /* ================================================================================    content   ======================================================================================= */
 /* ================================================================================================================================================================================== */
