@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان - الطراز </title>
+    <title> نظام الادارة - إحصائيات عقود المستأجرين </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -12,16 +12,17 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="../../../style/Layout.css">
+        <link rel="stylesheet" href="../../../style/Layout.css">
+
     <link rel="stylesheet" href="../../../style/content.css">
-    <!-- <link rel="stylesheet" href="../../../style/english.css">  --> 
+    <!-- <link rel="stylesheet" href="../../../style/english.css">     -->
 
 </head>
 
 <body>
     <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
-         <!-- Top Navbar -->
-         <nav class="navbar navbar-expand-lg navbar-light ">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="nav-container container-fluid">
                 <!-- Company Logo -->
                 <div class="navbar-brand d-flex align-items-center gap-4" >
@@ -153,7 +154,7 @@
                                         <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item active" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                         <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                     </div>
                                 </div>
@@ -198,13 +199,13 @@
                                     </li>
                                     <div id="Cars-items" class="collapse" >
                                         <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html">  التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item active" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                             <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
@@ -285,137 +286,87 @@
                     </nav>
                 </div>
                 <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container main-container">
-                        <form action="">
-                            <div class="row g-3 mb-2">
-                                <div class="col">
-                                    <h3> الطراز  </h3>
-                                </div>
-                                <div class="col-12 col-lg-6 d-flex justify-content-end">
+                    <div class="container NewUpdate-container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-11">
+                                <div class="row g-3 my-3">
+                                    <div class="col-md-12">
+                                        <h3> إحصائيات عقود المستأجرين </h3>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                        <p class="d-inline-block headLines">عدد العقود : </p>
+                                        <p class="d-inline-block Saved-data headLines">1,400 عقد</p>
 
-                                    <div class="col-12 col-md-8 search-input-col">
-                                        <div class="form-outline w-100" data-mdb-input-init>
-                                            <span class="fa fa-search"></span>
-                                            <input type="search" id="search" class="form-control inputs search-input"
-                                                name="search" aria-label="Search" autofocus autocomplete="off" />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="col-lg-8">
+                                            <div class="col-12 d-flex align-items-center Search-col  flex-wrap gap-2">
+                                                <div class="col-xl-4 d-flex  gap-3 align-items-center">
+                                                    <label for="start-date">من</label>
+                                                    <input type="date" class="form-control inputs custom-date-input"
+                                                        id="start-date" name="start-date" required>
+                                                </div>
+                                                <div class="col-xl-4 d-flex  gap-3 align-items-center">
+                                                    <label for="end-date"> إلى </label>
+                                                    <input type="date" class="form-control inputs custom-date-input"
+                                                        id="end-date" name="end-date" required>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-standard"> عرض </button>
+                                            </div>
                                         </div>
                                     </div>
-
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-12 filters-col">
-                                    <div class="filters-custom-order">
-                                       
-                                        <label class="form-check-label" for="all">الكل</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="all"
-                                        value="All" checked />
-                                    </div>
-
-                                    <div class="filters-custom-order">
-                                      
-                                        <label class="form-check-label filter2" for="Active">نشط</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="Active"
-                                        value="Active" />
-                                    </div>
-
-                                    <div class="filters-custom-order">
-                                       
-                                        <label class="form-check-label  filter1" for="Stoped">موقوف</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="Stoped"
-                                        value="Stoped" />
-                                    </div>
-                                    <div class="filters-custom-order">
-                                      
-                                        <label class="form-check-label filter3" for="deleted">محذوف</label>
-                                        <input class="form-check-input custom" type="radio" name="Options" id="deleted"
-                                        value="deleted" />
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row table-row px-3">
-                                <div class="col  scroll-table-div  table-responsive-sm  w-100  ">
-                                    <table class=" tables-style table table-borderless " id="Table">
-                                        <thead class="sticky-top">
-                                            <tr>
-                                                <th>العدد</th>
-                                                 <th> رمز نظام التأجير</th>
-                                                 <th> رقم نظام التأجير </th>
-                                                 <th class="DifferAlign"> الطراز   </th>
-                                                <th   class="DifferAlign"> الرمز</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                              <td><p>1999</p></td>
-                                                <td>
-                                                    <p></p>
-                                                </td>
-                                                <td>
-                                                    <p>231625001000003</p>
-                                                </td>
-                                                <td class="DifferAlign">
-                                                    <p> ألنترا</p>
-                                                </td>
-                                                <td class="DifferAlign">
-                                                    <p>3100000001</p>
-                                                </td>
-                                                <td>
-                                                    <div class="filter-number-td">
-
-                                                        <div class="filters filter2-div"></div>
-
-                                                        <div>1</div>
-
+                                    <div class="col-md-12">
+                                        <div class="row mt-3 g-2 justify-content-between">
+                                            <div class="col-lg-3">
+                                                <p class="headLines">بند المؤشر الإحصائي</p>
+                                                <div class="row">
+                                                    <div class="col-4 col-lg-9">
+                                                        <button class="btn stat-btn active-stat-btn"
+                                                            onclick="handleButtonClick(this, NationalityChart)">الجنسية</button>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>6</p></td>
-                                                  <td>
-                                                      <p></p>
-                                                  </td>
-                                                  <td>
-                                                    <p>231625001000003</p>
-                                                  </td>
-                                                  <td class="DifferAlign">
-                                                      <p> أزيرا  </p>
-                                                  </td>
-                                                  <td class="DifferAlign">
-                                                      <p>3100000002</p>
-                                                  </td>
-                                                  <td>
-                                                      <div class="filter-number-td">
-  
-                                                          <div class="filters filter2-div"></div>
-  
-                                                          <div>2</div>
-  
-                                                      </div>
-                                                  </td>
-                                              </tr>
+                                                    <div class="col-4 col-lg-9">
+                                                        <button class="btn stat-btn"
+                                                            onclick="handleButtonClick(this, ProfessionChart)">المهنة</button>
+                                                    </div>
+                                                    <div class="col-4 col-lg-9">
+                                                        <button class="btn stat-btn"
+                                                            onclick="handleButtonClick(this, AreaChart)">المنطقة</button>
+                                                    </div>
+                                                    <div class="col-4 col-lg-9">
+                                                        <button class="btn stat-btn"
+                                                            onclick="handleButtonClick(this, CityChart)">المدينة</button>
+                                                    </div>
+                                                    <div class="col-4 col-lg-9">
+                                                        <button class="btn stat-btn"
+                                                            onclick="handleButtonClick(this, AgeChart)">العمر</button>
+                                                    </div>
+                                                   
 
-                                        </tbody>
-                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 text-center charts-border">
+                                                <canvas id="myChart"></canvas>
 
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
+
                             </div>
-                        </form>
-                        <a href="AddModel.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-custom-class="custom-tooltip" data-bs-title="إضافة طراز "  class="new-Page-icon"><img
-                                src="../../../images/new car model.svg" alt="new item"></a>
+                        </div>
                         <a href="../../../index.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-custom-class="custom-tooltip" data-bs-title="العودة الي الرئيسية" class="main-page-icon"><img
-                                src="../../../images/back to main.svg" alt="man"></a>
+                        data-bs-custom-class="custom-tooltip" data-bs-title="العودة الي الرئيسية"
+                        class="new-Page-icon"><img src="../../../images/back to main.svg" alt="man"></a>
                     </div>
                 </div>
+                
             </div>
-
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -427,22 +378,448 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var table = document.getElementById("Table");
-            var rows = table.getElementsByTagName("tr");
-
-            for (var i = 0; i < rows.length; i++) {
-                var cells = rows[i].getElementsByTagName("td");
-
-                for (var j = 0; j < cells.length; j++) {
-                    cells[j].addEventListener("click", function () {
-                        window.location.href = "UpdateModels.html";
-                    });
-                }
-            }
-        });
+        window.addEventListener('load', function () {
+            NationalityChart()
+        })
     </script>
-   
+
+    <script>
+        let chartInstance = null;
+
+        function handleButtonClick(button, chartFunction) {
+            document.querySelectorAll('.stat-btn').forEach(btn => btn.classList.remove('active-stat-btn'));
+
+            button.classList.add('active-stat-btn');
+
+            chartFunction();
+        }
+        function createChart(chartType, chartData, chartOptions) {
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            chartInstance = new Chart(ctx, {
+                type: chartType,
+                data: chartData,
+                options: chartOptions
+            });
+        }
+
+        function NationalityChart() {
+            createChart('polarArea', {
+                labels: ['سعودي', 'مصري', 'أخرى'],
+                datasets: [{
+                    data: [345, 71, 169],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+
+                    ],
+                    borderColor: [
+                        'rgb(255, 255, 255)',
+                        'rgb(255, 255, 255)',
+                        'rgb(255, 255, 255)',
+
+
+                    ],
+                    borderWidth: 2
+                }]
+            }, {
+                responsive: true,
+                scales: {
+                    r: {
+                        pointLabels: {
+                            display: true,
+                            centerPointLabels: true,
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'left',
+                        labels: {
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'المؤشر الإحصائي لجنسيات عقود المستأجرين',
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 15,
+                            weight: '600'
+                        },
+                        padding: {
+                            top: 20,
+                            bottom: 25
+                        }
+                    }
+                }
+            });
+        }
+
+     
+        function ProfessionChart() {
+            createChart('scatter', {
+                datasets: [
+                    {
+                        data: [{ x: 'إداري', y: 5 }],
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'ممرض', y: 10 }],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'فني', y: 5 }],
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'محاضر', y: 12 }],
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'مهندس', y: 7 }],
+                        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'طبيب', y: 7 }],
+                        backgroundColor: '#F1F2F3',
+                        borderColor: '#C9CBCF',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'مدرس', y: 7 }],
+                        backgroundColor: '#FFCC99',
+                        borderColor: '#FF9F40',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'أعمال حرة', y: 8 }],
+                        backgroundColor: '#B3C2E5',
+                        borderColor: '#4B6EC0',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: 'عسكري', y: 10 }],
+                        backgroundColor: '#B4E4C8',
+                        borderColor: '#62C88C',
+                        pointRadius: 5
+                    }
+                    ,
+                    {
+                        data: [{ x: 'طالب', y: 5 }],
+                        backgroundColor: '#FF999B',
+                        borderColor: '#FF1515',
+                        pointRadius: 5
+                    }
+                    ,
+                    {
+                        data: [{ x: 'متقاعد', y: 4 }],
+                        backgroundColor: '#CCCCCC',
+                        borderColor: '#8C8C8C',
+                        pointRadius: 5
+                    }
+                    ,
+                    {
+                        data: [{ x: 'أخرى', y: 2 }],
+                        backgroundColor: '#DAA1F7',
+                        borderColor: '#A413EC',
+                        pointRadius: 5
+                    }
+                ]
+            }, {
+                responsive: true,
+                animations: {
+                    radius: {
+                        duration: 1000,
+                        easing: 'easeInOutQuad',
+                        loop: true,
+                        from: 5,
+                        to: 8
+                    },
+                    x: {
+                        type: 'number',
+                        duration: 1000,
+                        easing: 'easeInOutQuad'
+                    },
+                    y: {
+                        type: 'number',
+                        duration: 1000,
+                        easing: 'easeInOutQuad'
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'المؤشر الإحصائي لمهن عقود المستأجرين',
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 15,
+                            weight: '600'
+                        },
+                        padding: {
+                            top: 20,
+                            bottom: 25
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: ['إداري', 'ممرض', 'فني', 'محاضر', 'مهندس', 'طبيب', 'مدرس', 'أعمال حرة', 'عسكري', 'طالب', 'متقاعد', 'أخرى'],
+                        ticks: {
+                            display: true,
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: true
+                        }
+                    }
+                }
+            });
+        }
+        function AreaChart() {
+            createChart('bar', {
+                labels: ['الشرقية', 'الرياض ', 'مكة المكرمة', 'القصيم ', 'المدينة المنورة', 'غير متوفرة', 'أخرى'],
+                datasets: [{
+                    barThickness: 40,
+                    minBarLength: 2,
+                    data: [15, 20, 30, 60, 90, 10, 4],
+                    backgroundColor: ['#FF99AF', '#8BC9F3', '#FFE199', '#8ED7D7', '#C9ADFF', '#FFCC99', '#F1F2F3'],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(153, 102, 255)',
+                        'rgb(255, 159, 64)',
+                        '#C9CBCF',
+
+                    ],
+                    borderWidth: 2
+                }]
+            }, {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'المؤشر الإحصائي لمناطق عقود المستأجرين',
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 15,
+                            weight: '600'
+                        },
+                        padding: {
+                            top: 20,
+                            bottom: 25
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'category',
+                        ticks: {
+                            display: true,
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        function CityChart() {
+            createChart('bar', {
+                labels: ['الدمام', 'الرياض', 'مكة المكرمة', 'بريدة', 'المدينة المنورة', 'أخرى'],
+                datasets: [{
+                    barThickness: 40,
+                    minBarLength: 2,
+                    data: [15, 20, 30, 60, 90, 10],
+                    backgroundColor: ['#FF99AF', '#8BC9F3', '#FFE199', '#8ED7D7', '#C9ADFF', '#FFCC99'],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(153, 102, 255)',
+                        'rgb(255, 159, 64)',
+
+                    ],
+                    borderWidth: 2
+                }]
+            }, {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'المؤشر الإحصائي لمدن عقود المستأجرين',
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 15,
+                            weight: '600'
+                        },
+                        padding: {
+                            top: 20,
+                            bottom: 25
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'category',
+                        ticks: {
+                            display: true,
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        function AgeChart() {
+            createChart('scatter', {
+                datasets: [
+                    {
+                        data: [{ x: 'أقل من 20', y: 5 }],
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '25 - 21', y: 10 }],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '30 - 26', y: 5 }],
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '35 - 31', y: 12 }],
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '40 - 36', y: 7 }],
+                        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '50 - 41', y: 7 }],
+                        backgroundColor: '#F1F2F3',
+                        borderColor: '#C9CBCF',
+                        pointRadius: 5
+                    },
+                    {
+                        data: [{ x: '60 - 51', y: 7 }],
+                        backgroundColor: '#FFCC99',
+                        borderColor: '#FF9F40',
+                        pointRadius: 5
+                    },
+                   
+                    {
+                        data: [{ x: 'أعلى من 60', y: 10 }],
+                        backgroundColor: '#B4E4C8',
+                        borderColor: '#62C88C',
+                        pointRadius: 5
+                    }
+                
+                ]
+            }, {
+                responsive: true,
+                animations: {
+            radius: {
+                duration: 1000,
+                easing: 'easeInOutQuad',
+                loop: true,
+                from: 5,  
+                to: 8   
+            },
+        },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'المؤشر الإحصائي لأعمار عقود المستأجرين',
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 15,
+                            weight: '600'
+                        },
+                        padding: {
+                            top: 20,
+                            bottom: 25
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: ['أقل من 20', '25 - 21', '30 - 26', '35 - 31', '40 - 36', '50 - 41', '60 - 51',  'أعلى من 60'],
+                        ticks: {
+                            display: true,
+                            font: {
+                                family: "'Cairo', sans-serif",
+                                size: 12
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 
