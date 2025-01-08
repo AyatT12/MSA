@@ -285,7 +285,7 @@
                     </nav>
                 </div>
                 <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container NewUpdate-container">
+                    <div class="container  main-container ">
                         <form action="" class="needs-validation" novalidate>
                             <div class="row  mt-3 g-3">
 
@@ -314,24 +314,18 @@
                                                        </div>
                                                        <div class="col">
                                                         <select class="form-select select-style " name="ImagesSelector"
-                                                        id="ImagesSelector"  >
-                                                        <option> </option>
-                                                        <option value="A" selected>  أختام و شعارات  </option>
-                                                        <option value="B">  تنبيهات العقود </option>    
-                                                        <option value="C">   المستندات المالية عربي </option>                
-                                                        <option value="D">   المستندات المالية إنجليزي </option>                
-                                                        <option value="E">   العقد عربي </option>                
-                                                        <option value="F">  العقد إنجليزي  </option>                
-                                                        <option value="G">  تسوية العقد عربي  </option>                
-                                                        <option value="H">  تسوية العقد إنجليزي  </option>                
-                                                        <option value="I">  ملفات التحميل عربي  </option>                
-                                                        <option value="J">  ملفات التحميل إنجليزي  </option>                
+                                                        id="ImagesSelector">
+                                                        <option value="A" selected> الإشعارات </option>
+                                                        <option value="C">   المستندات المالية </option>                
+                                                        <option value="E">   العقد  </option>                
+                                                        <option value="G">  شروط العقد </option>                            
+                                                        <option value="I">  ملفات التحميل   </option>                
                                                       </select>
                                                      
                                                     </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-12" style="height: 450px; overflow-y: scroll; overflow-x: hidden;">
                                                     <div class="row g-4  Images-section" id="AImages">
                                                         <div class="col-md-auto">
                                                             <div class="dropzone-Card">
@@ -377,7 +371,7 @@
                                                                     <input type="file" name="WhatsAppLogo" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">شعار واتساب الشركة</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">شعار واتساب </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -406,10 +400,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Stamp-out-town" class="drop-zone__input">
+                                                                    <input type="file" name="Card" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">ختم خارج المدينة</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">البطاقة</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -422,10 +416,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Payment-stamp" class="drop-zone__input">
+                                                                    <input type="file" name="OTP" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">ختم تسديد المبلغ</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP"> رمز التحقق   </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -438,173 +432,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Stamp-out-Country" class="drop-zone__input">
+                                                                    <input type="file" name="Location_Code" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">ختم خارج الدولة</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
- 
-                                                    </div>
-                                                    <div class="row g-4  Images-section" id="BImages">
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Draft-contract" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">مسودة عقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="contract" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-extension" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">تمديد عقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-endd-tomorrow" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد ينتهي غدًا</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-end-in-hours" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">ينتهي بعد ساعات </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-end" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">انتهاء العقد </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-close" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">إغلاق العقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-Cancel" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">إلغاء العقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-Save" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> حفظ العقد</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Contract-pend" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> تعليق العقد</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">رمز الموقع </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -669,74 +500,6 @@
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="snd-sarf" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">سند صرف</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                       
- 
-                                                    </div>
-                                                    <div class="row g-4  Images-section" id="DImages">
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-proforma-invoice" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">الفاتورة الأولية</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Actual-invoice" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">الفاتورة الفعلية</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-snd-qbd" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">سند قبض</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-snd-sarf" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
                                                                      <p class="text-center pt-1 mb-1 fileNameP">سند صرف</p>
@@ -868,10 +631,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Contract-terms-1" class="drop-zone__input">
+                                                                    <input type="file" name="Page8" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">بنود العقد 1</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 8 </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -884,10 +647,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Contract-terms-2" class="drop-zone__input">
+                                                                    <input type="file" name="Page9" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> بنود العقد 2 </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 9  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -900,29 +663,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Contract-terms-3" class="drop-zone__input">
+                                                                    <input type="file" name="Page10" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> بنود العقد 3 </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
- 
-                                                    </div>
-                                                    <div class="row g-4  Images-section" id="FImages">
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Page1" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 1</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 10  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -935,10 +679,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="En-Page2" class="drop-zone__input">
+                                                                    <input type="file" name="Page11" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 2</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 11  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -951,122 +695,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="En-Page3" class="drop-zone__input">
+                                                                    <input type="file" name="Page12" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 3</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Page4" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 4</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Page5" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 5</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Page6" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 6</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Page7" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 7</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Contract-terms-1" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">بنود العقد 1</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Contract-terms-2" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> بنود العقد 2 </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Contract-terms-3" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> بنود العقد 3 </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 12  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1082,10 +714,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Settlement" class="drop-zone__input">
+                                                                    <input type="file" name="Page1_Terms" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">التسوية</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 1 عربي</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1098,10 +730,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Expenses" class="drop-zone__input">
+                                                                    <input type="file" name="Page2_Terms" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">المصروفات</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 2 عربي </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1114,29 +746,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="Reparations" class="drop-zone__input">
+                                                                    <input type="file" name="Page3_Terms" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">التعويضات</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                      
-                                                    </div>
-                                                    <div class="row g-4  Images-section" id="HImages">
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="En-Settlement" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">التسوية</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 3 عربي </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1149,10 +762,10 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="En-Expenses" class="drop-zone__input">
+                                                                    <input type="file" name="Page4_Terms" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">المصروفات</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 1 إنجليزي </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1165,14 +778,29 @@
                                                                     <span class="drop-zone__prompt">
                                                                         <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
-                                                                    <input type="file" name="En-Reparations" class="drop-zone__input">
+                                                                    <input type="file" name="Page5_Terms" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">التعويضات</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 2 إنجليزي</p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                      
+                                                        <div class="col-md-auto">
+                                                            <div class="dropzone-Card">
+                                                                <div class="drop-zone">
+                                                                    <div class="layer" style="display: none;">
+                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
+                                                                    </div>
+                                                                    <span class="drop-zone__prompt">
+                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                    </span>
+                                                                    <input type="file" name="Page6_Terms" class="drop-zone__input">
+                                                                </div>
+                                                                <div class="fileNameDiv">
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 3 إنجليزي</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="row g-4  Images-section" id="IImages">
                                                         <div class="col-md-auto">
@@ -1187,12 +815,10 @@
                                                                     <input type="file" name="Daily" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">اليومية</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">اليومية عربي</p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row g-4  Images-section" id="JImages">
                                                         <div class="col-md-auto">
                                                             <div class="dropzone-Card">
                                                                 <div class="drop-zone">
@@ -1205,11 +831,12 @@
                                                                     <input type="file" name="En-Daily" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">اليومية</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">اليومية إنجيلزي</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                               
                                             </div>
