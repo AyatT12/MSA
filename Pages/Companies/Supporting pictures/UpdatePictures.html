@@ -15,7 +15,35 @@
     <link rel="stylesheet" href="../../../style/Layout.css">
     <link rel="stylesheet" href="../../../style/content.css">   
      <!-- <link rel="stylesheet" href="../../../style/english.css">   -->
+<style>
+    .ImagesScrolledDiv{
+        height: 450px; overflow-y: scroll; overflow-x: hidden;
+    }
+    .ImagesScrolledDiv::-webkit-scrollbar {
+    width: 7px !important;
+    height: 5px;
 
+  }
+      .ImagesScrolledDiv::-webkit-scrollbar-track {
+    background: rgba(230, 229, 228, 0.089);
+    border-radius: 5px;
+
+
+  }
+
+  .ImagesScrolledDiv::-webkit-scrollbar-thumb {
+    background: rgba(255, 150, 38, 0.40);
+    border-radius: 5px;
+
+
+  }
+
+  .ImagesScrolledDiv::-webkit-scrollbar-thumb:hover {
+    border-radius: 8px;
+    background: rgba(250, 136, 13, 0.4);
+
+  }
+</style>
 </head>
 
 <body>
@@ -325,7 +353,7 @@
                                                     </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12" style="height: 450px; overflow-y: scroll; overflow-x: hidden;">
+                                                <div class="col-md-12 ImagesScrolledDiv" >
                                                     <div class="row g-4  Images-section" id="AImages">
                                                         <div class="col-md-auto">
                                                             <div class="dropzone-Card">
