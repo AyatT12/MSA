@@ -21,12 +21,22 @@
             resize: none;
             width: 690px;
         }
-        .invaild{
-         height: 22px;
+
+        .invaild {
+            height: 22px;
         }
-        .was-validated :invalid~.invaild .invalid-feedback{
+
+        .was-validated :invalid~.invaild .invalid-feedback {
             margin-top: 0;
             padding-top: 5px;
+        }
+
+        @media (min-width: 1024px) {
+            .NewUpdate-container form {
+                height: 98%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
         }
     </style>
 </head>
@@ -605,10 +615,12 @@
                                                                         </div>
                                                                         <div class="col-md-auto">
                                                                             <input class="form-check-input custom"
-                                                                                type="checkbox" id="quarterly" name="quarterly"
-                                                                                value="quarterly" name="quarterly" />
+                                                                                type="checkbox" id="quarterly"
+                                                                                name="quarterly" value="quarterly"
+                                                                                name="quarterly" />
                                                                             <label class="form-check-label"
-                                                                                for="quarterly" name="quarterly">اصدار ربع سنوي </label>
+                                                                                for="quarterly" name="quarterly">اصدار
+                                                                                ربع سنوي </label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -621,7 +633,8 @@
                                                             <!-- Hidden Content Data -->
                                                             <div id="content-container">
                                                                 <main>
-                                                                    <div class="row NewContractContent gx-lg-2 gx-xxl-4 ">
+                                                                    <div
+                                                                        class="row NewContractContent gx-lg-2 gx-xxl-4 ">
                                                                         <div class="row">
                                                                             <div
                                                                                 class="col-lg-6 col-xxl-3 CarPriceInputCol">
@@ -684,7 +697,9 @@
                                                                                 <div class="row gx-2">
                                                                                     <div
                                                                                         class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="WhatsappService" class="form-label"> خدمة  الوتساب  </label>
+                                                                                        <label for="WhatsappService"
+                                                                                            class="form-label"> خدمة
+                                                                                            الوتساب </label>
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <input type="number"
@@ -693,7 +708,8 @@
                                                                                             name="WhatsappService"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div class="invalid-feedback">
+                                                                                            <div
+                                                                                                class="invalid-feedback">
                                                                                                 الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
@@ -835,8 +851,11 @@
                                                                                 <div class="row gx-2 PriceColumnRow">
                                                                                     <div
                                                                                         class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="TAXPercent" class="form-label"> نسبة الضريبة
-                                                                                             <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                                                        <label for="TAXPercent"
+                                                                                            class="form-label"> نسبة
+                                                                                            الضريبة
+                                                                                            <i
+                                                                                                class="fa-solid fa-star-of-life RequirdStar"></i>
                                                                                         </label>
                                                                                     </div>
                                                                                     <div class="col">
@@ -846,7 +865,8 @@
                                                                                             name="TAXPercent"
                                                                                             data-section="0" required>
                                                                                         <div class="invaild">
-                                                                                            <div class="invalid-feedback">
+                                                                                            <div
+                                                                                                class="invalid-feedback">
                                                                                                 الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
@@ -867,9 +887,11 @@
                                                                                             id="DiscountPercent"
                                                                                             class="form-control inputs number-input PriceInputs"
                                                                                             name="DiscountPercent"
-                                                                                            data-section="0" >
+                                                                                            data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div class="invalid-feedback">  الحقل مطلوب</div>
+                                                                                            <div
+                                                                                                class="invalid-feedback">
+                                                                                                الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
