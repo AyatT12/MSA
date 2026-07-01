@@ -21,6 +21,13 @@
             resize: none;
             width: 690px;
         }
+        .invaild{
+         height: 22px;
+        }
+        .was-validated :invalid~.invaild .invalid-feedback{
+            margin-top: 0;
+            padding-top: 5px;
+        }
     </style>
 </head>
 
@@ -551,8 +558,10 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-auto ">
-                                                                            <button type="button" id="verifyPhone"class="btn btn-standard"> 
-                                                                                <a href="#" style="text-decoration: none; color: inherit;">العقد</a>
+                                                                            <button type="button" id="verifyPhone"
+                                                                                class="btn btn-standard">
+                                                                                <a href="#"
+                                                                                    style="text-decoration: none; color: inherit;">العقد</a>
                                                                             </button>
                                                                         </div>
                                                                     </div>
@@ -596,35 +605,23 @@
                                                                         </div>
                                                                         <div class="col-md-auto">
                                                                             <input class="form-check-input custom"
-                                                                                type="radio" id="Stoped"
-                                                                                value="Stoped" />
+                                                                                type="checkbox" id="quarterly" name="quarterly"
+                                                                                value="quarterly" name="quarterly" />
                                                                             <label class="form-check-label"
-                                                                                for="Stoped">اصدار ربع سنوي </label>
+                                                                                for="quarterly" name="quarterly">اصدار ربع سنوي </label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
                                                             </div>
-                                                            <div class="col-md-auto">
-                                                                <div class="col-md-12 ">
-                                                                    <div class="CompanyLogoPreview">
-
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-12 CarsCountP">
-                                                                    <p class="CarsCountTitle">عدد السيارات </p>
-                                                                    <p class="CarsCount"></p>
-                                                                </div>
-                                                            </div>
-
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 d-flex flex-column flex-1 min-h-0 ">
-                                                        <div id="Price-content-display">
+                                                        <div id="NewContract-content-display">
                                                             <!-- Hidden Content Data -->
                                                             <div id="content-container">
                                                                 <main>
-                                                                    <div class="row CarPriceContent gx-lg-2 gx-xxl-4 ">
+                                                                    <div class="row NewContractContent gx-lg-2 gx-xxl-4 ">
                                                                         <div class="row">
                                                                             <div
                                                                                 class="col-lg-6 col-xxl-3 CarPriceInputCol">
@@ -687,11 +684,7 @@
                                                                                 <div class="row gx-2">
                                                                                     <div
                                                                                         class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="WhatsappService"
-                                                                                            class="form-label"> خدمة
-                                                                                            الوتساب
-                                                                                            <i
-                                                                                                class="fa-solid fa-star-of-life RequirdStar"></i></label>
+                                                                                        <label for="WhatsappService" class="form-label"> خدمة  الوتساب  </label>
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <input type="number"
@@ -700,10 +693,8 @@
                                                                                             name="WhatsappService"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -844,9 +835,8 @@
                                                                                 <div class="row gx-2 PriceColumnRow">
                                                                                     <div
                                                                                         class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="TAXPercent"
-                                                                                            class="form-label"> نسبة
-                                                                                            الضريبة
+                                                                                        <label for="TAXPercent" class="form-label"> نسبة الضريبة
+                                                                                             <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                                                         </label>
                                                                                     </div>
                                                                                     <div class="col">
@@ -856,10 +846,8 @@
                                                                                             name="TAXPercent"
                                                                                             data-section="0" required>
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب</div>
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -879,19 +867,14 @@
                                                                                             id="DiscountPercent"
                                                                                             class="form-control inputs number-input PriceInputs"
                                                                                             name="DiscountPercent"
-                                                                                            data-section="0" required>
+                                                                                            data-section="0" >
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب</div>
+                                                                                            <div class="invalid-feedback">  الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-
-
 
                                                                         <div class="col-md-12">
                                                                             <div class="row gx-2">
@@ -939,98 +922,97 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="../../../scripts/Scripts.js"></script>
         <!-- سكربت لعمل قائمة اختيارات السيارة  -->
-       <script>
-        const companies = [
-            { textAr: "شركة كدي لتأجير السيارات", value: "1700000003", image: "missing company logo.png", count: 115 },
-            { textAr: "شركة جبال السروات لتأجير السيارات", value: "1700000004", image: "missing company logo.png", count: 25 },
-            { textAr: "شركة طيبة لتأجير السيارات", value: "1700000005", image: "missing company logo.png", count: 300 },
-            { textAr: "شركة نفود القصيم لتأجير السيارات", value: "1700000006", image: "missing company logo.png", count: 200 }
-        ];
-        const isArabic = "ar-EG" != "en-US";
-        var listsIsTrueOrNotCompany = true;
-
- 
-                const dataLists = { Companies: companies };
+        <script>
+            const companies = [
+                { textAr: "شركة كدي لتأجير السيارات", value: "1700000003" },
+                { textAr: "شركة جبال السروات لتأجير السيارات", value: "1700000004" },
+                { textAr: "شركة طيبة لتأجير السيارات", value: "1700000005" },
+                { textAr: "شركة نفود القصيم لتأجير السيارات", value: "1700000006" }
+            ];
+            const isArabic = "ar-EG" != "en-US";
+            var listsIsTrueOrNotCompany = true;
 
 
-        function setupAutocomplete(inputId, list, dataList, errorElementId, listsIsTrueOrNot, validate) {
-            const $input = $("#" + inputId);
-            const autocompleteList = $("#" + list);
+            const dataLists = { Companies: companies };
 
-            const $arrow = $('<div class="autocomplete-arrow"></div>');
-            $('body').append($arrow);
-            // 
-            function detectDirection() {
+            function setupAutocomplete(inputId, list, dataList, errorElementId, listsIsTrueOrNot, validate) {
+                const $input = $("#" + inputId);
+                const autocompleteList = $("#" + list);
+
+                const $arrow = $('<div class="autocomplete-arrow"></div>');
+                $('body').append($arrow);
+                // 
+                function detectDirection() {
                     const bodyStyle = window.getComputedStyle(document.body);
                     const htmlStyle = window.getComputedStyle(document.documentElement);
                     if (bodyStyle.direction === 'rtl' || htmlStyle.direction === 'rtl' ||
                         $('body').hasClass('rtl') || $('html').hasClass('rtl')) return 'rtl';
                     return 'ltr';
-            }
-
-            const isRTL = detectDirection() === 'rtl';
-            // 
-            function getMaxItemWidth(items) {
-                let maxWidth = 200;
-                const tempDiv = $('<div>').css({
-                    'position': 'absolute', 'visibility': 'hidden',
-                    'white-space': 'nowrap', 'font-size': '1rem',
-                    'font-family': 'inherit', 'padding': '8px 12px'
-                }).appendTo('body');
-                items.forEach(item => {
-                    tempDiv.text(item);
-                    const width = tempDiv.outerWidth();
-                    if (width > maxWidth) maxWidth = width;
-                });
-                tempDiv.remove();
-                const isMobile = window.innerWidth < 768;
-                let finalWidth = maxWidth + 30;
-                if (isMobile) finalWidth = Math.min(Math.max(finalWidth, 150), 250);
-                return finalWidth;
-            }
-
-            function updateAutocompletePosition() {
-                if (autocompleteList.is(":visible")) {
-                    const inputRect = $input[0].getBoundingClientRect();
-                    const viewportWidth = window.innerWidth;
-                    const visibleItems = autocompleteList.find('div').toArray().map(div => div.textContent);
-                    const calculatedWidth = getMaxItemWidth(visibleItems);
-                    const realWidth = autocompleteList[0].getBoundingClientRect().width;
-                    autocompleteList.css('width', calculatedWidth + 'px');
-                    const inputWidth = inputRect.width;
-        
-                    let leftPosition;
-                    if (isRTL) {
-                                leftPosition = inputRect.right - (inputWidth + realWidth);
-                               if (leftPosition < 10) leftPosition = 10;
-                            } else {
-                                leftPosition = inputRect.right;
-                                if (leftPosition < 10) leftPosition = 10;
-                                if (leftPosition + inputWidth > viewportWidth - 10) {
-                                    leftPosition = viewportWidth - inputWidth - 10;
-                                }
-                            }
-
-                    const dataContainer = $input.closest('.Data-container')[0] || document.body;
-                    const containerRect = dataContainer.getBoundingClientRect();
-
-                    autocompleteList.css({
-                        'position': 'fixed',
-                        'top': containerRect.top + 'px',
-                        'left': leftPosition + 'px',
-                        'height': (containerRect.bottom - containerRect.top) + 'px',
-                        'max-height': (containerRect.bottom - containerRect.top) + 'px',
-                        'overflow-y': 'auto'
-                    });
-                    updateArrowPosition();
                 }
-            }
 
-            function updateArrowPosition() {
-                const listRect = autocompleteList[0].getBoundingClientRect();
-                const inputRect = $input[0].getBoundingClientRect();
-                const inputMidY = inputRect.top + inputRect.height / 2;
-               let arrowStyle = {
+                const isRTL = detectDirection() === 'rtl';
+                // 
+                function getMaxItemWidth(items) {
+                    let maxWidth = 200;
+                    const tempDiv = $('<div>').css({
+                        'position': 'absolute', 'visibility': 'hidden',
+                        'white-space': 'nowrap', 'font-size': '1rem',
+                        'font-family': 'inherit', 'padding': '8px 12px'
+                    }).appendTo('body');
+                    items.forEach(item => {
+                        tempDiv.text(item);
+                        const width = tempDiv.outerWidth();
+                        if (width > maxWidth) maxWidth = width;
+                    });
+                    tempDiv.remove();
+                    const isMobile = window.innerWidth < 768;
+                    let finalWidth = maxWidth + 30;
+                    if (isMobile) finalWidth = Math.min(Math.max(finalWidth, 150), 250);
+                    return finalWidth;
+                }
+
+                function updateAutocompletePosition() {
+                    if (autocompleteList.is(":visible")) {
+                        const inputRect = $input[0].getBoundingClientRect();
+                        const viewportWidth = window.innerWidth;
+                        const visibleItems = autocompleteList.find('div').toArray().map(div => div.textContent);
+                        const calculatedWidth = getMaxItemWidth(visibleItems);
+                        const realWidth = autocompleteList[0].getBoundingClientRect().width;
+                        autocompleteList.css('width', calculatedWidth + 'px');
+                        const inputWidth = inputRect.width;
+
+                        let leftPosition;
+                        if (isRTL) {
+                            leftPosition = inputRect.right - (inputWidth + realWidth);
+                            if (leftPosition < 10) leftPosition = 10;
+                        } else {
+                            leftPosition = inputRect.right;
+                            if (leftPosition < 10) leftPosition = 10;
+                            if (leftPosition + inputWidth > viewportWidth - 10) {
+                                leftPosition = viewportWidth - inputWidth - 10;
+                            }
+                        }
+
+                        const dataContainer = $input.closest('.Data-container')[0] || document.body;
+                        const containerRect = dataContainer.getBoundingClientRect();
+
+                        autocompleteList.css({
+                            'position': 'fixed',
+                            'top': containerRect.top + 'px',
+                            'left': leftPosition + 'px',
+                            'height': (containerRect.bottom - containerRect.top) + 'px',
+                            'max-height': (containerRect.bottom - containerRect.top) + 'px',
+                            'overflow-y': 'auto'
+                        });
+                        updateArrowPosition();
+                    }
+                }
+
+                function updateArrowPosition() {
+                    const listRect = autocompleteList[0].getBoundingClientRect();
+                    const inputRect = $input[0].getBoundingClientRect();
+                    const inputMidY = inputRect.top + inputRect.height / 2;
+                    let arrowStyle = {
                         'position': 'fixed', 'z-index': '10001', 'display': 'block',
                         'pointer-events': 'none', 'top': (inputMidY - 8) + 'px'
                     };
@@ -1048,153 +1030,153 @@
                     arrowStyle['border-top'] = '8px solid transparent';
 
                     $arrow.css(arrowStyle);
-            }
-               
-            $(".hidden-input-row").on("scroll.autocomplete_" + inputId, function () {
-                autocompleteList.empty().hide();
-                $arrow.hide();
-            });
-            
-            $input.on("input", function () {
-                const value = this.value.trim().toLowerCase();
-                autocompleteList.empty();
-
-                if (validate) {
-                    $("#" + inputId + "-code").val('');
-                    $("#" + errorElementId).text('');
-                } else {
-                    $("#" + errorElementId).text("");
-                    window[listsIsTrueOrNot] = true;
                 }
 
-                if (value === "") {
-                    dataList.forEach(item => {
-                        const textToDisplay = isArabic ? item.textAr : item.textEn;
-                        autocompleteList.append(`<div data-value="${item.value}">${textToDisplay}</div>`);
-                    });
-                    autocompleteList.show();
-                    setTimeout(() => {
-                        updateAutocompletePosition();
-                        autocompleteList.find('div').first().addClass('active');
-                    }, 10);
-                    return;
-                }
-
-                let matchesFound = false;
-                dataList.forEach(item => {
-                    const textToDisplay = isArabic ? item.textAr : item.textEn;
-                    const textToShowOtherLang = isArabic ? item.textEn : item.textAr;
-                    if (textToDisplay.toLowerCase().includes(value)) {
-                        autocompleteList.append(
-                            `<div data-value="${item.value}" data-other-lang="${textToShowOtherLang}">${textToDisplay}</div>`
-                        );
-                        matchesFound = true;
-                    }
-                });
-
-                if (matchesFound) {
-                    autocompleteList.show();
-                    setTimeout(() => {
-                        updateAutocompletePosition();
-                        autocompleteList.find('div').first().addClass('active');
-                    }, 10);
-                } else {
-                    autocompleteList.hide();
-                    $arrow.hide();
-                }
-            });
-
-            $(document).on("click", "#" + list + " div", function () {
-                const selectedText = $(this).text();
-                const selectedValue = $(this).data("value");
-                const otherLangText = $(this).data("other-lang");
-
-                $input.val(selectedText);
-                $("#" + inputId + "-code").val(selectedValue);
-                $input.attr('data-other-lang', otherLangText);
-
-                const matchedItem = dataList.find(item =>
-                    item.textAr === selectedText || item.textEn === selectedText
-                );
-
-                if (validate) {
-                    if (matchedItem) {
-                        $("#" + inputId + "-code").val(matchedItem.value);
-                        $("#" + errorElementId).text('');
-                        window[listsIsTrueOrNot] = true;
-                    } else {
-                        $("#" + errorElementId).text("الحقل مطلوب");
-                        $("#" + inputId + "-code").val("");
-                        window[listsIsTrueOrNot] = false;
-                    }
-                }
-
-                autocompleteList.empty().hide();
-                $arrow.hide();
-                $input.focus();
-            });
-
-            $(document).on("click", function (e) {
-                if (!$(e.target).closest("#" + list + ", #" + inputId).length) {
+                $(".hidden-input-row").on("scroll.autocomplete_" + inputId, function () {
                     autocompleteList.empty().hide();
                     $arrow.hide();
-                }
-            });
+                });
 
-            if (validate) {
-                $input.on("blur keypress", function (e) {
-                    if (e.type === "blur" || (e.type === "keypress" && e.which === 13)) {
-                        const inputValue = $(this).val().trim().toLowerCase();
+                $input.on("input", function () {
+                    const value = this.value.trim().toLowerCase();
+                    autocompleteList.empty();
 
-                        const matchedItem = dataList.find(item =>
-                            (item.textAr && item.textAr.toLowerCase() === inputValue) ||
-                            (item.textEn && item.textEn.toLowerCase() === inputValue)
-                        );
+                    if (validate) {
+                        $("#" + inputId + "-code").val('');
+                        $("#" + errorElementId).text('');
+                    } else {
+                        $("#" + errorElementId).text("");
+                        window[listsIsTrueOrNot] = true;
+                    }
 
+                    if (value === "") {
+                        dataList.forEach(item => {
+                            const textToDisplay = isArabic ? item.textAr : item.textEn;
+                            autocompleteList.append(`<div data-value="${item.value}">${textToDisplay}</div>`);
+                        });
+                        autocompleteList.show();
+                        setTimeout(() => {
+                            updateAutocompletePosition();
+                            autocompleteList.find('div').first().addClass('active');
+                        }, 10);
+                        return;
+                    }
+
+                    let matchesFound = false;
+                    dataList.forEach(item => {
+                        const textToDisplay = isArabic ? item.textAr : item.textEn;
+                        const textToShowOtherLang = isArabic ? item.textEn : item.textAr;
+                        if (textToDisplay.toLowerCase().includes(value)) {
+                            autocompleteList.append(
+                                `<div data-value="${item.value}" data-other-lang="${textToShowOtherLang}">${textToDisplay}</div>`
+                            );
+                            matchesFound = true;
+                        }
+                    });
+
+                    if (matchesFound) {
+                        autocompleteList.show();
+                        setTimeout(() => {
+                            updateAutocompletePosition();
+                            autocompleteList.find('div').first().addClass('active');
+                        }, 10);
+                    } else {
+                        autocompleteList.hide();
+                        $arrow.hide();
+                    }
+                });
+
+                $(document).on("click", "#" + list + " div", function () {
+                    const selectedText = $(this).text();
+                    const selectedValue = $(this).data("value");
+                    const otherLangText = $(this).data("other-lang");
+
+                    $input.val(selectedText);
+                    $("#" + inputId + "-code").val(selectedValue);
+                    $input.attr('data-other-lang', otherLangText);
+
+                    const matchedItem = dataList.find(item =>
+                        item.textAr === selectedText || item.textEn === selectedText
+                    );
+
+                    if (validate) {
                         if (matchedItem) {
-                            const selectedText = isArabic ? matchedItem.textAr : matchedItem.textEn;
-                            const otherLangText = isArabic ? matchedItem.textEn : matchedItem.textAr;
-                            $(this).val(selectedText);
                             $("#" + inputId + "-code").val(matchedItem.value);
-                            $(this).attr('data-other-lang', otherLangText);
                             $("#" + errorElementId).text('');
                             window[listsIsTrueOrNot] = true;
                         } else {
-                            if ($(this).val().trim() !== "") {
-                                $("#" + errorElementId).text("الحقل مطلوب");
-                                $("#" + inputId + "-code").val("");
-                                window[listsIsTrueOrNot] = false;
+                            $("#" + errorElementId).text("الحقل مطلوب");
+                            $("#" + inputId + "-code").val("");
+                            window[listsIsTrueOrNot] = false;
+                        }
+                    }
+
+                    autocompleteList.empty().hide();
+                    $arrow.hide();
+                    $input.focus();
+                });
+
+                $(document).on("click", function (e) {
+                    if (!$(e.target).closest("#" + list + ", #" + inputId).length) {
+                        autocompleteList.empty().hide();
+                        $arrow.hide();
+                    }
+                });
+
+                if (validate) {
+                    $input.on("blur keypress", function (e) {
+                        if (e.type === "blur" || (e.type === "keypress" && e.which === 13)) {
+                            const inputValue = $(this).val().trim().toLowerCase();
+
+                            const matchedItem = dataList.find(item =>
+                                (item.textAr && item.textAr.toLowerCase() === inputValue) ||
+                                (item.textEn && item.textEn.toLowerCase() === inputValue)
+                            );
+
+                            if (matchedItem) {
+                                const selectedText = isArabic ? matchedItem.textAr : matchedItem.textEn;
+                                const otherLangText = isArabic ? matchedItem.textEn : matchedItem.textAr;
+                                $(this).val(selectedText);
+                                $("#" + inputId + "-code").val(matchedItem.value);
+                                $(this).attr('data-other-lang', otherLangText);
+                                $("#" + errorElementId).text('');
+                                window[listsIsTrueOrNot] = true;
+                            } else {
+                                if ($(this).val().trim() !== "") {
+                                    $("#" + errorElementId).text("الحقل مطلوب");
+                                    $("#" + inputId + "-code").val("");
+                                    window[listsIsTrueOrNot] = false;
+                                }
                             }
                         }
-                    }
-                });
-            } else {
-                $input.on("blur keypress", function (e) {
-                    if (e.type === "blur" || (e.type === "keypress" && e.which === 13)) {
-                        const inputValue = $(this).val();
-                        const matchedItem = dataList.find(item =>
-                            (item.textAr && item.textAr === inputValue) ||
-                            (item.textEn && item.textEn === inputValue)
-                        );
-                        if (matchedItem) {
-                            $("#" + inputId + "-code").val(matchedItem.value);
-                            $("#" + errorElementId).text('');
-                            window[listsIsTrueOrNot] = true;
-                        } else {
-                            $("#" + inputId + "-code").val("");
-                            $input.attr('data-other-lang', "");
+                    });
+                } else {
+                    $input.on("blur keypress", function (e) {
+                        if (e.type === "blur" || (e.type === "keypress" && e.which === 13)) {
+                            const inputValue = $(this).val();
+                            const matchedItem = dataList.find(item =>
+                                (item.textAr && item.textAr === inputValue) ||
+                                (item.textEn && item.textEn === inputValue)
+                            );
+                            if (matchedItem) {
+                                $("#" + inputId + "-code").val(matchedItem.value);
+                                $("#" + errorElementId).text('');
+                                window[listsIsTrueOrNot] = true;
+                            } else {
+                                $("#" + inputId + "-code").val("");
+                                $input.attr('data-other-lang', "");
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
-        }
-        
-        $(document).ready(function () {
-  setupAutocomplete("CompanyName", "autocomplete-Companies", dataLists.Companies, "CompanyName-error", "companyValid", true)
-           });
 
-    
-    </script>
+            $(document).ready(function () {
+                setupAutocomplete("CompanyName", "autocomplete-Companies", dataLists.Companies, "CompanyName-error", "companyValid", true)
+            });
+
+
+        </script>
 </body>
 
 </html>
