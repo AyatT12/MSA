@@ -16,10 +16,16 @@
     <link rel="stylesheet" href="../../../style/content.css">
     <!-- <link rel="stylesheet" href="../../../style/english.css">  -->
     <style>
+        html , body{
+            overflow-x: hidden;
+        }
+        .NewContractContent .row{
+            width: 100%;
+        }
         .textarea-inputs {
             margin-top: 7px;
             resize: none;
-            width: 690px;
+            max-width: 690px;
         }
 
         .invaild {
@@ -36,6 +42,11 @@
                 height: 98%;
                 overflow-y: scroll;
                 overflow-x: hidden;
+            }
+        }
+         @media (min-width: 992px) {
+            .NewContractInputs{
+              width:200px
             }
         }
     </style>
@@ -541,10 +552,9 @@
                                                             <div class="col">
                                                                 <div class="row">
                                                                     <div class="row ">
-                                                                        <div class="col-xl-9">
+                                                                        <div class="col-md-8">
                                                                             <div class="row">
-                                                                                <div
-                                                                                    class="col-md-auto centered-input-label">
+                                                                                <div class="col-md-auto centered-input-label">
                                                                                     <label for="CompanyName"
                                                                                         class="form-label">
                                                                                         الشركة
@@ -576,12 +586,11 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="row my-1 gy-2 align-items-center">
-                                                                        <div class="col-xl-9">
+                                                                        <div class="col-md-8">
                                                                             <div class="row">
                                                                                 <div class="col">
                                                                                     <div class="row  gx-2 gy-1">
-                                                                                        <div
-                                                                                            class="col-md-auto centered-input-label">
+                                                                                        <div class="col-md-auto centered-input-label">
                                                                                             <label for="start-date"
                                                                                                 class="form-label m-0">بدايته</label>
                                                                                         </div>
@@ -596,8 +605,7 @@
                                                                                 </div>
                                                                                 <div class="col">
                                                                                     <div class="row  gx-2 gy-1">
-                                                                                        <div
-                                                                                            class="col-md-auto centered-input-label">
+                                                                                        <div class="col-md-auto centered-input-label">
                                                                                             <label for="End-date"
                                                                                                 class="form-label m-0">
                                                                                                 نهايته</label>
@@ -633,43 +641,52 @@
                                                             <!-- Hidden Content Data -->
                                                             <div id="content-container">
                                                                 <main>
-                                                                    <div
-                                                                        class="row NewContractContent gx-lg-2 gx-xxl-4 ">
+                                                                    <div class="NewContractContent">
                                                                         <div class="row">
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="CarValueByMonth"
-                                                                                            class="form-label"> قيمة
-                                                                                            السيارة بالشهر
-                                                                                            <i
-                                                                                                class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
+                                                                                        <label for="CarValueByMonth" class="form-label"> قيمة السيارة بالشهر
+                                                                                            <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                                                         </label>
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="CarValueByMonth"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="CarValueByMonth"
                                                                                             data-section="0" required>
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب
+                                                                                         <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="ConnectFee"
+                                                                            <div  class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
+                                                                                        <label for="Branchfee" class="form-label"> رسوم الفرع الواحد</label>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <input type="number"
+                                                                                            id="Branchfee"
+                                                                                            class="form-control inputs number-input NewContractInputs"
+                                                                                            name="Branchfee"
+                                                                                            data-section="0">
+                                                                                        <div class="invaild">
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div  class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
+                                                                                        <label for="Branchfee"
                                                                                             class="form-label">رسوم
                                                                                             الربط التقني الواحد
                                                                                         </label>
@@ -677,14 +694,12 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="ConnectFee"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="ConnectFee"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -692,11 +707,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="WhatsappService"
                                                                                             class="form-label"> خدمة
                                                                                             الوتساب </label>
@@ -704,23 +717,20 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="WhatsappService"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="WhatsappService"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
+                                                                                            <div class="invalid-feedback">
                                                                                                 الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="EmailService"
                                                                                             class="form-label"> خدمة
                                                                                             البريدالالكتروني</label>
@@ -728,39 +738,31 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="EmailService"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="EmailService"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
-                                                                                        <label for="smsFee"
-                                                                                            class="form-label"> رسوم
-                                                                                            الرسائل النصية الواحدة
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
+                                                                                        <label for="smsFee"  class="form-label"> رسوم الرسالة النصية 
                                                                                         </label>
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <input type="number" id="smsFee"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="smsFee"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -768,11 +770,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2 PriceColumnRow">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="AdminstrationFees"
                                                                                             class="form-label"> رسوم
                                                                                             إدارية
@@ -781,23 +781,19 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="AdminstrationFees"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="AdminstrationFees"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب</div>
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2 PriceColumnRow">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="GovernationFees"
                                                                                             class="form-label"> رسوم
                                                                                             حكومية
@@ -806,23 +802,19 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="GovernationFees"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="GovernationFees"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب</div>
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2 PriceColumnRow">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="AnotherFee"
                                                                                             class="form-label"> رسوم
                                                                                             اخرى
@@ -831,14 +823,12 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="AnotherFee"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="AnotherFee"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
-                                                                                                الحقل
-                                                                                                مطلوب</div>
+                                                                                            <div class="invalid-feedback">
+                                                                                                الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -846,37 +836,31 @@
 
                                                                         </div>
                                                                         <div class="row">
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2 PriceColumnRow">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="TAXPercent"
                                                                                             class="form-label"> نسبة
                                                                                             الضريبة
-                                                                                            <i
-                                                                                                class="fa-solid fa-star-of-life RequirdStar"></i>
+                                                                                            <i class="fa-solid fa-star-of-life RequirdStar"></i>
                                                                                         </label>
                                                                                     </div>
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="TAXPercent"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="TAXPercent"
                                                                                             data-section="0" required>
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
+                                                                                            <div class="invalid-feedback">
                                                                                                 الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-lg-6 col-xxl-3 CarPriceInputCol">
-                                                                                <div class="row gx-2 PriceColumnRow">
-                                                                                    <div
-                                                                                        class="col-lg-12 centered-input-label PriceInputsLabel">
+                                                                            <div class="col-lg-auto ContractInputCol">
+                                                                                <div class="row flex-column gx-2">
+                                                                                    <div class="col-lg-auto centered-input-label">
                                                                                         <label for="DiscountPercent"
                                                                                             class="form-label"> نسبة
                                                                                             الخصم
@@ -885,33 +869,31 @@
                                                                                     <div class="col">
                                                                                         <input type="number"
                                                                                             id="DiscountPercent"
-                                                                                            class="form-control inputs number-input PriceInputs"
+                                                                                            class="form-control inputs number-input NewContractInputs"
                                                                                             name="DiscountPercent"
                                                                                             data-section="0">
                                                                                         <div class="invaild">
-                                                                                            <div
-                                                                                                class="invalid-feedback">
+                                                                                            <div class="invalid-feedback">
                                                                                                 الحقل مطلوب</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-
-                                                                        <div class="col-md-12">
-                                                                            <div class="row gx-2">
-                                                                                <div
-                                                                                    class="col-lg-12 d-flex align-items-center centered-input-label">
+                                                                            <div class="col-md-12">
+                                                                            <div class="row flex-column gx-2">
+                                                                                <div class="col-lg-12 d-flex align-items-center centered-input-label">
                                                                                     <label for="notes">الملاحظات</label>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="col d-flex justify-content-start">
+                                                                                <div class="col d-flex justify-content-start">
                                                                                     <input type="text" id="notes"
                                                                                         class="form-control textarea-inputs"
                                                                                         name="notes">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        </div>
+
+                                                                        
                                                                     </div>
                                                                 </main>
                                                             </div>
