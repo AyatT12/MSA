@@ -19,16 +19,15 @@
 </head>
 
 <body>
-    <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
-        <!-- Top Navbar -->
+       <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
+         <!-- Top Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="nav-container container-fluid">
                 <!-- Company Logo -->
                 <div class="navbar-brand d-flex align-items-center gap-4">
-                    <a href="../../../index.html" class="Company-Logo"><img src="../../../images/C 1.svg"
-                            alt="Company Logo" class="Company-Logo-img"></a>
+                    <a data-bs-target="#" class="Company-Logo"><img src="../../../images/Static/GyoumLogo.svg" alt="Company Logo" class="Company-Logo-img"></a>
                     <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
                 </div>
 
                 <!-- User Information -->
@@ -36,40 +35,42 @@
                     <div class="d-flex">
                         <div class="navbar-nav">
                             <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="ms-2  text-start">
-                                        <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                        <p class="m-0">مشرف علي الفروع</p>
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2" data-bs-target="#"
+                                    id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
                                     </div>
-                                    <img src="../../../images/pic (3).svg" alt="User Avatar"
+                                    <img src="../../../images/Demo/Employee_Picture.svg" alt="User Avatar"
                                         class="rounded-circle User-Avatar">
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="../../../Pages/Account/Account.html">حسابي <img
-                                                src="../../../images/Frame (2).svg" /></a></li>
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/Account.html">حسابي
+                                            <img src="images/Static/Topbar/AccountNavIcon.svg" /></a></li>
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img
-                                                src="../../../images/Frame (1).svg" /></a></li>
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/NewPassword.html">تغيير
+                                            كلمة السر <img src="images/Static/Topbar/PasswordNavIcon.svg" /></a>
+                                    </li>
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="https://ayatt12.github.io/test-page/"> الأنظمه <img
-                                                src="../../../images/Frame (3).svg" /></a></li>
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item userDropdown-options "
-                                            href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img
-                                                class="logout" src="../../../images/Frame (4).svg" /></a></li>
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout" src="images/Static/Topbar/LogoutNavIcon.svg" /></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center" style="gap:15px">
+                    <div class="d-flex align-items-center">
                         <div class="col lang-button-col">
                             <input type="checkbox" id="myCheckbox" class="d-none">
-                            <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
                         </div>
                     </div>
 
@@ -77,323 +78,238 @@
 
             </div>
         </nav>
-        <!-- top nav end -->
-        <div class="container-fluid h-100 main-container-fluid">
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                   <!-- Sidebar -->
-                   <nav class="sidebar close">
-                    <header>
-                        <i class='bx bx-chevron-right toggle'></i>
-                    </header>
-
-                    <div class="menu-bar">
-                        <div class="menu">
-                            <ul class="menu-links">
-                                <li class="nav-link" >
-                                    <a>
-                                        <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
-                                    </a>
-                                </li>
-                                 <div id="company-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                     <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                     <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                </div>
-                               </div>
-                               <li class="nav-link">
-                                <a>
-                                    <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
-                                </a>
-                            </li>
-                            <div id="Bnan-list-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href=""> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                </div>
-                            </div>
-                               <li class="nav-link">
-                                <a >
-                                    <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
-                                </a>
-                            </li>
-                            <div id="tenant-list-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                </div>
-                            </div>
-                            <li class="nav-link">
-                                <a >
-                                    <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
-                                </a>
-                            </li>
-                            <div id="reports-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                </div>
-                            </div>
-                            <li class="nav-link">
-                                <a >
-                                    <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
-                                </a>
-                            </li>
-                            <div id="stat-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href=""> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href=""> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href=""> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href=""> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                </div>
-                            </div>
-                            <li class="nav-link">
-                                <a >
-                                    <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
-                                </a>
-                            </li>
-                            <div id="employes-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                </div>
-                            </div>
-                               <li class="nav-link">
-                                <a >
-                                    <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                    <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
-                                </a>
-                            </li>
-                            <div id="tenant-items" class="collapse" >
-                                <div class="bg-white gap-3 collapse-inner rounded">
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                </div>
-                               </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
-                                    </a>
-                                </li>
-                                <div id="Cars-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html">  التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                    </div>
-                                   </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
-                                    </a>
-                                </li>
-                                <div id="Mail-items" class="collapse" >
-                                   <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-    
-                                    </div>
-                                   </div>
-                                <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
-                                    </a>
-                                </li>
-                                <div id="Financial-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                      
-                                    </div>
-                                   </div>
-   
-                                   <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
-                                    </a>
-                                </li>
-                                <div id="Contract-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                         <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-                                    </div>
-                                </div>
-
-                                <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
-                                    </a>
-                                </li>
-                                <div id="services-items" class="collapse" >
-                                       <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item active" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        
-                                        <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        
-                                       
-                                    </div>
-                                   </div>
-                            
-
-                            </ul>
-                        </div>
-
-
-                    </div>
-
-                </nav>
+        <!-- Main Container -->
+        <div class="main-container">
+             <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
                 </div>
-                <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container NewUpdate-container">
-                        <form action="" class="needs-validation" novalidate>
-                            <div class="row mt-3 g-3">
+                 <div class="menu-bar">
+                            <div class="menu">
+                                <ul class="menu-links">
+                                    <li class="nav-link" >
+                                        <a>
+                                            <img src="../../../images/Static/Sidebar_icons/Comanies.svg"  data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
+                                        </a>
+                                    </li>
+                                    <div id="company-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Companies/companies_Invoices/CompaniesInvoices.html"> فواتير الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="" >  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item " href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item " href="../../../Pages/Companies/Messages/MessagesSent.html">  الرسائل المرسلة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9">
-                                        <div class="row g-3 my-2">
+                                    </div>
+                                   </div>
+                                   <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse" data-bs-target="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
+                                    </a>
+                                </li>
+                                <div id="Bnan-list-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Bnan/Service prices/Service prices.html">  أسعار الخدمات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                   <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/tenants.svg" data-bs-toggle="collapse" data-bs-target="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
+                                    </a>
+                                </li>
+                                <div id="tenant-list-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/reports.svg" data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
+                                    </a>
+                                </li>
+                                <div id="reports-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/statics.svg" data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
+                                    </a>
+                                </li>
+                                <div id="stat-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/employees.svg" data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
+                                    </a>
+                                </li>
+                                <div id="employes-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    </div>
+                                </div>
+                                
+                                   <li class="nav-link">
+                                    <a >
+                                        <img src="../../../images/Static/Sidebar_icons/tenants.svg" data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                    </a>
+                                </li>
+                                <div id="tenant-items" class="collapse" >
+                                    <div class="bg-white gap-3 collapse-inner rounded">
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                    </div>
+                                   </div>
+                                    <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse" data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
+                                        </a>
+                                    </li>
+                                    <div id="Cars-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html">  التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">   الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">  الزيوت  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">    الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات   <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان   <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                        </div>
+                                       </div>
+                                    <li class="nav-link">
+                                        <a >
+                                            <img src="../../../images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse" data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
+                                        </a>
+                                    </li>
+                                    <div id="Mail-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+        
+                                        </div>
+                                       </div>
+                                    <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse" data-bs-target="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
+                                        </a>
+                                    </li>
+                                    <div id="Financial-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                          
+                                        </div>
+                                       </div>
+       
+                                       <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/Static/Sidebar_icons/ContractIcon.svg" data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
+                                        </a>
+                                    </li>
+                                    <div id="Contract-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                    <li class="nav-link">
+                                        <a>
+                                            <img src="../../../images/Static/Sidebar_icons/services.svg" data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
+                                        </a>
+                                    </li>
+                                    <div id="services-items" class="collapse" >
+                                        <div class="bg-white gap-3 collapse-inner rounded">
+                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة   <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                            <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                           
+                                        </div>
+                                       </div>
+                                
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+            </aside>
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <div class="container d-flex flex-column InputsPageContainer">
+                    <div class="row flex-column min-h-0 flex-1 position-relative">
+                        <div class="col-xxl-9 Data-container ">
+                            <form class="ContentForm needs-validation" novalidate>
+                                <div class="row justify-content-center flex-1 min-h-0">
+                                    <div class="col-lg-12 d-flex flex-column h-100">
+                                        <div class="row my-2">
                                             <div class="col">
                                                 <h3> الربط التقني </h3>
                                             </div>
-                                            <div class="col-md-auto save-col">
-                                                <button type="submit" class="custom-img-btn"> <img
-                                                        src="../../../images/save.svg" /></button>
-                                            </div>
                                         </div>
-                                        <main class="mt-3 g-3">
+                                        <main class="mt-3 g-3 inputs-accordion-container">
                                             <div class="accordion inputs-accordion">
-                                                <div class=" inputs-accordion-item">
-                                                    <div class=" inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> <i
-                                                                class="fa-solid fa-check data-check"></i> هيئة النقل
-                                                        </span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
-                                                            stroke-width="3" stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
-                                                            <path d="m6 9 6 6 6-6" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="accordion-item-description-wrapper">
-                                                        <div class="accordion-item-description">
-                                                            <hr class="accordion-items-hr">
-                                                            <div class="container-fluid ">
-                                                                <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
-                                                                        <label for="Content-Type" class="form-label">
-                                                                            Content-Type </label>
-                                                                        <input type="text" id="Content-Type"
-                                                                            class="form-control inputs english-input"
-                                                                            name="Content-Type " maxlength="100"
-                                                                            required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="App-ID" class="form-label">
-                                                                            App-ID</label>
-                                                                        <input type="text" id="App-ID"
-                                                                            class="form-control inputs  english-input"
-                                                                            name="App-ID " maxlength="100" required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
-                                                                        <label for="App-Key" class="form-label"> App-Key
-                                                                        </label>
-                                                                        <input type="text" id="App-Key"
-                                                                            class="form-control inputs english-input"
-                                                                            name="App-Key " maxlength="100" required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="Authorization " class="form-label">
-                                                                            Authorization </label>
-                                                                        <input type="text" id="Authorization "
-                                                                            class="form-control inputs  english-input"
-                                                                            name="Authorization  " maxlength="100"
-                                                                            required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs-accordion-item">
+                                                 <div class="inputs-accordion-item">
                                                     <div class="inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> <i
-                                                                class="fa-solid fa-check data-check"></i> شموس
+                                                        <span class="accordion-item-header-title">
+                                                            البريد الالكتروني
                                                         </span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                                             viewBox="0 0 24 24" fill="none" stroke="#666666"
@@ -404,229 +320,341 @@
                                                         </svg>
                                                     </div>
                                                     <div class="accordion-item-description-wrapper">
+
                                                         <div class="accordion-item-description">
                                                             <hr class="accordion-items-hr">
-                                                            <div class="container-fluid ">
-                                                                <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
-                                                                        <label for="Content-Type-Shomoos"
-                                                                            class="form-label"> Content-Type </label>
-                                                                        <input type="text" id="Content-Type-Shomoos"
-                                                                            class="form-control inputs english-input"
-                                                                            name="Content-Type-Shomoos " maxlength="100"
-                                                                            required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
+
+                                                            <form id="emailConnectForm" method="post"
+                                                                action="/MAS/TechnicalConnectivity/ConnectEmail">
+                                                                <div class="container-fluid">
+                                                                    <div class="row mt-4">
+                                                                        <div
+                                                                            class="col-md-12 d-flex justify-content-end">
+                                                                            <button type="submit" class="custom-img-btn"
+                                                                                id="saveEmailBtn" style="display:none;">
+                                                                                <img  src="../../../images/Static/save (3).svg" />
+                                                                            </button>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="App-ID-Shomoos" class="form-label">
-                                                                            App-ID</label>
-                                                                        <input type="text" id="App-ID-Shomoos"
-                                                                            class="form-control inputs  english-input"
-                                                                            name="App-ID-Shomoos " maxlength="100"
-                                                                            required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                    <div class="row d-none">
+                                                                        <div class="col-md-12 mb-3">
+                                                                            <div
+                                                                                class="form-check form-switch d-flex gap-2 align-items-center">
+                                                                                <input
+                                                                                    class="form-check-input checkbox m-0"
+                                                                                    type="checkbox" role="switch"
+                                                                                    id="emailIsActiveCheckbox"
+                                                                                    data-val="true"
+                                                                                    data-val-required="The IsActive field is required."
+                                                                                    name="EmailSettings.IsActive"
+                                                                                    value="true">
+                                                                                <label class="form-check-label"
+                                                                                    for="emailIsActiveCheckbox">تفعيل</label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
-                                                                </div>
-                                                                <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
-                                                                        <label for="App-Key-Shomoos" class="form-label">
-                                                                            App-Key </label>
-                                                                        <input type="text" id="App-Key-Shomoos"
-                                                                            class="form-control inputs english-input"
-                                                                            name="App-Key-Shomoos " maxlength="100"
-                                                                            required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="Authorization-Shomoos "
-                                                                            class="form-label"> Authorization </label>
-                                                                        <input type="text" id="Authorization-Shomoos "
-                                                                            class="form-control inputs  english-input"
-                                                                            name="Authorization-Shomoos  "
-                                                                            maxlength="100" required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs-accordion-item">
-                                                    <div class="inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> <i
-                                                                class="fa-solid fa-check data-check"></i> رسائل نصية
-                                                        </span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
-                                                            stroke-width="3" stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
-                                                            <path d="m6 9 6 6 6-6" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="accordion-item-description-wrapper">
-                                                        <div class="accordion-item-description">
-                                                            <hr class="accordion-items-hr">
-                                                            <div class="container-fluid ">
-                                                                <div class="row techncal-connect-rows">
-                                                                    <div class="col-md-6">
-                                                                        <label for="UserName" class="form-label">User
-                                                                            Name </label>
-                                                                        <input type="text" id="UserName"
-                                                                            class="form-control inputs english-input"
-                                                                            name="UserName " maxlength="100" required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="API-Token " class="form-label">
-                                                                            API-Token </label>
-                                                                        <input type="text" id="API-Token "
-                                                                            class="form-control inputs  english-input"
-                                                                            name="API-Token  " maxlength="100" required>
-                                                                        <div class="invaild  techncal-connect-error   ">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs-accordion-item">
-                                                    <div class="inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> <i
-                                                                class="fa-solid fa-check data-check"></i> واتساب
-                                                        </span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
-                                                            stroke-width="3" stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
-                                                            <path d="m6 9 6 6 6-6" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="accordion-item-description-wrapper">
-                                                        <div class="accordion-item-description">
-                                                            <hr class="accordion-items-hr">
-                                                            <div class="container-fluid ">
-                                                                <div class="row techncal-connect-rows ">
-                                                                    <div class="col-md-7">
+                                                                    <div id="credentialStep" class="wizard-step">
                                                                         <div class="row">
-                                                                            <div class="col-md-10">
-                                                                                <label for="DeviceName-whatsapp"
-                                                                                    class="form-label">اسم الجهاز
-                                                                                </label>
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label" for="EmailSettings_Email">البريد الالكتروني</label>
+                                                                                 <input type="email" class="form-control inputs english-input valid" id="emailInput" maxlength="100" autocomplete="off" data-val="true" data-val-email="يجب ادخال ايميل صحيح" data-val-required="الحقل مطلوب" name="EmailSettings.Email" value="" fdprocessedid="zsiaf" aria-describedby="emailInput-error" aria-invalid="false">
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="EmailSettings.Email"
+                                                                                    data-valmsg-replace="true"></span>
+                                                                            </div>
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label" for="EmailSettings_PasswordOrToken">رمز / الرقم السري</label>
+                                                                                <div class="input-group">
+                                                                                    <input type="text" class="form-control inputs english-input" id="tokenInput" maxlength="30" oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '')" autocomplete="off" data-val="true" data-val-maxlength="هذا الحقل يلازم اقل من 30 خانة" data-val-maxlength-max="30" data-val-required="الحقل مطلوب" name="EmailSettings.PasswordOrToken" value="" fdprocessedid="">
+                                                                                    <button type="button"
+                                                                                        id="testConnectionBtn"
+                                                                                        onclick="handleEmailAjax(this, 'SendTestOtp')"
+                                                                                        class="btn btn-outline-secondary">
+                                                                                        <i
+                                                                                            class="fa-solid fa-flask-vial me-1"></i>
+                                                                                        <span
+                                                                                            class="button-text"></span>
+                                                                                        <span
+                                                                                            class="spinner-border spinner-border-sm"
+                                                                                            role="status"
+                                                                                            style="display: none;"></span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="otpStep" class="wizard-step"
+                                                                        style="display: none;">
+                                                                        <div class="row align-items-end g-3">
+                                                                            <div class="col-md-6">
+                                                                                <label class="form-label"
+                                                                                    for="EmailSettings_Otp"> رمز
+                                                                                    التحقق</label>
                                                                                 <input type="text"
-                                                                                    id="DeviceName-whatsapp"
                                                                                     class="form-control inputs"
-                                                                                    name="DeviceName-whatsapp"
-                                                                                    maxlength="100" required>
-                                                                                <div
-                                                                                    class="invaild ">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
+                                                                                    id="otpInput" placeholder=""
+                                                                                    maxlength="6"
+                                                                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                                                                    autocomplete="off"
+                                                                                    name="EmailSettings.Otp" value="">
+                                                                                <span id="otpError"
+                                                                                    class="text-danger"></span>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <button type="button" id="verifyOtpBtn"
+                                                                                    onclick="handleEmailAjax(this, 'VerifyOtp')"
+                                                                                    class="btn btn-success">
+                                                                                    <span
+                                                                                        class="button-text">تحقق</span>
+                                                                                    <span
+                                                                                        class="spinner-border spinner-border-sm"
+                                                                                        role="status"
+                                                                                        style="display: none;"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-text"></div>
+                                                                    </div>
+                                                                   <div class="col-md-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <label>الملاحظات</label>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col d-flex justify-content-start">
+                                                                                        <textarea
+                                                                                            class=" form-control textarea-inputs"
+                                                                                            rows="1" maxlength="100"
+                                                                                            id="Documentnotes"
+                                                                                            type="text"
+                                                                                            name="Reasons"></textarea>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                </div>
+                                                                <input name="__RequestVerificationToken" type="hidden"
+                                                                    value="CfDJ8EQ153K1ksdDnGurKHewhGViZPVMQd5j4XBThCZle3qGyy_y2AYMF15QniQYc2uFE_d6pzZOsCpJ5wiAw2jhyPZpXdM51QT2AZloC9tChhGw58NL9MQ9NYG65ps-j3FGDhy0lFOVjK4sHKskHwgI0IHNmzo0fH3DMHgH6f7BaY_tKFurAQ8PgYoDyuhjsXK0Sw" /><input
+                                                                    name="EmailSettings.IsActive" type="hidden"
+                                                                    value="false">
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--SMS Section-->
+                                                <div class="inputs-accordion-item">
+                                                    <div class="inputs-accordion-item-header">
+                                                        <span class="accordion-item-header-title">
+                                                            رسائل نصية
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
+                                                            <path d="m6 9 6 6 6-6" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="accordion-item-description-wrapper">
+                                                        <div class="accordion-item-description">
+                                                            <hr class="accordion-items-hr">
+
+                                                            <form id="smsConnectForm" method="post"
+                                                                style="overflow: hidden;"
+                                                                action="/MAS/TechnicalConnectivity/ConnectSms">
+
+                                                                <div class="container-fluid">
+                                                                    <div class="row flex-column-reverse">
                                                                         <div class="row">
-                                                                            <div class="col-md-10">
-                                                                                <label for="phone2" class="form-label"> الجوال 
-                                                                                </label>
-                                                                                <div class="input-group ">
-                                                                                    <input type="tel"
-                                                                                        class="form-control inputs tel-input"
-                                                                                        id="phone2" name="phone2" maxlength="20" required >
-                                                                                    <select
-                                                                                        class="input-group-text select-style counterCode"
-                                                                                        name="counterCode-phone2">
-                                                                                        <option value="+966">+966</option>
-                                                                                        <option value="+962">+962</option>
-                                                                                        <option value="+20">+20</option>
-                                                                                    </select>
-                                                                                    <div class="invaild">
-                                                                                        <div class="invalid-feedback">
-                                                                                            الحقل مطلوب
+
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label"
+                                                                                    for="SmsSettings_SenderName">اسم
+                                                                                    المرسل</label>
+                                                                               <input type="text" class="form-control inputs english-input" id="smsSenderNameInput" maxlength="11" autocomplete="off" data-val="true" data-val-maxlength="هذا الحقل يلزم 10 ارقام ويبدأ برقم 7" data-val-maxlength-max="11" name="SmsSettings.SenderName" value="" fdprocessedid="">
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="SmsSettings.SenderName"
+                                                                                    data-valmsg-replace="true"></span>
+                                                                            </div>
+
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label"
+                                                                                    for="SmsSettings_ApiToken">رمز
+                                                                                    API</label>
+                                                                                <div
+                                                                                    class="row align-items-start justify-content-center g-2">
+                                                                                    <div class="col">
+                                                                                        <input type="text"
+                                                                                            class="form-control inputs english-input"
+                                                                                            id="smsApiTokenInput"
+                                                                                            maxlength="200"
+                                                                                            autocomplete="off"
+                                                                                            data-val="true"
+                                                                                            data-val-maxlength="100"
+                                                                                            data-val-maxlength-max="200"
+                                                                                            name="SmsSettings.ApiToken"
+                                                                                            value="" />
+                                                                                    </div>
+                                                                                    <div class="col-auto">
+                                                                                        <button type="button"
+                                                                                            id="testSmsConnectionBtn"
+                                                                                            onclick="handleSmsAjax(this, 'TestSmsConnection')"
+                                                                                            class="btn btn-standard"
+                                                                                            disabled>
+                                                                                            <span
+                                                                                                class="button-text">تحقق</span>
+                                                                                            <span
+                                                                                                class="spinner-border spinner-border-sm"
+                                                                                                role="status"
+                                                                                                style="display:none;"></span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="SmsSettings.ApiToken"
+                                                                                    data-valmsg-replace="true"></span>
+                                                                            </div>
+
+                                                                            <div id="smsVerificationResult"
+                                                                                class="col-md-12 mb-3"
+                                                                                style="display:none;"></div>
+
+                                                                            <div class="col-md-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <label>الملاحظات</label>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col d-flex justify-content-start">
+                                                                                        <textarea
+                                                                                            class="form-control textarea-inputs"
+                                                                                            rows="1" maxlength="100"
+                                                                                            data-val="true"
+                                                                                            data-val-maxlength="100"
+                                                                                            data-val-maxlength-max="100"
+                                                                                            id="SmsSettings_Reasons"
+                                                                                            name="SmsSettings.Reasons">
+                                                                                        </textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <input name="__RequestVerificationToken" type="hidden"
+                                                                    value="CfDJ8EQ153K1ksdDnGurKHewhGViZPVMQd5j4XBThCZle3qGyy_y2AYMF15QniQYc2uFE_d6pzZOsCpJ5wiAw2jhyPZpXdM51QT2AZloC9tChhGw58NL9MQ9NYG65ps-j3FGDhy0lFOVjK4sHKskHwgI0IHNmzo0fH3DMHgH6f7BaY_tKFurAQ8PgYoDyuhjsXK0Sw" />
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                   <!--Whatsapp Section-->
+                                                <div class="inputs-accordion-item">
+                                                    <div class="inputs-accordion-item-header">
+                                                        <span class="accordion-item-header-title">
+                                                            واتساب
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                            viewBox="0 0 24 24" fill="none" stroke="#666666"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down accordion-item-header-icon">
+                                                            <path d="m6 9 6 6 6-6" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="accordion-item-description-wrapper">
+                                                        <div class="accordion-item-description">
+                                                            <hr class="accordion-items-hr">
+
+                                                            <div class="accordion-item-description-wrapper">
+                                                                <div class="accordion-item-description">
+                                                                    <form id="whatsappForm" style="overflow: hidden;">
+                                                                        <div class="container-fluid">
+                                                                            <h5 class="text-danger">تنبيه و إخلاء
+                                                                                مسئولية</h5>
+
+                                                                            <div class="row mx-1"
+                                                                                style="border: 2px  dashed #cccccc88; border-radius: 5px;">
+                                                                                <div class="whatsappWarninng col py-2">
+                                                                                    <!-- العنوان ورسائل التنبيه -->
+                                                                                    <p>يرجى ملاحظة ذلك " نظام **بنان**
+                                                                                        لإدارة شركات و مكاتب تأجير
+                                                                                        السيارات " لم يتم اعتماده بأي
+                                                                                        شكل من الاشكال من قبل شركة "
+                                                                                        Meta " </p>
+                                                                                    <p>المميزات المقدمة في هذه الخدمة
+                                                                                        ليست مخصصة لإرسال رسائل للأشخاص
+                                                                                        غير مرغوبة أو غير لائقة ، اذا
+                                                                                        قررت إساءة استخدام المميزات
+                                                                                        المقدمة ، فقد تعرض حسابك في
+                                                                                        الواتساب لخطر الحظر</p>
+                                                                                    <p>لذا ننصح باتباع التالي :-</p>
+
+                                                                                    <!-- قائمة النصائح -->
+                                                                                    <ul class="px-4">
+                                                                                        <li>استخدام الخدمة لإرسال
+                                                                                            الرسائل الضرورية فقط</li>
+                                                                                        <li>تجنب ارسال الرسائل الجماعية
+                                                                                            خلال السبعة أيام الأولى</li>
+                                                                                        <li>تجنب ارسال رسائل جماعية تزيد
+                                                                                            عن 50 رسالة في لحظه واحده
+                                                                                        </li>
+                                                                                        <li>تأكد أن الرسائل مثيرة
+                                                                                            للاهتمام و مفيدة للمستأجرين
+                                                                                        </li>
+                                                                                        <li>تجنب ارسال روابط خلال الفترة
+                                                                                            التجريبية</li>
+                                                                                    </ul>
+                                                                                </div>
+
+                                                                                <!-- منطقة الـ QR والتاريخ والوقت -->
+                                                                                <div class="col-lg-5 d-flex flex-column text-center py-2"
+                                                                                    style="min-height: 220px; border-radius: 5px; justify-content: center; align-items: center;"
+                                                                                    id="WhatsAppQR">
+                                                                                    <div
+                                                                                        class="row w-100 justify-content-center">
+                                                                                        <div class="col-auto">
+                                                                                            <p>التاريخ : <span
+                                                                                                    id="opDate"></span>
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-auto">
+                                                                                            <p>الوقت : <span
+                                                                                                    id="opTime"></span>
+                                                                                            </p>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-10">
-                                                                                <label for="API-Token-whatsapp"
-                                                                                    class="form-label"> رمز واجهة برمجة التطبيقات
-                                                                                </label>
-                                                                                <input type="text"
-                                                                                    id="API-Token-whatsapp"
-                                                                                    class="form-control inputs"
-                                                                                    name="API-Token-whatsapp"
-                                                                                    maxlength="100" required>
-                                                                                <div
-                                                                                    class="invaild">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
+                                                                                    <div class="d-flex align-items-center justify-content-center h-100"
+                                                                                        id="QRArea">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-lg-5 d-flex flex-column text-center"
-                                                                        style="min-height: 190px;">
-                                                                        <div class="d-flex align-items-center justify-content-center h-100"
-                                                                            id="QRArea">
-                                                                            <button type="button"
-                                                                                class="border-0 bg-transparent"
-                                                                                id="RegenerateQR"><img
-                                                                                    src="../../../images/qrcode 1.svg"></button>
-
-                                                                        </div>
-                                                                    </div>
+                                                                    </form>
                                                                 </div>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </main>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                        <a href="../../../index.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                            data-bs-custom-class="custom-tooltip" data-bs-title="العودة الي الرئيسية"
-                            class="new-Page-icon"><img src="../../../images/back to main.svg" alt="man"></a>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
+            </main>
         </div>
-
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -638,115 +666,407 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
+        <!--SMS-->
     <script>
-    let QRGenerated = true;
-    let QRScanned = false;
-    let Connected = false;
+        /**
+         * SMS Ajax Handler — نفس pattern الإيميل بالظبط
+         */
+        async function handleSmsAjax(btn, actionName) {
+            const form = document.getElementById('smsConnectForm') || btn.closest('form');
+            if (!form) return;
 
-function setupRegenerateButton() {
-    const QRArea = document.getElementById('QRArea');
+            const btnText = btn.querySelector('.button-text');
+            const btnSpinner = btn.querySelector('.spinner-border');
 
-    if (Connected) {
-        QRArea.innerHTML = `
-            <div class="col-auto d-flex gap-2 flex-column justify-content-center align-items-center">
-                <img src="../../../images/done.svg" style="width: 50px;">
-                <p>أنت متصل بالواتساب </p>
-                <button class="btn cut-connect-btn" type="button">قطع الاتصال </button>
-            </div>`;
+            btn.disabled = true;
+            if (btnText) btnText.style.display = 'none';
+            if (btnSpinner) btnSpinner.style.display = 'inline-block';
 
-        const cutConnectButton = QRArea.querySelector('.cut-connect-btn');
-        cutConnectButton.addEventListener("click", () => {
-            Connected = false;
-            QRGenerated = true;
-            QRScanned = true;
-            QRArea.innerHTML = `<span class="loader"></span>`;
-            setTimeout(() => {
-                setupRegenerateButton();   
-            }, 3000);
-        });
-    } else {
-        QRArea.innerHTML = `
-            <button type="button" class="border-0 bg-transparent" id="RegenerateQR">
-                <img src="../../../images/qrcode 1.svg">
-            </button>`;
+            try {
+                const url = `/MAS/TechnicalConnectivity/${actionName}`;
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                    }
+                });
 
-        const RegenerateQR = document.getElementById('RegenerateQR');
-        RegenerateQR.addEventListener("click", function () {
-            RegenerateQR.classList.add('d-none');
-            QRArea.innerHTML = `<span class="loader"></span>`;
+                if (!response.ok) throw new Error("Server Error");
 
-            setTimeout(() => {
-                if (QRGenerated) {
-                    startQRSteps(QRArea); 
+                const result = await response.json();
+
+                const verificationResult = document.getElementById('smsVerificationResult');
+
+                if (result.success) {
+                    toastr.success(result.message);
+
+                    // ✅ نفس فكرة الإيميل — اعرض رسالة نجاح وبعدين submit أوتوماتيك
+                    if (verificationResult) {
+                        verificationResult.innerHTML = `<div class="alert alert-success p-2">تم الاتصال بنجاح! البيانات المدخلة صحيحة.</div>`;
+                        verificationResult.style.display = 'block';
+                    }
+
+                    // أخفي زرار التحقق
+                    btn.style.display = 'none';
+
+                    // Submit أوتوماتيك بعد 800ms
+                    setTimeout(() => {
+                        form.submit();
+                    }, 1000);
+
                 } else {
-                    QRArea.innerHTML = `
-                        <button type="button" class="border-0 bg-transparent" id="RegenerateQR">
-                            <img src="../../../images/qrcode 1.svg">
-                        </button>`;
-                    QRGenerated = true;
-                    setupRegenerateButton();
+                    toastr.error(result.message);
+
+                    if (verificationResult) {
+                        verificationResult.innerHTML = `<div class="alert alert-danger p-2">فشل الاتصال. يرجى التحقق من البيانات المدخلة والمحاولة مرة أخرى.</div>`;
+                        verificationResult.style.display = 'block';
+                    }
+
+                    btn.disabled = false;
                 }
-            }, 1000);
-        });
-    }
-}
 
-function startQRSteps(QRArea) {
-    QRArea.innerHTML = `<span class="loader"></span>`; 
-    setTimeout(() => {
-          QRArea.innerHTML = `
-        <div class="col-auto d-flex flex-column justify-content-center align-items-center">
-            <img src="../../../images/qrcode 2.svg">
-            <br>
-            <p><img src="../../../images/Frame 2608853.svg"> مسح الرمز</p>
-        <div>`;
-
-    }, 3000);
-  
-    setTimeout(() => {
-        if (QRScanned) {
-            QRArea.innerHTML = `
-                <div class="row justify-content-center gap-2">
-                    <div class="col-auto"><img src="../../../images/whatsapp-icon.svg"></div>
-                    <div class="col-auto dots-div"><span class="loader2"></span></div>
-                    <div class="col-auto"><img src="../../../images/benan-icon.svg"></div>
-                    <p>...جارٍ ربط الشركة بالواتساب</p>
-                </div>`;
-
-            setTimeout(() => {
-                QRArea.innerHTML = `
-                    <div class="col-auto d-flex gap-2 flex-column justify-content-center align-items-center">
-                        <img src="../../../images/done.svg" style="width: 50px;">
-                        <p>أنت الآن متصل بالواتساب </p>
-                    </div>`;
-            }, 3000);
-
-            setTimeout(() => {
-                QRArea.innerHTML = `
-                    <div class="col-auto d-flex gap-2 flex-column justify-content-center align-items-center">
-                        <img src="../../../images/done.svg" style="width: 50px;">
-                        <p>أنت متصل بالواتساب </p>
-                        <button class="btn cut-connect-btn" type="button">قطع الاتصال </button>
-                    </div>`;
-                Connected = true;
-                setupRegenerateButton();
-            }, 5000);
-        } else {
-            setTimeout(() => {
-                QRArea.innerHTML = `
-                    <div class="col-auto d-flex gap-4 flex-column justify-content-center align-items-center" style="cursor:pointer;" onclick="startQRSteps(QRArea)">
-                        <img src="../../../images/NotScannedQR.svg" >
-                        <p>انتهت صلاحية الرمز اضغط لإعادة التحميل</p>
-                    </div>`;
-                QRScanned = true; 
-            }, 3000);
+            } catch (err) {
+                toastr.error("حدث خطأ أثناء الاتصال بالسيرفر");
+                btn.disabled = false;
+            } finally {
+                if (btnText) btnText.style.display = 'inline-block';
+                if (btnSpinner) btnSpinner.style.display = 'none';
+            }
         }
-    }, 6000);
-}
 
-setupRegenerateButton();
+        /**
+         * تفعيل زرار التحقق بس لو الحقلين مكتوبين
+         */
+        document.addEventListener('DOMContentLoaded', function () {
+            const smsForm = document.getElementById('smsConnectForm');
+            if (!smsForm) return;
 
-</script>
+            const senderNameInput = document.getElementById('smsSenderNameInput');
+            const apiTokenInput = document.getElementById('smsApiTokenInput');
+            const testBtn = document.getElementById('testSmsConnectionBtn');
+
+            function checkInputs() {
+                const hasData = senderNameInput.value.trim() !== '' && apiTokenInput.value.trim() !== '';
+                testBtn.disabled = !hasData;
+            }
+
+            senderNameInput.addEventListener('input', checkInputs);
+            apiTokenInput.addEventListener('input', checkInputs);
+
+            // لو البيانات موجودة من الـ DB خلي الزرار شغال من أول ما الصفحة تفتح
+            checkInputs();
+
+            // لو غير البيانات بعد التحقق، أخفي رسالة النجاح
+            function resetVerification() {
+                const verificationResult = document.getElementById('smsVerificationResult');
+                if (verificationResult) {
+                    verificationResult.style.display = 'none';
+                    verificationResult.innerHTML = '';
+                }
+                if (testBtn) {
+                    testBtn.style.display = 'inline-block';
+                    testBtn.disabled = false;
+                }
+                checkInputs();
+            }
+
+            senderNameInput.addEventListener('change', resetVerification);
+            apiTokenInput.addEventListener('change', resetVerification);
+        });
+    </script>
+
+    <!--Email-->
+    <script>
+        // 1. دالة تحديث واجهة الإيميل (إظهار/إخفاء الخطوات)
+        function updateEmailUI(state) {
+            const otpStep = document.getElementById('otpStep');
+            const saveBtn = document.getElementById('saveEmailBtn');
+            const testBtn = document.getElementById('testConnectionBtn');
+            const emailInput = document.getElementById('emailInput');
+            const tokenInput = document.getElementById('tokenInput');
+
+            if (!otpStep || !saveBtn) return;
+
+            if (state === 'otp_sent') {
+                otpStep.style.display = 'block';
+                emailInput.readOnly = true;
+                tokenInput.readOnly = true;
+                const otpInp = document.getElementById('otpInput');
+                if (otpInp) otpInp.focus();
+            }
+            else if (state === 'verified') {
+                // استبدال محتوى منطقة الـ OTP برسالة نجاح
+                otpStep.innerHTML = `<div class="alert alert-success p-2">تم التحقق بنجاح</div>`;
+                otpStep.style.display = 'block';
+
+                if (testBtn) testBtn.style.display = 'none'; // إخفاء زر الفحص
+                saveBtn.style.display = 'block';           // إظهار زر الحفظ النهائي
+                saveBtn.type = 'submit';
+            }
+        }
+
+        // 2. الدالة الموحدة لإرسال طلبات الـ Ajax (SendOtp & VerifyOtp)
+        async function handleEmailAjax(btn, actionName) {
+            const form = document.getElementById('emailConnectForm') || btn.closest('form');
+            if (!form) return;
+
+            const btnText = btn.querySelector('.button-text');
+            const btnSpinner = btn.querySelector('.spinner-border');
+            const otpError = document.getElementById('otpError');
+
+            // تعطيل الزر وتشغيل اللودر
+            btn.disabled = true;
+            if (btnText) btnText.style.display = 'none';
+            if (btnSpinner) btnSpinner.style.display = 'inline-block';
+            if (otpError) otpError.textContent = '';
+
+            try {
+                const formData = new FormData(form);
+                const url = `/MAS/TechnicalConnectivity/${actionName}`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                    }
+                });
+
+                if (!response.ok) throw new Error("Server Error");
+
+                const result = await response.json();
+                if (result.success) {
+                    toastr.success(result.message);
+                    if (actionName === 'SendTestOtp') {
+                        updateEmailUI('otp_sent');
+                    } else {
+                        updateEmailUI('verified');
+                    }
+                } else {
+                    if (actionName === 'VerifyOtp' && otpError) {
+                        otpError.textContent = result.message;
+                    }
+                    toastr.error(result.message);
+                }
+            } catch (err) {
+                toastr.error("حدث خطأ أثناء الاتصال بالسيرفر");
+            } finally {
+                btn.disabled = false;
+                if (btnText) btnText.style.display = 'inline-block';
+                if (btnSpinner) btnSpinner.style.display = 'none';
+            }
+        }
+
+        // 3. تنظيم الأحداث عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailInput = document.getElementById('emailInput');
+            const tokenInput = document.getElementById('tokenInput');
+            const saveEmailBtn = document.getElementById('saveEmailBtn');
+            const testBtn = document.getElementById('testConnectionBtn');
+
+            // وظيفة لإعادة الضبط إذا تم تعديل الإيميل أو الرمز بعد التحقق
+            function resetVerification() {
+                if (saveEmailBtn && saveEmailBtn.style.display !== 'none') {
+                    saveEmailBtn.style.display = 'none';
+                    if (testBtn) testBtn.style.display = 'inline-block';
+
+                    const otpStep = document.getElementById('otpStep');
+                    if (otpStep) {
+                        otpStep.style.display = 'none';
+                        // إعادة بناء هيكل الـ OTP الداخلي لأنه تم مسحه عند حالة verified
+                        location.reload(); // أسهل طريقة لإعادة تصفير الفورم بالكامل عند التلاعب
+                    }
+
+                    if (emailInput) emailInput.readOnly = false;
+                    if (tokenInput) tokenInput.readOnly = false;
+                }
+            }
+
+            // مراقبة حقول الإدخال
+            if (emailInput) emailInput.addEventListener('input', resetVerification);
+            if (tokenInput) tokenInput.addEventListener('input', resetVerification);
+
+            // تنفيذ الحفظ النهائي
+            if (saveEmailBtn) {
+                saveEmailBtn.addEventListener('click', function (e) {
+                    const form = document.getElementById('emailConnectForm');
+                    if (form) {
+                        form.submit();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const clientId = "0000";
+            const qrArea = document.getElementById("QRArea");
+            const confirmModal = new bootstrap.Modal(document.getElementById('confirmLogoutModal'));
+            function refreshUI(state, data = {}) {
+                if (state === 'LOADING') {
+                    qrArea.innerHTML = `<div class="spinner-border text-primary" role="status"></div>`;
+                    return;
+                }
+
+                if (state === 'CONNECTED') {
+                    const phone = data.userNumber || " ";
+
+                    if (document.getElementById("opDate")) {
+                        document.getElementById("opDate").textContent = data.operationDate || " ";
+                    }
+                    if (document.getElementById("opTime")) {
+                        document.getElementById("opTime").textContent = data.operationTime || " ";
+                    }
+
+                    qrArea.innerHTML = `
+                        <div class="col-auto d-flex gap-2 flex-column justify-content-center align-items-center animate__animated animate__fadeIn">
+                            <img src="../../../images/Static/TechnicalConnect/done.svg" style="width: 50px;">
+                            <p class="m-0">أنت متصل بالواتساب</p>
+                            <span class="fw-bold">${phone}</span>
+                            <button class="btn cut-connect-btn-transparent mt-2" id="btnDisconnectInQR" type="button">قطع الاتصال</button>
+                         </div>`;
+
+                    document.getElementById("btnDisconnectInQR").onclick = () => confirmModal.show();
+                    return;
+                }
+
+                if (state === 'NEEDS_QR' || state === 'INITIALIZING') {
+                    qrArea.innerHTML = `
+                        <div class="d-flex flex-column align-items-center animate__animated animate__fadeIn">
+                            <div id="realQRContainer" class="p-2 bg-white border rounded"></div>
+                            <p class="mt-2" style="font-size:12px; color:#666;">يرجى مسح الرمز ضوئياً</p>
+                        </div>`;
+                    if (data.qr) generateQrCode(data.qr);
+                    return;
+                }
+
+                qrArea.innerHTML = `
+                    <div id="initSection" class="text-center animate__animated animate__fadeIn">
+                        <button type="button" class="border-0 bg-transparent" id="RegenerateQR">
+                            <img src="../../../images/Static/TechnicalConnect/qrcode 1.svg" style="width:100%;">
+                        </button>
+                    </div>`;
+
+                document.getElementById("RegenerateQR").onclick = () => apiAction('/api/WhatsApp/login', { clientId });
+            }
+
+            function generateQrCode(qrData) {
+                const container = document.getElementById("realQRContainer");
+                if (!container) return;
+                container.innerHTML = '';
+                QRCode.toDataURL(qrData, { width: 160, margin: 1 }, (err, url) => {
+                    if (err) return;
+                    const img = document.createElement('img');
+                    img.src = url;
+                    container.appendChild(img);
+                });
+            }
+
+            async function apiAction(endpoint, bodyData) {
+                refreshUI('LOADING');
+                try {
+                    const res = await fetch(endpoint, {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(bodyData)
+                    });
+                    return res.ok;
+                } catch (e) {
+                    console.error("API Error:", e);
+                    refreshUI('ERROR');
+                    return false;
+                }
+            }
+
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl(`/whatsappHub?clientId=${clientId}`)
+                .withAutomaticReconnect().build();
+
+            connection.on("ReceiveQr", (id, qr) => {
+                if (id === clientId) refreshUI("NEEDS_QR", { qr });
+            });
+
+            connection.on("ReceiveStatus", (id) => {
+                if (id === clientId) checkState();
+            });
+
+            document.getElementById("confirmLogoutBtn").onclick = async () => {
+                confirmModal.hide();
+                const success = await apiAction('/api/WhatsApp/logout', { clientId });
+                if (success) {
+                    if (document.getElementById("opDate")) document.getElementById("opDate").textContent = "";
+                    if (document.getElementById("opTime")) document.getElementById("opTime").textContent = "";
+                    if (document.getElementById("displayPhone")) document.getElementById("displayPhone").textContent = "";
+                    checkState();
+                }
+            };
+
+            async function checkState() {
+                try {
+                    const res = await fetch(`/api/WhatsApp/get-initial-state/${clientId}`);
+                    const result = await res.json();
+                    refreshUI(result.state, result.data);
+                } catch (e) {
+                    refreshUI('NEEDS_INITIALIZATION');
+                }
+            }
+
+            connection.start().then(checkState).catch(err => console.error("SignalR Error:", err));
+        });
+    </script>
+
+
+
+    <script src=/_content/NToastNotify/toastr.js?8.0.0.0 type="text/javascript"></script>
+    <script>
+        if (nToastNotify) {
+            nToastNotify.init({
+                firstLoadEvent: 'DOMContentLoaded',
+                messages: [],
+                responseHeaderKey: 'X-NToastNotify-Messages',
+                requestHeaderKey: 'X-Requested-With',
+                libraryDetails: { "varName": "toastr", "scriptSrc": "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js", "styleHref": "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css", "options": { "timeOut": 5000, "progressBar": true, "type": "success" } },
+                disableAjaxToasts: false
+            });
+        };
+    </script>
+    <!--Hide All Console-->
+    <script>
+        // console.log = function () {};
+        // console.info = function () {};
+        // console.warn = function () {};
+        // console.error = function () {};
+        // console.debug = function () {};
+    </script>
+    <script>
+        $(document).ready(function () {
+            toastr.options = { "positionClass": 'toast-top-left', "title": " " };
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var exitUser = parseInt("5");
+            initializeIdleTimeoutHandler(exitUser);
+        });
+    </script>
+    <script>
+        // دالة الإظهار الموجودة لديك
+        function showLoader() {
+            $("#min-loader").removeClass("d-none");
+        }
+
+        // دالة الإخفاء
+        function hideLoader() {
+            $("#min-loader").addClass("d-none");
+        }
+
+        // إخفاء اللودر عند تحميل الصفحة
+        $(document).ready(function () {
+            hideLoader();
+        });
+    </script>
 
     
 
