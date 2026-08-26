@@ -17,18 +17,15 @@
 </head>
 
 <body>
-    <div id="wrapper" class=" Branches-wrapper d-flex flex-column ">
-        <!-- <div class="min-loader-back">
-            <span class="Main-Loader"></span>
-        </div> -->
+    <div id="wrapper" class="home-wrapper d-flex flex-column ">
         <!-- Top Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="nav-container container-fluid">
                 <!-- Company Logo -->
-                <div class="navbar-brand d-flex align-items-center gap-4" >
-                    <a href="#" class="Company-Logo"><img src="images/C 1.svg" alt="Company Logo" class="Company-Logo-img" ></a>
+                <div class="navbar-brand d-flex align-items-center gap-4">
+                    <a data-bs-target="#" class="Company-Logo"><img src="images/Static/GyoumLogo.svg" alt="Company Logo" class="Company-Logo-img"></a>
                     <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
                 </div>
 
                 <!-- User Information -->
@@ -36,34 +33,42 @@
                     <div class="d-flex">
                         <div class="navbar-nav">
                             <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="ms-2  text-start">
-                                        <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                        <p class="m-0">مشرف علي الفروع</p>
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2" data-bs-target="#"
+                                    id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
                                     </div>
-                                    <img src="images/pic (3).svg" alt="User Avatar"
+                                    <img src="images/Demo/Employee_Picture.svg" alt="User Avatar"
                                         class="rounded-circle User-Avatar">
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item userDropdown-options" href="Pages/Account/Account.html">حسابي <img src="images/Frame (2).svg"/></a></li>
-                                    <li><a class="dropdown-item userDropdown-options" href="Pages/Account/NewPassword.html">تغيير كلمة السر <img src="images/Frame (1).svg"/></a></li>
-                                    <li><a class="dropdown-item userDropdown-options" href="https://ayatt12.github.io/test-page/"> الأنظمه <img src="images/Frame (3).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/Account.html">حسابي
+                                            <img src="images/Static/Topbar/AccountNavIcon.svg" /></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/NewPassword.html">تغيير
+                                            كلمة السر <img src="images/Static/Topbar/PasswordNavIcon.svg" /></a>
+                                    </li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item userDropdown-options " href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img class="logout" src="images/Frame (4).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options "
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout" src="images/Static/Topbar/LogoutNavIcon.svg" /></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center" style="gap:15px">
-                        <!-- <img src="images/Frame 2608795.svg" class=" sms nav-icon"  style="width: 28;height: 28px;"/>
-                        <img src="images/whatsup.svg" class=" whatsup nav-icon" /> -->
+                    <div class="d-flex align-items-center">
                         <div class="col lang-button-col">
                             <input type="checkbox" id="myCheckbox" class="d-none">
-                            <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
                         </div>
                     </div>
 
@@ -71,25 +76,20 @@
 
             </div>
         </nav>
-        <!-- end of tobar -->
-        <!-- end of alert bar -->
-        <div class="container-fluid h-100">
-           
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                    <!-- Sidebar -->
-                    <nav class="sidebar close">
-                        <header>
-                            <i class='bx bx-chevron-right toggle'></i>
-                        </header>
-
-                        <div class="menu-bar">
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
+                </div>
+                 <div class="menu-bar">
                             <div class="menu">
                                 <ul class="menu-links">
                                     <li class="nav-link" >
                                         <a>
-                                            <img src="images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
+                                            <img src="images/Static/Sidebar_icons/Comanies.svg"  data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
                                         </a>
                                     </li>
                                     <div id="company-items" class="collapse" >
@@ -107,8 +107,8 @@
                                    </div>
                                    <li class="nav-link">
                                     <a >
-                                        <img src="images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
+                                        <img src="images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse" data-bs-target="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
                                     </a>
                                 </li>
                                 <div id="Bnan-list-items" class="collapse" >
@@ -120,8 +120,8 @@
                                 </div>
                                    <li class="nav-link">
                                     <a >
-                                        <img src="images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
+                                        <img src="images/Static/Sidebar_icons/tenants.svg" data-bs-toggle="collapse" data-bs-target="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
                                     </a>
                                 </li>
                                 <div id="tenant-list-items" class="collapse" >
@@ -132,8 +132,8 @@
                                 </div>
                                 <li class="nav-link">
                                     <a >
-                                        <img src="images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
+                                        <img src="images/Static/Sidebar_icons/reports.svg" data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
                                     </a>
                                 </li>
                                 <div id="reports-items" class="collapse" >
@@ -152,8 +152,8 @@
                                 </div>
                                 <li class="nav-link">
                                     <a >
-                                        <img src="images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
+                                        <img src="images/Static/Sidebar_icons/statics.svg" data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
                                     </a>
                                 </li>
                                 <div id="stat-items" class="collapse" >
@@ -167,8 +167,8 @@
                                 </div>
                                 <li class="nav-link">
                                     <a >
-                                        <img src="images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
+                                        <img src="images/Static/Sidebar_icons/employees.svg" data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
                                     </a>
                                 </li>
                                 <div id="employes-items" class="collapse" >
@@ -181,8 +181,8 @@
                                 
                                    <li class="nav-link">
                                     <a >
-                                        <img src="images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                        <img src="images/Static/Sidebar_icons/tenants.svg" data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
+                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
                                     </a>
                                 </li>
                                 <div id="tenant-items" class="collapse" >
@@ -200,8 +200,8 @@
                                    </div>
                                     <li class="nav-link">
                                         <a>
-                                            <img src="images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
+                                            <img src="images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse" data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
                                         </a>
                                     </li>
                                     <div id="Cars-items" class="collapse" >
@@ -221,8 +221,8 @@
                                        </div>
                                     <li class="nav-link">
                                         <a >
-                                            <img src="images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
+                                            <img src="images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse" data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
                                         </a>
                                     </li>
                                     <div id="Mail-items" class="collapse" >
@@ -235,8 +235,8 @@
                                        </div>
                                     <li class="nav-link">
                                         <a>
-                                            <img src="images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
+                                            <img src="images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse" data-bs-target="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
                                         </a>
                                     </li>
                                     <div id="Financial-items" class="collapse" >
@@ -250,8 +250,8 @@
        
                                        <li class="nav-link">
                                         <a>
-                                            <img src="images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
+                                            <img src="images/Static/Sidebar_icons/ContractIcon.svg" data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
                                         </a>
                                     </li>
                                     <div id="Contract-items" class="collapse" >
@@ -266,8 +266,8 @@
 
                                     <li class="nav-link">
                                         <a>
-                                            <img src="images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
+                                            <img src="images/Static/Sidebar_icons/services.svg" data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
+                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
                                         </a>
                                     </li>
                                     <div id="services-items" class="collapse" >
@@ -288,24 +288,15 @@
 
 
                         </div>
+            </aside>
 
-                    </nav>
-                </div>
-
-
-                <!-- end of main sidebar -->
-                <div class="col my-2 home-wrapper1"> 
-                   
-                    <img src="images/Frame 2608906.svg" class="up">
-                    <img src="images//car.svg" class="car">
-                    <img src="images//Mask group down (1).svg" class="down">
-                </div>
-
-
-                <!-- end of content -->
-
-
-            </div>
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <!-- Main backgroung vectors -->
+                <img src="images/Static/Background/TopPart.svg" class="up">
+                <img src="images/Static/Background/car.svg" class="car">
+                <img src="images/Static/Background/DownPart.svg" class="down">
+            </main>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
