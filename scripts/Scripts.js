@@ -48,14 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       if (side === "right") {
         sidebarRight.classList.remove("closed");
-        sidebarLeft.classList.add("closed");
         closeAllCollapses(sidebarLeft);
-      }
-
-      if (side === "left") {
-        sidebarLeft.classList.remove("closed");
-        sidebarRight.classList.add("closed");
-        closeAllCollapses(sidebarRight);
       }
 
       updateIcons();
@@ -383,6 +376,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const inputs = item.querySelectorAll("input, select, textarea");
       const checkIcon = item.querySelector(".data-check");
 
+      // Pulled out so it can be reused by the input listeners AND
+      // by the "just opened" observer below.
       const validateInputs = () => {
         let allValid = true;
         inputs.forEach((input) => {
@@ -400,6 +395,27 @@ document.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("input", validateInputs);
         input.addEventListener("blur", validateInputs);
       });
+
+      // If this item is already open when the page loads, check it now
+      // (the MutationObserver below only reacts to future class changes).
+      if (item.classList.contains("open")) {
+        validateInputs();
+      }
+
+      // Watch for the "open" class being added to this accordion item
+      // (works no matter what triggers the open — click handler,
+      // openAccordionItem(), keyboard, etc.) and re-check right away.
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === "class") {
+            if (item.classList.contains("open")) {
+              validateInputs();
+            }
+          }
+        });
+      });
+
+      observer.observe(item, { attributes: true });
     });
   };
 
@@ -422,7 +438,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize input field validation on page load
   document.addEventListener("DOMContentLoaded", validateInputFields);
 })();
-
 // //********************************************************************** stop autocompelete ********************************************************************************** */
 
 document.querySelectorAll("input, select, textarea").forEach((el) => {
