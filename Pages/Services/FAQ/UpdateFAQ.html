@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان - تحديث بيانات  السؤال    </title>
+    <title> نظام بنان - الخدمات - تحديث  بيانات  السؤال    </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -19,406 +19,611 @@
 </head>
 
 <body>
-    <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
-            <!-- Top Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="nav-container container-fluid">
-                    <!-- Company Logo -->
-                    <div class="navbar-brand d-flex align-items-center gap-4" >
-                        <a href="../../../index.html" class="Company-Logo"><img src="../../../images/C 1.svg" alt="Company Logo" class="Company-Logo-img" ></a>
-                        <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                        <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
-                    </div>
-    
-                    <!-- User Information -->
-                    <div class="icons-content">
-                        <div class="d-flex">
-                            <div class="navbar-nav">
-                                <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="ms-2  text-start">
-                                            <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                            <p class="m-0">مشرف علي الفروع</p>
-                                        </div>
-                                        <img src="../../../images/pic (3).svg" alt="User Avatar"
-                                            class="rounded-circle User-Avatar">
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                        <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/Account.html">حسابي <img src="../../../images/Frame (2).svg"/></a></li>
-                                        <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img src="../../../images/Frame (1).svg"/></a></li>
-                                        <li><a class="dropdown-item userDropdown-options" href="https://ayatt12.github.io/test-page/"> الأنظمه <img src="../../../images/Frame (3).svg"/></a></li>
-    
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item userDropdown-options " href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img class="logout" src="../../../images/Frame (4).svg"/></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center" style="gap:15px">
-                            <div class="col lang-button-col">
-                                <input type="checkbox" id="myCheckbox" class="d-none">
-                                <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
-                            </div>
-                        </div>
-    
-                    </div>
-    
+      <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="nav-container container-fluid">
+                <!-- Company Logo -->
+                <div class="navbar-brand d-flex align-items-center gap-4">
+                    <a data-bs-target="#" class="Company-Logo"><img src="../../../images/Static/GyoumLogo.svg"
+                            alt="Company Logo" class="Company-Logo-img"></a>
+                    <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
                 </div>
-            </nav>
-            <!-- end of tobar -->
-    
-        <div class="container-fluid h-100 main-container-fluid">
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                    <!-- Sidebar -->
-                    <nav class="sidebar close">
-                        <header>
-                            <i class='bx bx-chevron-right toggle'></i>
-                        </header>
 
-                        <div class="menu-bar">
-                            <div class="menu">
-                                <ul class="menu-links">
-                                    <li class="nav-link" >
-                                        <a>
-                                            <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
-                                        </a>
+                <!-- User Information -->
+                <div class="icons-content">
+                    <div class="d-flex">
+                        <div class="navbar-nav">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2"
+                                    data-bs-target="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
+                                    </div>
+                                    <img src="../../../images/Demo/Employee_Picture.svg" alt="User Avatar"
+                                        class="rounded-circle User-Avatar">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/Account.html">حسابي
+                                            <img src="images/Static/Topbar/AccountNavIcon.svg" /></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/Ar-Administration/Pages/Account/NewPassword.html">تغيير
+                                            كلمة السر <img src="images/Static/Topbar/PasswordNavIcon.svg" /></a>
                                     </li>
-                                     <div id="company-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                       <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                         <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                   </div>
-                                   <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
-                                    </a>
-                                </li>
-                                <div id="Bnan-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
-                                    </a>
-                                </li>
-                                <div id="reports-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                       <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
-
-                                    </div>
-                                </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
-                                    </a>
-                                </li>
-                                <div id="stat-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
-                                    </a>
-                                </li>
-                                <div id="employes-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                    </div>
-                                   </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
-                                        </a>
+                                    <li>
+                                        <hr class="dropdown-divider">
                                     </li>
-                                    <div id="Cars-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
-                                        </a>
+                                    <li><a class="dropdown-item userDropdown-options "
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout" src="images/Static/Topbar/LogoutNavIcon.svg" /></a>
                                     </li>
-                                    <div id="Mail-items" class="collapse" >
-                                       <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-        
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
-                                        </a>
-                                    </li>
-                                    <div id="Financial-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
-                                        </div>
-                                       </div>
-       
-                                       <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
-                                        </a>
-                                    </li>
-                                    <div id="Contract-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        </div>
-                                    </div>
-
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
-                                        </a>
-                                    </li>
-                                    <div id="services-items" class="collapse" >
-                                           <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item active" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            
-                                           
-                                        </div>
-                                       </div>
-                                
-
                                 </ul>
                             </div>
-
-
                         </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="col lang-button-col">
+                            <input type="checkbox" id="myCheckbox" class="d-none">
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
+                        </div>
+                    </div>
 
-                    </nav>
                 </div>
-                <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container NewUpdate-container">
-                        <form action="" class="needs-validation" novalidate>
-                            <div class="row mt-3 g-3">
 
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9">
-                                         <div class="row g-3 my-2">
-                                            <div class="col">
-                                                <h3>  تحديث بيانات  السؤال  </h3>
+            </div>
+        </nav>
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Comanies.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items">الشركات </span>
+                                </a>
+                            </li>
+                            <div id="company-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/CompaniesData/CompaniesData.html"> بيانات الشركات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">
+                                        صور مساندة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html">
+                                        عقود الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/companies_Invoices/CompaniesInvoices.html">
+                                        فواتير الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> تسديد المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessageComanies.html"> رسائل الشركات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessagesSent.html"> الرسائل المرسلة<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items"> بنان </span>
+                                </a>
+                            </li>
+                            <div id="Bnan-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات
+                                        المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Marketing companies/Marketing companies.html"> الشركات
+                                        التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Service prices/Service prices.html"> أسعار الخدمات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-list-items"
+                                        aria-expanded="false" aria-controls="#tenant-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-list-items" aria-expanded="false"
+                                        aria-controls="#tenant-list-items"> المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html"> عقود
+                                        المستأجرين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/reports.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items"> التقارير </span>
+                                </a>
+                            </li>
+                            <div id="reports-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html"> العقود
+                                        القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود
+                                        المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">
+                                        العقود المحفوظة و الملغاه <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود
+                                        المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Car Contracts/Car Contracts.html"> عقود السيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود
+                                        شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html">
+                                        الحركة المالية للموظفين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html">
+                                        الحركة المالية للمستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/statics.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false"
+                                        aria-controls="#stat-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">
+                                        الإحصائيات </span>
+                                </a>
+                            </li>
+                            <div id="stat-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات
+                                        المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">
+                                        إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html">
+                                        إحصائيات عقود المستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات
+                                        عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/employees.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items"> الموظفين </span>
+                                </a>
+                            </li>
+                            <div id="employes-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات
+                                        النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي
+                                        الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Identities/Identities.html"> الهويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص
+                                        القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Nationalities/Nationalities.html"> الجنسيات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html">
+                                        الجنس <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Professions/Professions.html"> المهن <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Workplace/Workplace.html"> جهات العمل <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Membership/Membership.html"> العضويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">
+                                        القطاعات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items">
+                                        خدمات السيارات </span>
+                                </a>
+                            </li>
+                            <div id="Cars-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Registration type/Registration type.html">
+                                        التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">
+                                        الوقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">
+                                        الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/transporter type/Transporter type.html"> الناقل
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">
+                                        الماركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html"> الطراز
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories/Categories.html"> الفئات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">
+                                        توزيع الفئات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Additional features/Additional features.html">
+                                        المميزات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">
+                                        الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">
+                                        خدمات البريد </span>
+                                </a>
+                            </li>
+                            <div id="Mail-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Postal services/Countries/Countries.html"> الدول <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">
+                                        المناطق <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html">
+                                        المدن <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items"> الخدمات المالية </span>
+                                </a>
+                            </li>
+                            <div id="Financial-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">
+                                        البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Payment Method/Payment Methods.html">
+                                        طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/ContractIcon.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items">خدمات العقود </span>
+                                </a>
+                            </li>
+                            <div id="Contract-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Additions/Additions.html"> الإضافات<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Options/Options.html"> الخيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص
+                                        الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل
+                                        الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/services.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items">الخدمات</span>
+                                </a>
+                            </li>
+                            <div id="services-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/techncal-connect/techncal-connect.html"> الربط
+                                        التقني <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Countries Classification/Countries-Classification .html">
+                                        تصنيف الدول <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Companies Classification/Companies-Classification .html">
+                                        تصنيف الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">
+                                        العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html"> الأسئلة الأكثر
+                                        شيوعًا <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <div class="container d-flex flex-column InputsPageContainer">
+                    <div class="row flex-column min-h-0 flex-1 position-relative">
+                        <div class="col-xxl-9 Data-container ">
+                            <form class="ContentForm needs-validation" novalidate>
+                                <input hidden type="text" data-val="true" data-val-required="The CrMasLessorCountryClassificationCode field is required." id="CrMasLessorCountryClassificationCode" name="CrMasLessorCountryClassificationCode" value="2" />
+                                <div class="row justify-content-center flex-1 min-h-0">
+                                    <div class="col-lg-12 d-flex flex-column h-100">
+                                        <div class="row my-2">
+                                            <div class="col-md-6">
+                                                <h3>تحديث بيانات السؤال</h3>
                                             </div>
-                                            <div class="col-md-auto save-col">
-                                                <button type="submit" class="custom-img-btn"> <img
-                                                        src="../../../images/save.svg" /></button>
-                                                <button type="button" class="custom-img-btn"> <img
-                                                        src="../../../images/stop.svg" /></button>
-                                                <button type="button" class="custom-img-btn"> <img
-                                                        src="../../../images/delete.svg" /></button>
-                                                        <button type="button" class="custom-img-btn" > <a href="FAQ.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
-                                                    </div>
+                                            <div class="col-md-6 save-col">
+                                                <button type="submit" class="custom-img-btn" id="SaveEdit">
+                                                    <img src="../../../images/Static/States/save.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn" id="HoldBtn"
+                                                    data-bs-toggle="modal" data-bs-target="#Stop-Modal">
+                                                    <img id="StopModalIcon" src="../../../images/Static/States/stop.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn" id="DeleteBtn"
+                                                    data-bs-toggle="modal" data-bs-target="#Delete-Modal">
+                                                    <img id="modalIcon" src="../../../images/Static/States/delete.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn"> <a
+                                                        href="FAQ.html"><img class="Chevron"
+                                                            src="../../../images/Static/States/Chevron_Left.svg" /></a></button>
+                                            </div>
+                                        </div>
+                                        <main class="mt-4 inputs-accordion-container">
+                                            <div class="container-fluid">
+                                               <div class="row g-3 mt-3">
+                                
+                                <div class="col-md-12">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 ">
+                                            <label for="System_select" class="form-label"> النظام </label>
+                                            <div class="col-auto ">
+                                                    <p class="Saved-data">الإدارة</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <label for="list_mainTask" class="form-label"> القائمة </label>
+                                            <div class="col-auto ">
+                                                    <p class="Saved-data">الشركة</p>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p class="DataTitle">الرمز</p>
+                                                </div>
+                                                <div class="col-auto ">
+                                                    <p class="Saved-data">220101</p>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        <div class="container-fluid">
+                                    </div>
+                                </div>
 
-                                            <div class="row g-3 mt-3">
-                                                <div class="col-md-12">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6 ">
-                                                            <label for="System" class="form-label"> النظام <i class="fa-solid fa-star-of-life RequirdStar"></i> </label>
-                                                            <select class="form-select select-style " name="System" 
-                                                                id="System"  required>
-                                                                <option> </option>
-                                                                <option value="أ" selected> الإدارة </option>
-                                                                <option value="ب">  ب    </option>                
-                                                            </select>
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 ">
-                                                            <label for="item" class="form-label"> الحقل <i class="fa-solid fa-star-of-life RequirdStar"></i> </label>
-                                                            <select class="form-select select-style " name="item"
-                                                                id="item"  required>
-                                                                <option> </option>
-                                                                <option value="أ" selected> السيارات </option>
-                                                                <option value="ب">  ب    </option>                
-                                                            </select>
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                <div class="col-md-12">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <label for="AR-Licence" class="form-label">
+                                                السؤال عربي
+                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                            </label>
+                                            <textarea class="form-control textarea-inputs valid w-100 h-100" rows="4" type="text" id="CrMasSysQuestionsAnswerArQuestions" oninput="this.value=this.value.replace(/[^\u0600-\u06FF\ufb50-\ufdff\ufe70-\ufeff\s\/\.\+\#\{\[\}\]\(\)\&amp;\*\!\$\%\_\-0-9]/g, '')" required="" autocomplete="off" data-val="true" data-val-required="الحقل مطلوب" name="CrMasSysQuestionsAnswerArQuestions" aria-describedby="CrMasSysQuestionsAnswerArQuestions-error" aria-invalid="false">كيف أقوم بإضافة و تحيث بيانات الفرع</textarea>
+                                            <div class="invaild">
+                                                <div class="invalid-feedback">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="CrMasSysQuestionsAnswerArQuestions" data-valmsg-replace="true"></span>
+                                                    <span class="text-danger" id="CrMasSysQuestionsAnswerArQuestions-Error"></span>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                     <p class="DataTitle">الرمز  </p>
-                                                                </div>
-                                                                <div class="col-auto ">
-                                                                  <p class="Saved-data">13</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="EN-Licence" class="form-label">
+                                                السؤال إنجليزي
+                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                            </label>
+                                            <textarea class=" form-control textarea-inputs english-input w-100 h-100" rows="4" type="text" id="CrMasSysQuestionsAnswerEnQuestions" oninput="this.value = this.value.replace(/[^a-zA-Z\s\/\.\+\#\{\[\}\]\(\)\&amp;\*\!\$\_\%\-0-9]/g, '')" autocomplete="off" required="" data-val="true" data-val-required="الحقل مطلوب" name="CrMasSysQuestionsAnswerEnQuestions">How to add and update branch data?</textarea>
+                                            <div class="invaild">
+                                                <div class="invalid-feedback">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="CrMasSysQuestionsAnswerEnQuestions" data-valmsg-replace="true"></span>
+                                                    <span class="text-danger" id="CrMasSysQuestionsAnswerEnQuestions-Error"></span>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6">
-                                                            <label for="AR-Question" class="form-label"> السؤال  عربي
-                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                                            </label>
-                                                            <input type="text" id="AR-Question" value="كيف يمكنني إضافة بيانات سيارة؟"
-                                                                class="form-control inputs arabic-input"
-                                                                name="AR-Question" maxlength="" required>
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback">
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="EN-Question" class="form-label"> السؤال  انجليزي
-                                                                <i class="fa-solid fa-star-of-life RequirdStar"></i>
 
-                                                            </label>
-                                                            <input type="text" id="EN-Question" value="?How can I add car details"
-                                                                class="form-control inputs english-input"
-                                                                name="EN-Question" maxlength="" required>
-                                                            <div class="invaild">
-                                                                <div class="invalid-feedback" >
-                                                                    الحقل مطلوب
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>الإجابة عربي <i class="fa-solid fa-star-of-life RequirdStar"></i></label>
+                                            <textarea class=" form-control textarea-inputs w-100 h-100" rows="6" type="text" oninput="this.value=this.value.replace(/[^\u0600-\u06FF\ufb50-\ufdff\ufe70-\ufeff\s\/\.\+\#\{\[\}\]\(\)\&amp;\*\!\$\%\_\-0-9]/g, '')" autocomplete="off" required="" data-val="true" data-val-required="الحقل مطلوب" id="CrMasSysQuestionsAnswerArAnswer" name="CrMasSysQuestionsAnswerArAnswer">اختر من القائمة الرئيسية الشركة ثم اختر الفروع  سيقوم النظام بعرض جميع بيانات الفروع  قم بالضغط على  ( + )  سوف يقوم النظام بفتح صفحة جديدة لتعبئة بيانات فرع  جديد، وعند القيام بحفظ بيانات الفرع الجديد سيقوم النظام بفتح ملفات للمستندات ، و لتحديث بيانات الفرع قم باختيار الفرع  ستظهر بيانات الفرع للتحديث ملحوظة: (عند إيقاف الفرع لن يتمكن من إنشاء عقود تأجير جديدة، وسيتم إيقاف التعامل مع نقاط البيع التابعة للفرع  ، كذلك لايمكن حذف فرع  و مرتبط به نقاط بيع أو  سيارات ). </textarea>
+                                            <div class="invaild">
+                                                <div class="invalid-feedback">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="CrMasSysQuestionsAnswerArAnswer" data-valmsg-replace="true"></span>
+                                                    <span class="text-danger" id="CrMasSysQuestionsAnswerArAnswer-Error"></span>
                                                 </div>
-
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <label>الإجابة عربي</label>
-                                                            <textarea class=" form-control textarea-inputs" rows="3"
-                                                                maxlength="" name="AR-Answer" type="text">انتقل لنظام الإدارة. في القائمة الرئيسية “السيارات” اختر بيانات السيارت. اضغط زر الإضافة ثم ادخل بيانات السيارة واضغط حفظ أعلى الشاشة.</textarea>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>الإجابة إنجليزي</label>
-                                                            <textarea class=" form-control textarea-inputs english-input" rows="3"
-                                                                maxlength="" name="AR-Answer" type="text">Go to the management system. In the main menu “Cars” select Car Data. Press the Add button then enter the car data and press Save at the top of the screen.</textarea>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>الإجابة انجليزي <i class="fa-solid fa-star-of-life RequirdStar"></i></label>
+                                            <textarea class=" form-control textarea-inputs english-input w-100 h-100" rows="6" type="text" oninput="this.value = this.value.replace(/[^a-zA-Z\s\/\.\+\#\{\[\}\]\(\)\&amp;\*\!\$\_\%\-0-9]/g, '')" autocomplete="off" required="" data-val="true" data-val-required="الحقل مطلوب" id="CrMasSysQuestionsAnswerEnAnswer" name="CrMasSysQuestionsAnswerEnAnswer">Select "company" from the main menu, then select "branches". The system will display all the branches’ data. Press (+) and the system will open a new page to fill in the data for a new branch. When you save the new branch’s data, the system will open a file for the documents. To update the branch’s data, select the branch, and the branch data will appear for updating. Note: (When the branch is held, it will not enable creating new rental contracts, and hold the branch’s points of sale transactions. It is also not allowed to delete a branch that has existing points of sale or cars associated with it).</textarea>
+                                            <div class="invaild">
+                                                <div class="invalid-feedback">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="CrMasSysQuestionsAnswerEnAnswer" data-valmsg-replace="true"></span>
+                                                    <span class="text-danger" id="CrMasSysQuestionsAnswerEnAnswer-Error"></span>
                                                 </div>
-                                            
-                                              
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                                            </div>
+                                        </main>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-                
-            </div>
+            </main>
 
         </div>
+        <!-- delete modal -->
+        <div class="modal fade" id="Delete-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="Delete-ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border: 1px solid var(--main-color);" ">
+                   <div class=" content" id="modalContent">
+
+                </div>
+                <!-- Hidden spinner  -->
+                <div class="modal-body text-center" id="spinner" style="display: none;">
+                    <span class="State-Modal-loader"></span>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Stop  modal -->
+    <div class="modal fade" id="Stop-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="Stop-ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border: 1px solid var(--main-color);" ">
+            <div class=" content" id="Stop-modal-Content">
+
+            </div>
+            <!-- Hidden spinner  -->
+            <div class="modal-body text-center" id="spinner2" style="display: none;">
+                <span class="State-Modal-loader"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -429,7 +634,246 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
+   <script>
+        function StopPermissions(Permitted) {
 
+            if (Permitted) {
+                $('#Stop-Modal').modal('show');
+            } else {
+                console.log("No permissions")
+                return
+            }
+        }
+        function ActivatePermissions(Permitted) {
+
+            if (Permitted) {
+                $('#Stop-Modal').modal('show');
+            } else {
+                console.log("No permissions")
+                return
+            }
+        }
+
+        function DeletePermissions(Permitted) {
+
+            if (Permitted) {
+                $('#Delete-Modal').modal('show');
+            } else {
+                console.log("No permissions")
+                return
+            }
+        }
+        function RestartPermissions(Permitted) {
+
+            if (Permitted) {
+                $('#Delete-Modal').modal('show');
+            } else {
+                console.log("No permissions")
+                return
+            }
+        }
+    </script>
+    <script>
+        let isDeleted = false;
+        let isStoped = false
+        const deleteModalBtn = document.getElementById("DeleteBtn");
+        const StopModalBtn = document.getElementById("HoldBtn");
+        const newButton = document.createElement("button");
+        const newButton2 = document.createElement("button");
+
+        newButton.type = "button";
+        newButton.className = "custom-img-btn";
+
+        newButton2.type = "button";
+        newButton2.className = "custom-img-btn";
+
+        window.onload = () => {
+            DeleteState(isDeleted);
+            StopState(isStoped);
+
+        };
+
+        function DeleteState(deleted) {
+            isDeleted = deleted;
+
+            document.getElementById("modalContent").style.display = "block";
+            if (isDeleted) {
+                newButton.id = "RestartModal-Btn";
+                newButton.onclick = () => RestartPermissions(true);
+                newButton.innerHTML = `<img src="../../../images/Static/States/Property 1=recycle.svg" id="modalIcon" />`;
+            } else {
+                newButton.id = "DeleteBtn";
+                newButton.onclick = () => DeletePermissions(true);
+                newButton.innerHTML = `<img src="../../../images/Static/States/delete.svg" id="modalIcon" />`;
+            }
+            deleteModalBtn.replaceWith(newButton);
+
+
+            document.getElementById("modalContent").innerHTML = isDeleted
+                ? `
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
+                <img src="../../../images/Static/States/Green-recycle.svg" /> تأكيد الارجاع
+              </h1>
+            </div>
+            <div class="modal-body">
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
+            </div>
+            <div class="modal-footer border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-modal-Save" onclick="DeleteLoad()">موافق</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-Cancel" data-bs-dismiss="modal">إلغاء الأمر</button>
+                  </div>
+                </div>
+              </div>
+            </div>`
+                : `
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
+                <img src="../../../images/Static/States/delete.svg" /> تأكيد الحذف
+              </h1>
+            </div>
+            <div class="modal-body">
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
+            </div>
+            <div class="modal-footer border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-modal-Save" onclick="DeleteLoad()">موافق</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-Cancel" data-bs-dismiss="modal">إلغاء الأمر</button>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+        function DeleteLoad() {
+            document.getElementById("modalContent").style.display = "none";
+            document.getElementById("spinner").style.display = "flex";
+
+            setTimeout(() => {
+                
+                const modal = bootstrap.Modal.getInstance(document.getElementById("Delete-Modal"));
+                modal.hide();
+                
+                document.getElementById("spinner").style.display = "none";
+
+                isDeleted = !isDeleted;
+                if (isDeleted) {
+                    newButton.id = "RestartModal-Btn";
+                    newButton.onclick = () => RestartPermissions(true);
+                    newButton.innerHTML = `<img src="../../../images/Static/States/Property 1=recycle.svg" id="modalIcon" />`;
+                } else {
+                    newButton.id = "DeleteBtn";
+                    newButton.onclick = () => DeletePermissions(true);
+                    newButton.innerHTML = `<img src="../../../images/Static/States/delete.svg" id="modalIcon" />`;
+                }
+                deleteModalBtn.replaceWith(newButton);
+
+                DeleteState(isDeleted);
+
+            }, 2000);
+        }
+        //  
+        function StopState(Stoped) {
+            isStoped = Stoped;
+
+            document.getElementById("Stop-modal-Content").style.display = "block";
+            if (isStoped) {
+                newButton2.id = "ActivateModal-Btn";
+                newButton2.onclick = () => ActivatePermissions(true);
+                newButton2.innerHTML = `<img src="../../../images/Static/States/Property 1=active.svg" id="modalIcon" />`;
+            } else {
+                newButton2.id = "DeleteBtn";
+                newButton2.onclick = () => StopPermissions(true);
+                newButton2.innerHTML = `<img src="../../../images/Static/States/stop.svg" id="modalIcon" />`;
+            }
+            StopModalBtn.replaceWith(newButton2);
+
+            document.getElementById("Stop-modal-Content").innerHTML = isStoped
+                ? `
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
+                <img src="../../../images/Static/States/GreenStop.svg" /> تأكيد التفعيل
+              </h1>
+            </div>
+            <div class="modal-body">
+             <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
+            </div>
+            <div class="modal-footer border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-modal-Save" onclick="StopLoad()">موافق</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-Cancel" data-bs-dismiss="modal">إلغاء الأمر</button>
+                  </div>
+                </div>
+              </div>
+            </div>`
+                : `
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
+                <img src="../../../images/Static/States/RedStop.svg" /> تأكيد الإيقاف
+              </h1>
+            </div>
+            <div class="modal-body">
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
+            </div>
+            <div class="modal-footer border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-modal-Save" onclick="StopLoad()">موافق</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-Cancel" data-bs-dismiss="modal">إلغاء الأمر</button>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+
+        function StopLoad() {
+            document.getElementById("Stop-modal-Content").style.display = "none";
+            document.getElementById("spinner2").style.display = "flex";
+
+            setTimeout(() => {
+                document.getElementById("spinner2").style.display = "none";
+
+                const modal = bootstrap.Modal.getInstance(document.getElementById("Stop-Modal"));
+                modal.hide();
+
+                isStoped = !isStoped;
+
+                if (isStoped) {
+                    newButton2.id = "ActivateModal-Btn";
+                    newButton2.onclick = () => ActivatePermissions(true);
+                    newButton2.innerHTML = `<img src="../../../images/Static/States/Property 1=active.svg" id="modalIcon" />`;
+                } else {
+                    newButton2.id = "DeleteBtn";
+                    newButton2.onclick = () => StopPermissions(true);
+                    newButton2.innerHTML = `<img src="../../../images/Static/States/stop.svg" id="modalIcon" />`;
+                }
+                StopModalBtn.replaceWith(newButton2);
+
+                StopState(isStoped);
+
+            }, 2000);
+        }
+
+    </script>
 </body>
 
 </html>
