@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان - تحديث بيانات الشركات</title>
+    <title> بنان - الشركات - تحديث بيانات الشركات</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -25,10 +25,10 @@
             <div class="nav-container container-fluid">
                 <!-- Company Logo -->
                 <div class="navbar-brand d-flex align-items-center gap-4">
-                    <a href="#" class="Company-Logo"><img src="../../../images/C 1.svg" alt="Company Logo"
-                            class="Company-Logo-img"></a>
+                    <a data-bs-target="#" class="Company-Logo"><img src="../../../images/Static/GyoumLogo.svg"
+                            alt="Company Logo" class="Company-Logo-img"></a>
                     <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
                 </div>
 
                 <!-- User Information -->
@@ -36,40 +36,45 @@
                     <div class="d-flex">
                         <div class="navbar-nav">
                             <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="ms-2  text-start">
-                                        <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                        <p class="m-0">مشرف علي الفروع</p>
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2"
+                                    data-bs-target="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
                                     </div>
-                                    <img src="../../../images/pic (3).svg" alt="User Avatar"
+                                    <img src="../../../images/Demo/Employee_Picture.svg" alt="User Avatar"
                                         class="rounded-circle User-Avatar">
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="../../../Pages/Account/Account.html">حسابي <img
-                                                src="../../../images/Frame (2).svg" /></a></li>
+                                            href="../../Account/Account.html">حسابي
+                                            <img src="../../../images/Static/Topbar/AccountNavIcon.svg" /></a></li>
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img
-                                                src="../../../images/Frame (1).svg" /></a></li>
+                                            href="../../Account/NewPassword.html">تغيير
+                                            كلمة السر <img
+                                                src="../../../images/Static/Topbar/PasswordNavIcon.svg" /></a>
+                                    </li>
                                     <li><a class="dropdown-item userDropdown-options"
-                                            href="https://ayatt12.github.io/test-page/"> الأنظمه <img
-                                                src="../../../images/Frame (3).svg" /></a></li>
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="../../../images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item userDropdown-options "
-                                            href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img
-                                                class="logout" src="../../../images/Frame (4).svg" /></a></li>
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout"
+                                                src="../../../images/Static/Topbar/LogoutNavIcon.svg" /></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center" style="gap:15px">
+                    <div class="d-flex align-items-center">
                         <div class="col lang-button-col">
                             <input type="checkbox" id="myCheckbox" class="d-none">
-                            <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
                         </div>
                     </div>
 
@@ -77,261 +82,426 @@
 
             </div>
         </nav>
-        <!-- end of tobar -->
-        <div class="container-fluid h-100 main-container-fluid">
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                    <!-- Sidebar -->
-                    <nav class="sidebar close">
-                        <header>
-                            <i class='bx bx-chevron-right toggle'></i>
-                        </header>
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Comanies.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items">الشركات </span>
+                                </a>
+                            </li>
+                            <div id="company-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/CompaniesData/CompaniesData.html"> بيانات الشركات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">
+                                        صور مساندة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html">
+                                        عقود الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/companies_Invoices/CompaniesInvoices.html">
+                                        فواتير الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> تسديد المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessageComanies.html"> رسائل الشركات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessagesSent.html"> الرسائل المرسلة<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                        <div class="menu-bar">
-                            <div class="menu">
-                                <ul class="menu-links">
-                                    <li class="nav-link" >
-                                        <a>
-                                            <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
-                                        </a>
-                                    </li>
-                                     <div id="company-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item active" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                       <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                         <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                   </div>
-                                   <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
-                                    </a>
-                                </li>
-                                <div id="Bnan-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items"> بنان </span>
+                                </a>
+                            </li>
+                            <div id="Bnan-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات
+                                        المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Marketing companies/Marketing companies.html"> الشركات
+                                        التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Service prices/Service prices.html"> أسعار الخدمات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
-                                    </a>
-                                </li>
-                                <div id="reports-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                       <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-list-items"
+                                        aria-expanded="false" aria-controls="#tenant-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-list-items" aria-expanded="false"
+                                        aria-controls="#tenant-list-items"> المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html"> عقود
+                                        المستأجرين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
-                                    </a>
-                                </li>
-                                <div id="stat-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/reports.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items"> التقارير </span>
+                                </a>
+                            </li>
+                            <div id="reports-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html"> العقود
+                                        القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود
+                                        المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">
+                                        العقود المحفوظة و الملغاه <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود
+                                        المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Car Contracts/Car Contracts.html"> عقود السيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود
+                                        شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html">
+                                        الحركة المالية للموظفين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html">
+                                        الحركة المالية للمستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
-                                    </a>
-                                </li>
-                                <div id="employes-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/statics.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false"
+                                        aria-controls="#stat-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">
+                                        الإحصائيات </span>
+                                </a>
+                            </li>
+                            <div id="stat-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات
+                                        المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">
+                                        إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html">
+                                        إحصائيات عقود المستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات
+                                        عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/employees.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items"> الموظفين </span>
+                                </a>
+                            </li>
+                            <div id="employes-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات
+                                        النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي
+                                        الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
 
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Identities/Identities.html"> الهويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص
+                                        القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Nationalities/Nationalities.html"> الجنسيات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html">
+                                        الجنس <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Professions/Professions.html"> المهن <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Workplace/Workplace.html"> جهات العمل <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Membership/Membership.html"> العضويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">
+                                        القطاعات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    </div>
-                                   </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
-                                        </a>
-                                    </li>
-                                    <div id="Cars-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items">
+                                        خدمات السيارات </span>
+                                </a>
+                            </li>
+                            <div id="Cars-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Registration type/Registration type.html">
+                                        التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">
+                                        الوقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">
+                                        الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/transporter type/Transporter type.html"> الناقل
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">
+                                        الماركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html"> الطراز
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories/Categories.html"> الفئات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">
+                                        توزيع الفئات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Additional features/Additional features.html">
+                                        المميزات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">
+                                        الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">
+                                        خدمات البريد </span>
+                                </a>
+                            </li>
+                            <div id="Mail-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Postal services/Countries/Countries.html"> الدول <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">
+                                        المناطق <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html">
+                                        المدن <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
-                                        </a>
-                                    </li>
-                                    <div id="Mail-items" class="collapse" >
-                                       <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-        
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
-                                        </a>
-                                    </li>
-                                    <div id="Financial-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
-                                        </div>
-                                       </div>
-       
-                                       <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
-                                        </a>
-                                    </li>
-                                    <div id="Contract-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items"> الخدمات المالية </span>
+                                </a>
+                            </li>
+                            <div id="Financial-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">
+                                        البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Payment Method/Payment Methods.html">
+                                        طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
-                                        </a>
-                                    </li>
-                                    <div id="services-items" class="collapse" >
-                                           <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            
-                                           
-                                        </div>
-                                       </div>
-                                
+                                </div>
+                            </div>
 
-                                </ul>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/ContractIcon.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items">خدمات العقود </span>
+                                </a>
+                            </li>
+                            <div id="Contract-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Additions/Additions.html"> الإضافات<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Options/Options.html"> الخيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص
+                                        الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل
+                                        الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/services.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items">الخدمات</span>
+                                </a>
+                            </li>
+                            <div id="services-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/techncal-connect/techncal-connect.html"> الربط
+                                        التقني <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Countries Classification/Countries-Classification .html">
+                                        تصنيف الدول <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Companies Classification/Companies-Classification .html">
+                                        تصنيف الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">
+                                        العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html"> الأسئلة الأكثر
+                                        شيوعًا <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
                             </div>
 
 
-                        </div>
+                        </ul>
+                    </div>
 
-                    </nav>
+
                 </div>
+            </aside>
 
-                <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container NewUpdate-container">
-                        <form action="" class="needs-validation" novalidate>
-                            <div class="row">
-
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9">
-                                        <div class="row g-3 my-2">
-                                            <div class="col">
-                                                <h3> تحديث بيانات الشركة </h3>
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <div class="container d-flex flex-column InputsPageContainer">
+                    <div class="row flex-column min-h-0 flex-1 position-relative">
+                        <div class="col-xxl-9 Data-container ">
+                            <form class="ContentForm needs-validation" novalidate>
+                                <input hidden type="text" data-val="true"
+                                    data-val-required="The CrMasLessorCountryClassificationCode field is required."
+                                    id="CrMasLessorCountryClassificationCode"
+                                    name="CrMasLessorCountryClassificationCode" value="2" />
+                                <div class="row justify-content-center flex-1 min-h-0">
+                                    <div class="col-lg-12 d-flex flex-column h-100">
+                                        <div class="row my-2">
+                                            <div class="col-md-6">
+                                                <h3>تحديث بيانات الشركة</h3>
                                             </div>
-                                            <div class="col-md-auto save-col">
-                                                <label class="switch">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider round">    
-                                                       <i class="fab fa-whatsapp icon"></i>
-                                                    </span>
-                                                </label>                                              
-                                                <button type="submit" class="custom-img-btn"> <img
-                                                        src="../../../images/save.svg" /></button>
-                                                <button type="button" class="custom-img-btn" id="StopModal-Btn"
-                                                    onclick="StopPermissions(true)"> <img src="../../../images/stop.svg"
-                                                        id="StopModalIcon" /></button>
-                                                <button type="button" class="custom-img-btn" id="DeleteModal-Btn"
-                                                    onclick="RestartPermissions(true)"> <img
-                                                        src="../../../images/delete.svg" id="modalIcon" /></button>
+                                            <div class="col-md-6 save-col">
+                                                <button type="submit" class="custom-img-btn" id="SaveEdit">
+                                                    <img src="../../../images/Static/States/save.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn" id="HoldBtn"
+                                                    data-bs-toggle="modal" data-bs-target="#Stop-Modal">
+                                                    <img id="StopModalIcon"
+                                                        src="../../../images/Static/States/stop.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn" id="DeleteBtn"
+                                                    data-bs-toggle="modal" data-bs-target="#Delete-Modal">
+                                                    <img id="modalIcon"
+                                                        src="../../../images/Static/States/delete.svg" />
+                                                </button>
                                                 <button type="button" class="custom-img-btn"> <a
                                                         href="CompaniesData.html"><img class="Chevron"
-                                                            src="../../../images/Chevron_Left.svg" /></a></button>
+                                                            src="../../../images/Static/States/Chevron_Left.svg" /></a></button>
                                             </div>
                                         </div>
-                                        <main class="mt-4 g-3">
+                                        <main class="mt-3 g-3 inputs-accordion-container">
                                             <h4 class="subtitle mb-3"> شركة كدي لتأجير السيارات </h4>
                                             <h6> مكة المكرمة - مكة المكرمة </h6>
                                             <div class="accordion inputs-accordion">
-                                                <div class=" inputs-accordion-item">
-                                                    <div class=" inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> بيانات
+                                                <div class="inputs-accordion-item">
+                                                    <div class="inputs-accordion-item-header">
+                                                        <span class="accordion-item-header-title">
+                                                            بيانات
                                                         </span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                                             viewBox="0 0 24 24" fill="none" stroke="#666666"
@@ -349,10 +519,11 @@
                                                                     <div class="col-md-6">
                                                                         <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <p class="DataTitle">الرقم الضريبي</p>
+                                                                                <p class="DataTitle">الرقم الضريبى</p>
                                                                             </div>
                                                                             <div class="col-auto ">
-                                                                                <p class="Saved-data"> 800400041004100
+                                                                                <p class="Saved-data">
+                                                                                    800400110040011
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -360,10 +531,10 @@
                                                                     <div class="col-md-6">
                                                                         <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <p class="DataTitle">الرقم الحكومي </p>
+                                                                                <p class="DataTitle">الرقم الحكومى </p>
                                                                             </div>
                                                                             <div class="col-auto ">
-                                                                                <p class="Saved-data"> 70004001100 </p>
+                                                                                <p class="Saved-data"> 8004001100 </p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -371,16 +542,28 @@
                                                                 <div class="row">
                                                                     <div class="col-md-6 ">
                                                                         <label for="Category" class="form-label">
-                                                                            التصنيف </label>
-                                                                        <select class="form-select select-style "
-                                                                            name="Category" id="Category">
-                                                                            <option> </option>
-                                                                            <option value="أ"> أ </option>
-                                                                            <option value="ب"> ب </option>
+                                                                            التصنيف
+                                                                        </label>
+                                                                        <select class="form-select select-style valid"
+                                                                            id="Category" data-val="true"
+                                                                            data-val-required="الحقل مطلوب"
+                                                                            name="CrMasLessorInformationClassification"
+                                                                            autocomplete="off" fdprocessedid="o9tyn5"
+                                                                            aria-describedby="Category-error"
+                                                                            aria-invalid="false">
+                                                                            <option value="1">بدون</option>
+                                                                            <option value="2" selected="selected">ا
+                                                                            </option>
+                                                                            <option value="3">ب</option>
+                                                                            <option value="4">د</option>
+                                                                            <option value="5">هـ</option>
                                                                         </select>
                                                                         <div class="invaild">
                                                                             <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="CrMasLessorInformationClassification"
+                                                                                    data-valmsg-replace="true"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -389,26 +572,42 @@
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <label for="manager-name-ar"
-                                                                            class="form-label">اسم المدير عربي</label>
+                                                                            class="form-label">إسم المدير عربي</label>
                                                                         <input type="text" id="manager-name-ar"
                                                                             class="form-control inputs arabic-input"
-                                                                            name="manager-name-ar" maxlength="50">
+                                                                            oninput="this.value=this.value.replace(/[^\u0600-\u06FF\ufb50-\ufdff\ufe70-\ufeff\s]/g, '')"
+                                                                            maxlength="50" data-val="true"
+                                                                            data-val-required="الحقل مطلوب"
+                                                                            name="CrMasLessorInformationDirectorArName"
+                                                                            value="عبدالله محمد الانصاري"
+                                                                            autocomplete="off" fdprocessedid="ebazio">
                                                                         <div class="invaild">
                                                                             <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="CrMasLessorInformationDirectorArName"
+                                                                                    data-valmsg-replace="true"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
-                                                                        <label for="manager-name-en"
-                                                                            class="form-label">اسم المدير
-                                                                            إنجليزي</label>
+                                                                        <label for="manager-name-en" class="form-label">
+                                                                            إسم المدير انجليزى
+                                                                        </label>
                                                                         <input type="text" id="manager-name-en"
                                                                             class="form-control inputs english-input"
-                                                                            name="manager-name-en" maxlength="50">
+                                                                            oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '')"
+                                                                            maxlength="50" data-val="true"
+                                                                            data-val-required="الحقل مطلوب"
+                                                                            name="CrMasLessorInformationDirectorEnName"
+                                                                            value="Abdullah Al Ansare"
+                                                                            autocomplete="off" fdprocessedid="j2mmqi">
                                                                         <div class="invaild">
                                                                             <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="CrMasLessorInformationDirectorEnName"
+                                                                                    data-valmsg-replace="true"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -417,100 +616,190 @@
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <label for="phone1" class="form-label">
-                                                                            الهاتف</label>
-                                                                        <div class="input-group">
-                                                                            <input type="tel"
-                                                                                class="form-control inputs tel-input"
-                                                                                id="phone1" name="phone1"
-                                                                                maxlength="20">
-                                                                            <select
-                                                                                class="input-group-text select-style counterCode"
-                                                                                name="counterCode-phone1">
-                                                                                <option value="+966">+966</option>
-                                                                                <option value="+962">+962</option>
-                                                                                <option value="+20">+20</option>
-
-
-                                                                            </select>
-                                                                            <div class="invaild">
-                                                                                <div class="invalid-feedback">
-                                                                                    الحقل مطلوب
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="phone2" class="form-label"> الجوال
+                                                                            الهاتف
                                                                         </label>
-                                                                        <div class="input-group">
-                                                                            <input type="tel"
+                                                                        <div class="input-group has-validation">
+                                                                            <input type="text"
                                                                                 class="form-control inputs tel-input"
-                                                                                id="phone2" name="phone2"
-                                                                                maxlength="20">
+                                                                                id="phone1"
+                                                                                oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                                                                maxlength="15" data-val="true"
+                                                                                data-val-regex="ادخل رقم الجوال صحيح"
+                                                                                data-val-regex-pattern="^\d{1,15}$"
+                                                                                name="CrMasLessorInformationCallFree"
+                                                                                value="" autocomplete="off"
+                                                                                fdprocessedid="197fto">
                                                                             <select
                                                                                 class="input-group-text select-style counterCode"
-                                                                                name="counterCode-phone2">
-                                                                                <option value="+966">+966</option>
-                                                                                <option value="+962">+962</option>
-                                                                                <option value="+20">+20</option>
+                                                                                id="CrMasLessorInformationCallFreeKey"
+                                                                                name="CrMasLessorInformationCallFreeKey"
+                                                                                autocomplete="off"
+                                                                                fdprocessedid="8qszge">
+                                                                                <option value="966">966</option>
+                                                                                <option value="973">973</option>
+                                                                                <option value="964">964</option>
+                                                                                <option value="965">965</option>
+                                                                                <option value="968">968</option>
+                                                                                <option value="974">974</option>
+                                                                                <option value="971">971</option>
+                                                                                <option value="967">967</option>
+                                                                                <option value="20">20</option>
                                                                             </select>
                                                                             <div class="invaild">
-                                                                                <div class="invalid-feedback">
-                                                                                    الحقل مطلوب
-                                                                                </div>
+                                                                                <div class="invalid-feedback"></div>
                                                                             </div>
                                                                         </div>
-
                                                                     </div>
 
+                                                                    <div class="col-md-6">
+                                                                        <label for="phone2" class="form-label">
+                                                                            الجوال
+                                                                        </label>
+                                                                        <div
+                                                                            class="row align-items-start justify-content-center g-2">
+                                                                            <div class="col">
+                                                                                <div class="input-group">
+                                                                                    <input type="text"
+                                                                                        class="form-control inputs tel-input"
+                                                                                        id="phone2" maxlength="15"
+                                                                                        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                                                                        data-val="true"
+                                                                                        data-val-regex="ادخل رقم الجوال صحيح"
+                                                                                        data-val-regex-pattern="^\d{1,15}$"
+                                                                                        name="CrMasLessorInformationCommunicationMobile"
+                                                                                        value="531002795"
+                                                                                        autocomplete="off"
+                                                                                        fdprocessedid="1xk34">
+                                                                                    <select
+                                                                                        class="input-group-text select-style counterCode"
+                                                                                        id="counterCode"
+                                                                                        name="CrMasLessorInformationCommunicationMobileKey"
+                                                                                        autocomplete="off"
+                                                                                        fdprocessedid="v6prwf">
+                                                                                        <option value="966"
+                                                                                            selected="selected">966
+                                                                                        </option>
+                                                                                        <option value="973">973</option>
+                                                                                        <option value="964">964</option>
+                                                                                        <option value="965">965</option>
+                                                                                        <option value="968">968</option>
+                                                                                        <option value="974">974</option>
+                                                                                        <option value="971">971</option>
+
+                                                                                    </select>
+                                                                                    <div class="invaild">
+                                                                                        <div class="invalid-feedback">
+                                                                                            <span
+                                                                                                class="text-danger field-validation-valid"
+                                                                                                id="CommunicationMobileError"
+                                                                                                data-valmsg-for="CrMasLessorInformationCommunicationMobile"
+                                                                                                data-valmsg-replace="true"></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-auto">
+                                                                                <button type="button" id="verifyPhone"
+                                                                                    class="btn btn-standard"
+                                                                                    style="display: none;">
+                                                                                    تحقق</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <label for="email" class="form-label"> البريد
-                                                                            الإلكتروني </label>
-                                                                        <input type="email" id="email"
-                                                                            class="form-control inputs english-input"
-                                                                            name="email" maxlength="100">
-                                                                        <div class="invaild">
-                                                                            <div class="invalid-feedback">
-                                                                                البريد الإلكتروني المدخل غير صحيح 
+                                                                            الإلكترونى </label>
+                                                                        <div
+                                                                            class="row align-items-start justify-content-center g-2">
+                                                                            <div class="col">
+                                                                                <input type="email" id="email"
+                                                                                    class="form-control inputs english-input"
+                                                                                    maxlength="100" data-val="true"
+                                                                                    data-val-email="من فضلك ادخل البريد الالكتروني بشكل صحيح"
+                                                                                    name="CrMasLessorInformationEmail"
+                                                                                    value="bnan.ghyum@gmail.com"
+                                                                                    autocomplete="off"
+                                                                                    fdprocessedid="eg69w">
+                                                                                <div class="invaild">
+                                                                                    <div class="invalid-feedback">
+                                                                                        <span
+                                                                                            class="text-danger field-validation-valid"
+                                                                                            data-valmsg-for="CrMasLessorInformationEmail"
+                                                                                            data-valmsg-replace="true"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-auto">
+                                                                                <button type="button" id="verifyEmail"
+                                                                                    class="btn btn-standard"
+                                                                                    style="display: none;">
+                                                                                    تحقق</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
-                                                                        <label for="contact-mail"
-                                                                            class="form-label">بريد التواصل</label>
-                                                                        <input type="email" id="contact-mail"
-                                                                            class="form-control inputs english-input"
-                                                                            name="contact-mail" maxlength="100">
-                                                                        <div class="invaild">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                        <label for="OTP" class="form-label"> رمز التحقق
+                                                                        </label>
+                                                                        <div
+                                                                            class="row align-items-start justify-content-center g-2">
+                                                                            <div class="col">
+                                                                                <input type="text" id="OTP"
+                                                                                    class="form-control inputs"
+                                                                                    name="OTP" maxlength="6"
+                                                                                    oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                                                                                    disabled="" autocomplete="off"
+                                                                                    fdprocessedid="elj9h">
+                                                                                <div class="invaild">
+                                                                                    <div class="invalid-feedback">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-auto">
+                                                                                <button type="button"
+                                                                                    class="btn btn-standard"
+                                                                                    id="sendOTP" disabled=""> ارسال
+                                                                                </button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
                                                                 </div>
+
                                                                 <div class="row align-items-end g-3 ">
                                                                     <div class="col-md-8">
-                                                                        <label>ملاحظات</label>
-                                                                        <textarea class=" form-control textarea-inputs"
-                                                                            rows="1" maxlength="100" name="notes"
-                                                                            type="text"></textarea>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 ">
+                                                                                <div class="row">
+                                                                                    <div class="col-12">
+                                                                                        <label>الملاحظات</label>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col d-flex justify-content-start">
+                                                                                        <textarea
+                                                                                            class=" form-control textarea-inputs"
+                                                                                            rows="1" maxlength="100"
+                                                                                            id="Documentnotes"
+                                                                                            type="text"
+                                                                                            name="Reasons"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="col-md-4">
-                                                                        <div
-                                                                            class="row align-items-center justify-content-end">
+                                                                        <div class="row align-items-center justify-content-end">
                                                                             <div class="col-auto">
                                                                                 <button type="button"
-                                                                                    class="custom-img-btn"><img
-                                                                                        src="../../../images/icon.svg"
+                                                                                    class="custom-img-btn"
+                                                                                    fdprocessedid="ncm93f">
+                                                                                    <img src="../../../images/Static/signature/PenIcon.svg"
                                                                                         data-bs-toggle="modal"
-                                                                                        href="#signature-modal" /></button>
+                                                                                        href="#signature-modal">
+                                                                                </button>
                                                                             </div>
                                                                             <div class="col-auto">
-                                                                                <img src="../../../images/signature.svg"
+                                                                                <img src="../../../images/Demo/signature.svg"
                                                                                     id="previewSignature">
                                                                             </div>
                                                                         </div>
@@ -520,9 +809,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!--SMS Section-->
                                                 <div class="inputs-accordion-item">
                                                     <div class="inputs-accordion-item-header">
-                                                        <span class="accordion-item-header-title"> عنوان
+                                                        <span class="accordion-item-header-title">
+                                                            العنوان
                                                         </span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                                             viewBox="0 0 24 24" fill="none" stroke="#666666"
@@ -537,123 +828,44 @@
                                                             <hr class="accordion-items-hr">
                                                             <div class="container-fluid Update-data-scroll-container">
                                                                 <div class="row">
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-12">
                                                                         <label for="District-name-ar"
-                                                                            class="form-label">اسم الحي عربي</label>
+                                                                            class="form-label">العنوان (عربى)</label>
                                                                         <input type="text" id="District-name-ar"
-                                                                            class="form-control inputs arabic-input"
-                                                                            name="District-name-ar" maxlength="50">
+                                                                            class="form-control inputs arabic-input valid"
+                                                                            maxlength="120"
+                                                                            oninput="this.value=this.value.replace(/[^\u0600-\u06FF0-9\s\-.,/#\\]/g, '')"
+                                                                            name="BranchPostVM.CrCasBranchPostArShortConcatenate"
+                                                                            value="حي الريان - شارع رقم   2376"
+                                                                            autocomplete="off" fdprocessedid="v0csaq"
+                                                                            aria-describedby="District-name-ar-error"
+                                                                            aria-invalid="false">
                                                                         <div class="invaild">
                                                                             <div class="invalid-feedback">
-                                                                                الحقل مطلوب
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="BranchPostVM.CrCasBranchPostArShortConcatenate"
+                                                                                    data-valmsg-replace="true"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-12">
                                                                         <label for="District-name-en"
-                                                                            class="form-label">اسم الحي
-                                                                            إنجليزي</label>
+                                                                            class="form-label"> العنوان
+                                                                            (انجليزي)</label>
                                                                         <input type="text" id="District-name-en"
                                                                             class="form-control inputs english-input"
-                                                                            name="District-name-en" maxlength="50">
+                                                                            maxlength="120"
+                                                                            oninput="this.value=this.value.replace(/[^a-zA-Z0-9\s\-.,/#\\]/g, '')"
+                                                                            name="BranchPostVM.CrCasBranchPostEnShortConcatenate"
+                                                                            value="Al Rayyan Neighborhood - Street No.  2376"
+                                                                            autocomplete="off" fdprocessedid="2eya4wg">
                                                                         <div class="invaild">
                                                                             <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-6">
-                                                                        <label for="street-name-ar"
-                                                                            class="form-label">اسم الشارع عربي</label>
-                                                                        <input type="text" id="street-name-ar"
-                                                                            class="form-control inputs arabic-input"
-                                                                            name="street-name-ar" maxlength="50">
-                                                                        <div class="invaild">
-                                                                            <div class="invalid-feedback">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label for="street-name-en"
-                                                                            class="form-label">اسم الشارع
-                                                                            إنجليزي</label>
-                                                                        <input type="text" id="street-name-en"
-                                                                            class="form-control inputs english-input"
-                                                                            name="street-name-en">
-                                                                        <div class="invaild">
-                                                                            <div class="invalid-feedback"
-                                                                                maxlength="50">
-                                                                                الحقل مطلوب
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-6 ">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label for="Building-number"
-                                                                                    class="form-label"> رقم
-                                                                                    المبنى</label>
-                                                                                <input type="text" id="Building-number"
-                                                                                    class="form-control inputs text-center"
-                                                                                    name="Building-number"
-                                                                                    maxlength="10">
-                                                                                <div class="invaild">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <label for="Unit-number"
-                                                                                    class="form-label"> رقم
-                                                                                    الوحدة</label>
-                                                                                <input type="text" id="Unit-number"
-                                                                                    class="form-control inputs text-center"
-                                                                                    name="Unit-number" maxlength="20">
-                                                                                <div class="invaild">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 ">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <label for="zip-code"
-                                                                                    class="form-label"> الرمز البريدي
-                                                                                </label>
-                                                                                <input type="text" id="zip-code"
-                                                                                    class="form-control inputs text-center"
-                                                                                    name="zip-code" maxlength="10">
-                                                                                <div class="invaild">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <label for="Additional-number"
-                                                                                    class="form-label"> رقم إضافي
-                                                                                </label>
-                                                                                <input type="text"
-                                                                                    id="Additional-number"
-                                                                                    class="form-control inputs text-center"
-                                                                                    name="Additional-number"
-                                                                                    maxlength="10">
-                                                                                <div class="invaild">
-                                                                                    <div class="invalid-feedback">
-                                                                                        الحقل مطلوب
-                                                                                    </div>
-                                                                                </div>
+                                                                                <span
+                                                                                    class="text-danger field-validation-valid"
+                                                                                    data-valmsg-for="BranchPostVM.CrCasBranchPostEnShortConcatenate"
+                                                                                    data-valmsg-replace="true"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -667,19 +879,23 @@
                                         </main>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-
-            </div>
-
+            </main>
 
         </div>
         <!-- signature modal -->
-        <div class="modal fade" id="signature-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="signature-modal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
                 <div class="modal-content signature-modal-content p-3">
+                    <div class="modal-header p-1 border-0 justify-content-end">
+                        <button type="button" class="btn-close m-0 p-1" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
                     <div class="modal-body Signature-modal-body">
                         <div class="SignatureCard">
                             <div class="image-main-container" id="removeSignatureImg"></div>
@@ -692,23 +908,24 @@
                         <div class="row">
                             <div class="col-3">
                                 <div class="sinature-Btn-Card p-2">
-                                    <img src="../../../images/signature/save.svg" class="w-100" id="save">
+                                    <img src="../../../images/Static/signature/save.svg" class="w-100" id="save">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="sinature-Btn-Card p-2">
-                                    <img src="../../../images/signature/Frame.svg" class="w-100" id="clear">
+                                    <img src="../../../images/Static/signature/Frame.svg" class="w-100" id="clear">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="sinature-Btn-Card p-2">
-                                    <img src="../../../images/signature/file-signature_9795523 1.svg" class="w-100"
-                                        id="WriteSignature">
+                                    <img src="../../../images/Static/signature/file-signature_9795523 1.svg"
+                                        class="w-100" id="WriteSignature">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="sinature-Btn-Card p-2">
-                                    <img src="../../../images/signature/Pic.svg" class="w-100" id="UploadSigntaurePic">
+                                    <img src="../../../images/Static/signature/Pic.svg" class="w-100"
+                                        id="UploadSigntaurePic">
                                     <input type="file" id="imageUpload" accept="image/*" style="display: none;">
                                 </div>
                             </div>
@@ -732,7 +949,7 @@
             </div>
         </div>
     </div>
-    <!-- Stopp  modal -->
+    <!-- Stop  modal -->
     <div class="modal fade" id="Stop-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="Stop-ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -747,6 +964,7 @@
         </div>
     </div>
     </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -759,44 +977,6 @@
     <script src="../../../scripts/Scripts.js"></script>
     <script src="../../../scripts/signature.js"></script>
 
-    <!-- local scripts  -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const data = {
-                "phone1": "0123456789",
-                "phone2": "0987654321",
-                "managerNameAr": "فهد ناصر الدوسري",
-                "managerNameEn": "Fahd Nasser Eldosary",
-                "Category": "أ",
-                "Signature": "../../../images/signature_29.png",
-                "streetNameAr": "شارع الملك",
-                "streetNameEn": "King Street",
-                "districtNameAr": "الحي الشرقي",
-                "districtNameEn": "Eastern District",
-                "buildingNumber": "123",
-                "unitNumber": "45",
-                "zipCode": "54321",
-                "additionalNumber": "6789",
-                "BranchNumberRentalSystem": "80040041004100",
-                "notes": 'ملاحظات الفرع',
-            };
-            document.getElementById("manager-name-ar").value = data.managerNameAr;
-            document.getElementById("manager-name-en").value = data.managerNameEn;
-            document.getElementById("phone1").value = data.phone1;
-            document.getElementById("phone2").value = data.phone2;
-            document.getElementById("Category").value = data.Category;
-            document.getElementById("street-name-ar").value = data.streetNameAr;
-            document.getElementById("street-name-en").value = data.streetNameEn;
-            document.getElementById("District-name-ar").value = data.districtNameAr;
-            document.getElementById("District-name-en").value = data.districtNameEn;
-            document.getElementById("Building-number").value = data.buildingNumber;
-            document.getElementById("Unit-number").value = data.unitNumber;
-            document.getElementById("zip-code").value = data.zipCode;
-            document.getElementById("Additional-number").value = data.additionalNumber;
-            document.querySelector('textarea[name="notes"]').value = data.notes;
-            document.getElementById('previewSignature').src = data.Signature;
-        });
-    </script>
     <script>
         function StopPermissions(Permitted) {
 
@@ -836,12 +1016,11 @@
             }
         }
     </script>
-
     <script>
         let isDeleted = false;
         let isStoped = false
-        const deleteModalBtn = document.getElementById("DeleteModal-Btn");
-        const StopModalBtn = document.getElementById("StopModal-Btn");
+        const deleteModalBtn = document.getElementById("DeleteBtn");
+        const StopModalBtn = document.getElementById("HoldBtn");
         const newButton = document.createElement("button");
         const newButton2 = document.createElement("button");
 
@@ -864,11 +1043,11 @@
             if (isDeleted) {
                 newButton.id = "RestartModal-Btn";
                 newButton.onclick = () => RestartPermissions(true);
-                newButton.innerHTML = `<img src="../../../images/Property 1=recycle.svg" id="modalIcon" />`;
+                newButton.innerHTML = `<img src="../../../images/Static/States/Property 1=recycle.svg" id="modalIcon" />`;
             } else {
-                newButton.id = "DeleteModal-Btn";
+                newButton.id = "DeleteBtn";
                 newButton.onclick = () => DeletePermissions(true);
-                newButton.innerHTML = `<img src="../../../images/delete.svg" id="modalIcon" />`;
+                newButton.innerHTML = `<img src="../../../images/Static/States/delete.svg" id="modalIcon" />`;
             }
             deleteModalBtn.replaceWith(newButton);
 
@@ -877,12 +1056,12 @@
                 ? `
             <div class="modal-header border-0">
               <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
-                <img src="../../../images/Green-recycle.svg" /> تأكيد الارجاع
+                <img src="../../../images/Static/States/Green-recycle.svg" /> تأكيد الارجاع
               </h1>
             </div>
             <div class="modal-body">
-              <p>بيانات ونتائج</p>
-              <p>بيانات ونتائج</p>
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
             </div>
             <div class="modal-footer border-0">
               <div class="container">
@@ -899,12 +1078,12 @@
                 : `
             <div class="modal-header border-0">
               <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
-                <img src="../../../images/delete (2).svg" /> تأكيد الحذف
+                <img src="../../../images/Static/States/delete.svg" /> تأكيد الحذف
               </h1>
             </div>
             <div class="modal-body">
-              <p>بيانات ونتائج</p>
-              <p>بيانات ونتائج</p>
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
             </div>
             <div class="modal-footer border-0">
               <div class="container">
@@ -924,20 +1103,21 @@
             document.getElementById("spinner").style.display = "flex";
 
             setTimeout(() => {
-                document.getElementById("spinner").style.display = "none";
 
                 const modal = bootstrap.Modal.getInstance(document.getElementById("Delete-Modal"));
                 modal.hide();
+
+                document.getElementById("spinner").style.display = "none";
 
                 isDeleted = !isDeleted;
                 if (isDeleted) {
                     newButton.id = "RestartModal-Btn";
                     newButton.onclick = () => RestartPermissions(true);
-                    newButton.innerHTML = `<img src="../../../images/Property 1=recycle.svg" id="modalIcon" />`;
+                    newButton.innerHTML = `<img src="../../../images/Static/States/Property 1=recycle.svg" id="modalIcon" />`;
                 } else {
-                    newButton.id = "DeleteModal-Btn";
+                    newButton.id = "DeleteBtn";
                     newButton.onclick = () => DeletePermissions(true);
-                    newButton.innerHTML = `<img src="../../../images/delete.svg" id="modalIcon" />`;
+                    newButton.innerHTML = `<img src="../../../images/Static/States/delete.svg" id="modalIcon" />`;
                 }
                 deleteModalBtn.replaceWith(newButton);
 
@@ -953,11 +1133,11 @@
             if (isStoped) {
                 newButton2.id = "ActivateModal-Btn";
                 newButton2.onclick = () => ActivatePermissions(true);
-                newButton2.innerHTML = `<img src="../../../images/Property 1=active.svg" id="modalIcon" />`;
+                newButton2.innerHTML = `<img src="../../../images/Static/States/Property 1=active.svg" id="modalIcon" />`;
             } else {
-                newButton2.id = "DeleteModal-Btn";
+                newButton2.id = "DeleteBtn";
                 newButton2.onclick = () => StopPermissions(true);
-                newButton2.innerHTML = `<img src="../../../images/stop.svg" id="modalIcon" />`;
+                newButton2.innerHTML = `<img src="../../../images/Static/States/stop.svg" id="modalIcon" />`;
             }
             StopModalBtn.replaceWith(newButton2);
 
@@ -965,12 +1145,12 @@
                 ? `
             <div class="modal-header border-0">
               <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
-                <img src="../../../images/GreenStop.svg" /> تأكيد التفعيل
+                <img src="../../../images/Static/States/GreenStop.svg" /> تأكيد التفعيل
               </h1>
             </div>
             <div class="modal-body">
-              <p>بيانات ونتائج</p>
-              <p>بيانات ونتائج</p>
+             <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
             </div>
             <div class="modal-footer border-0">
               <div class="container">
@@ -987,12 +1167,12 @@
                 : `
             <div class="modal-header border-0">
               <h1 class="modal-title fs-4 m-auto d-flex align-items-start gap-2" id="Delete-ModalLabel">
-                <img src="../../../images/RedStop.svg" /> تأكيد الإيقاف
+                <img src="../../../images/Static/States/RedStop.svg" /> تأكيد الإيقاف
               </h1>
             </div>
             <div class="modal-body">
-              <p>بيانات ونتائج</p>
-              <p>بيانات ونتائج</p>
+            <p>ارجاع بيانات ونتائج1</p>
+            <p>ارجاع بيانات ونتائج2</p>            
             </div>
             <div class="modal-footer border-0">
               <div class="container">
@@ -1021,15 +1201,15 @@
                 isStoped = !isStoped;
 
                 if (isStoped) {
-                newButton2.id = "ActivateModal-Btn";
-                newButton2.onclick = () => ActivatePermissions(true);
-                newButton2.innerHTML = `<img src="../../../images/Property 1=active.svg" id="modalIcon" />`;
-            } else {
-                newButton2.id = "DeleteModal-Btn";
-                newButton2.onclick = () => StopPermissions(true);
-                newButton2.innerHTML = `<img src="../../../images/stop.svg" id="modalIcon" />`;
-            }
-            StopModalBtn.replaceWith(newButton2);
+                    newButton2.id = "ActivateModal-Btn";
+                    newButton2.onclick = () => ActivatePermissions(true);
+                    newButton2.innerHTML = `<img src="../../../images/Static/States/Property 1=active.svg" id="modalIcon" />`;
+                } else {
+                    newButton2.id = "DeleteBtn";
+                    newButton2.onclick = () => StopPermissions(true);
+                    newButton2.innerHTML = `<img src="../../../images/Static/States/stop.svg" id="modalIcon" />`;
+                }
+                StopModalBtn.replaceWith(newButton2);
 
                 StopState(isStoped);
 
