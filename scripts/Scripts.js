@@ -1,11 +1,10 @@
 // ******************************************************************sidebar toggle script*************************************************************************************//
 // Variables
  const body = document.querySelector("body"),
-  sidebar = body.querySelector(".sidebar-left");
+  sidebar = body.querySelector(".rightSidebar");
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebarRight = document.getElementById("rightSidebar");
-  const sidebarLeft = document.getElementById("leftSidebar");
 
   const mainPageIcon = document.querySelector(".main-page-icon");
   const newPageIcon = document.querySelector(".new-Page-icon");
@@ -28,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= DESKTOP_WIDTH) return;
 
     const Open =
-      !sidebarRight.classList.contains("closed") ||
-      !sidebarLeft.classList.contains("closed");
-
+      !sidebarRight.classList.contains("closed");
 
       if (Open) {
       mainPageIcon?.style.setProperty("left", "-60px");
@@ -48,41 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       if (side === "right") {
         sidebarRight.classList.remove("closed");
-        closeAllCollapses(sidebarLeft);
       }
 
       updateIcons();
     }, 0);
   }
 
-  function toggleSidebar(side) {
-    setTimeout(() => {
-      if (side === "right") {
-        const willBeClosed = !sidebarRight.classList.contains("closed");
-        sidebarRight.classList.toggle("closed");
+function toggleSidebar(side) {
+  setTimeout(() => {
+    if (side === "right") {
+      const willBeClosed = !sidebarRight.classList.contains("closed");
 
-        if (willBeClosed) {
-          closeAllCollapses(sidebarRight);
-        }
+      if (willBeClosed) {
+        closeAllCollapses(sidebarRight);
 
-        if (!sidebarRight.classList.contains("closed")) {
-          sidebarLeft.classList.add("closed");
-          closeAllCollapses(sidebarLeft);
-        }
-      }
-
-      if (side === "left") {
-        sidebarLeft.classList.toggle("closed");
-
-        if (!sidebarLeft.classList.contains("closed")) {
+        setTimeout(() => {
           sidebarRight.classList.add("closed");
-          closeAllCollapses(sidebarRight);
-        }
-      }
+          updateIcons();
+        }, 350); 
 
-      updateIcons();
-    }, 0);
-  }
+        return;
+      } else {
+        sidebarRight.classList.remove("closed");
+      }
+    }
+    updateIcons();
+  }, 0);
+}
 
   /* ================= hover ================= */
 
@@ -166,20 +155,6 @@ collapsibleElements.forEach((element) => {
   });
 });
 
-//**************************************************************************alert sidebar collapse script******************************************************************************* */
-
-const collapse = document.querySelectorAll(".accordion-item");
-
-collapse.forEach((item) => {
-  item.querySelector(".accordion-item-header").addEventListener("click", () => {
-    item.classList.toggle("open");
-    collapse.forEach((otherElement) => {
-      if (otherElement !== item) {
-        otherElement.classList.remove("open");
-      }
-    });
-  });
-});
 
 //*****************************************************************initialize tooltips*************************************************************************************** */
 
