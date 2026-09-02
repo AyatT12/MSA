@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان - صور مساندة  </title>
+    <title> بنان - الشركات - صور مساندة - تحديث </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="../../../style/content.css">   
      <!-- <link rel="stylesheet" href="../../../style/english.css">   -->
 <style>
+    .inputs-accordion-container{
+        overflow-y: hidden;
+    }
     .ImagesScrolledDiv{
         height: 450px; overflow-y: scroll; overflow-x: hidden;
     }
@@ -48,299 +51,482 @@
 
 <body>
     <div id="wrapper" class="Branches-wrapper d-flex flex-column ">
-       <!-- Top Navbar -->
-       <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="nav-container container-fluid">
-            <!-- Company Logo -->
-            <div class="navbar-brand d-flex align-items-center gap-4" >
-                <a href="../../../index.html" class="Company-Logo"><img src="../../../images/C 1.svg" alt="Company Logo" class="Company-Logo-img" ></a>
-                <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
-            </div>
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="nav-container container-fluid">
+                <!-- Company Logo -->
+                <div class="navbar-brand d-flex align-items-center gap-4">
+                    <a data-bs-target="#" class="Company-Logo"><img src="../../../images/Static/GyoumLogo.svg"
+                            alt="Company Logo" class="Company-Logo-img"></a>
+                    <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
+                </div>
 
-            <!-- User Information -->
-            <div class="icons-content">
-                <div class="d-flex">
-                    <div class="navbar-nav">
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="ms-2  text-start">
-                                    <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                    <p class="m-0">مشرف علي الفروع</p>
-                                </div>
-                                <img src="../../../images/pic (3).svg" alt="User Avatar"
-                                    class="rounded-circle User-Avatar">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/Account.html">حسابي <img src="../../../images/Frame (2).svg"/></a></li>
-                                <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img src="../../../images/Frame (1).svg"/></a></li>
-                                <li><a class="dropdown-item userDropdown-options" href="https://ayatt12.github.io/test-page/"> الأنظمه <img src="../../../images/Frame (3).svg"/></a></li>
+                <!-- User Information -->
+                <div class="icons-content">
+                    <div class="d-flex">
+                        <div class="navbar-nav">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2"
+                                    data-bs-target="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
+                                    </div>
+                                    <img src="../../../images/Demo/Employee_Picture.svg" alt="User Avatar"
+                                        class="rounded-circle User-Avatar">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="../../Account/Account.html">حسابي
+                                            <img src="../../../images/Static/Topbar/AccountNavIcon.svg" /></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="../../Account/NewPassword.html">تغيير
+                                            كلمة السر <img
+                                                src="../../../images/Static/Topbar/PasswordNavIcon.svg" /></a>
+                                    </li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="../../../images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item userDropdown-options " href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img class="logout" src="../../../images/Frame (4).svg"/></a></li>
-                            </ul>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item userDropdown-options "
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout"
+                                                src="../../../images/Static/Topbar/LogoutNavIcon.svg" /></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="d-flex align-items-center" style="gap:15px">
-                    <div class="col lang-button-col">
-                        <input type="checkbox" id="myCheckbox" class="d-none">
-                        <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                    <div class="d-flex align-items-center">
+                        <div class="col lang-button-col">
+                            <input type="checkbox" id="myCheckbox" class="d-none">
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
+        </nav>
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Comanies.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items">الشركات </span>
+                                </a>
+                            </li>
+                            <div id="company-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/CompaniesData/CompaniesData.html"> بيانات الشركات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">
+                                        صور مساندة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html">
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/companies_Invoices/CompaniesInvoices.html">
+                                        الفواتير <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> تسديد المستحقات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessageComanies.html"> رسائل الشركات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessagesSent.html"> الرسائل المرسلة<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-        </div>
-    </nav>
-    <!-- end of tobar -->
-        <div class="container-fluid h-100 main-container-fluid">
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                    <!-- Sidebar -->
-                    <nav class="sidebar close">
-                        <header>
-                            <i class='bx bx-chevron-right toggle'></i>
-                        </header>
-
-                        <div class="menu-bar">
-                            <div class="menu">
-                                <ul class="menu-links">
-                                    <li class="nav-link" >
-                                        <a>
-                                            <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
-                                        </a>
-                                    </li>
-                                     <div id="company-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                       <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                         <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                   </div>
-                                   <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
-                                    </a>
-                                </li>
-                                <div id="Bnan-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items"> بنان </span>
+                                </a>
+                            </li>
+                            <div id="Bnan-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات
+                                        المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Marketing companies/Marketing companies.html"> الشركات
+                                        التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Service prices/Service prices.html"> أسعار الخدمات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
-                                    </a>
-                                </li>
-                                <div id="reports-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                       <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-list-items"
+                                        aria-expanded="false" aria-controls="#tenant-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-list-items" aria-expanded="false"
+                                        aria-controls="#tenant-list-items"> المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html"> عقود
+                                        المستأجرين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
-                                    </a>
-                                </li>
-                                <div id="stat-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/reports.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items"> التقارير </span>
+                                </a>
+                            </li>
+                            <div id="reports-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html"> العقود
+                                        القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود
+                                        المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">
+                                        العقود المحفوظة و الملغاه <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود
+                                        المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Car Contracts/Car Contracts.html"> عقود السيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود
+                                        شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html">
+                                        الحركة المالية للموظفين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html">
+                                        الحركة المالية للمستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
-                                    </a>
-                                </li>
-                                <div id="employes-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/statics.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false"
+                                        aria-controls="#stat-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">
+                                        الإحصائيات </span>
+                                </a>
+                            </li>
+                            <div id="stat-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات
+                                        المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">
+                                        إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html">
+                                        إحصائيات عقود المستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات
+                                        عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/employees.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items"> الموظفين </span>
+                                </a>
+                            </li>
+                            <div id="employes-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات
+                                        النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي
+                                        الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
 
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Identities/Identities.html"> الهويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص
+                                        القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Nationalities/Nationalities.html"> الجنسيات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html">
+                                        الجنس <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Professions/Professions.html"> المهن <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Workplace/Workplace.html"> جهات العمل <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Membership/Membership.html"> العضويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">
+                                        القطاعات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    </div>
-                                   </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
-                                        </a>
-                                    </li>
-                                    <div id="Cars-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items">
+                                        خدمات السيارات </span>
+                                </a>
+                            </li>
+                            <div id="Cars-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Registration type/Registration type.html">
+                                        التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">
+                                        الوقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">
+                                        الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/transporter type/Transporter type.html"> الناقل
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">
+                                        الماركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html"> الطراز
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories/Categories.html"> الفئات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">
+                                        توزيع الفئات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Additional features/Additional features.html">
+                                        المميزات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">
+                                        الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">
+                                        خدمات البريد </span>
+                                </a>
+                            </li>
+                            <div id="Mail-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Postal services/Countries/Countries.html"> الدول <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">
+                                        المناطق <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html">
+                                        المدن <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
-                                        </a>
-                                    </li>
-                                    <div id="Mail-items" class="collapse" >
-                                       <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-        
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
-                                        </a>
-                                    </li>
-                                    <div id="Financial-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
-                                        </div>
-                                       </div>
-       
-                                       <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
-                                        </a>
-                                    </li>
-                                    <div id="Contract-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items"> الخدمات المالية </span>
+                                </a>
+                            </li>
+                            <div id="Financial-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">
+                                        البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Payment Method/Payment Methods.html">
+                                        طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
-                                        </a>
-                                    </li>
-                                    <div id="services-items" class="collapse" >
-                                           <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            
-                                           
-                                        </div>
-                                       </div>
-                                
+                                </div>
+                            </div>
 
-                                </ul>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/ContractIcon.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items">خدمات العقود </span>
+                                </a>
+                            </li>
+                            <div id="Contract-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Additions/Additions.html"> الإضافات<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Options/Options.html"> الخيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص
+                                        الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل
+                                        الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/services.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items">الخدمات</span>
+                                </a>
+                            </li>
+                            <div id="services-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/techncal-connect/techncal-connect.html"> الربط
+                                        التقني <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Countries Classification/Countries-Classification .html">
+                                        تصنيف الدول <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Companies Classification/Companies-Classification .html">
+                                        تصنيف الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">
+                                        العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html"> الأسئلة الأكثر
+                                        شيوعًا <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
                             </div>
 
 
-                        </div>
+                        </ul>
+                    </div>
 
-                    </nav>
+
                 </div>
-                <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container  main-container ">
-                        <form action="" class="needs-validation" novalidate>
-                            <div class="row  mt-3 g-3">
+            </aside>
 
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9">
-                                         <div class="row g-3 my-2">
-                                            <div class="col">
-                                                <h3> صور مساندة </h3>
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <div class="container d-flex flex-column InputsPageContainer">
+                    <div class="row flex-column min-h-0 flex-1 position-relative">
+                        <div class="col-xxl-9 Data-container ">
+                            <form class="ContentForm needs-validation" novalidate>
+                                <input hidden type="text" data-val="true"
+                                    data-val-required="The CrMasLessorCountryClassificationCode field is required."
+                                    id="CrMasLessorCountryClassificationCode"
+                                    name="CrMasLessorCountryClassificationCode" value="2" />
+                                <div class="row justify-content-center flex-1 min-h-0">
+                                    <div class="col-lg-12 d-flex flex-column h-100">
+                                        <div class="row my-2">
+                                            <div class="col-md-6">
+                                                <h3>صور مساندة</h3>
                                             </div>
-                                            <div class="col-md-auto save-col">
-                                                <button type="submit" class="custom-img-btn"> <img
-                                                        src="../../../images/save.svg" /></button>
-                                                <button type="button" class="custom-img-btn" > <a href="Supporting pictures.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
-                                             </div>
+                                            <div class="col-md-6 save-col">
+                                                <button type="submit" class="custom-img-btn" id="SaveEdit">
+                                                    <img src="../../../images/Static/States/save.svg" />
+                                                </button>
+                                                <button type="button" class="custom-img-btn"> <a
+                                                        href="Supporting pictures.html"><img class="Chevron"
+                                                            src="../../../images/Static/States/Chevron_Left.svg" /></a></button>
+                                            </div>
                                         </div>
-                                            <div class="container-fluid">
-                                            <div class="row  mt-3 g-3 ">
-
+                                        <main class="mt-3 g-3 inputs-accordion-container">
+                                           <div class="container-fluid">
+                                             <div class="row mt-3 g-3">
                                                 <div class="col-md-12">
                                                     <h4 class="subtitle mb-3"> شركة كدي لتأجير السيارات </h4>
                                                 </div>
                                                 <div class="col-md-auto">
                                                     <div class="row align-items-baseline">
-                                                       <div class="col-md-auto">
+                                                       <div class="col-auto">
                                                         <label for="ImagesSelector" class="form-label">الصورة </label>
                                                        </div>
-                                                       <div class="col">
+                                                       <div class="col-auto">
                                                         <select class="form-select select-style " name="ImagesSelector"
                                                         id="ImagesSelector">
                                                         <option value="A" selected> الإشعارات </option>
@@ -362,7 +548,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Logo" class="drop-zone__input">
                                                                 </div>
@@ -378,7 +564,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="LoadingLogo" class="drop-zone__input">
                                                                 </div>
@@ -394,7 +580,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="WhatsAppLogo" class="drop-zone__input">
                                                                 </div>
@@ -410,7 +596,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="stamp" class="drop-zone__input">
                                                                 </div>
@@ -426,7 +612,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="AuthenticationStamp" class="drop-zone__input">
                                                                 </div>
@@ -442,7 +628,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Card" class="drop-zone__input">
                                                                 </div>
@@ -458,7 +644,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="OTP" class="drop-zone__input">
                                                                 </div>
@@ -474,7 +660,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Location_Code" class="drop-zone__input">
                                                                 </div>
@@ -493,7 +679,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="proforma-invoice" class="drop-zone__input">
                                                                 </div>
@@ -509,7 +695,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Actual-invoice" class="drop-zone__input">
                                                                 </div>
@@ -525,7 +711,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="snd-qbd" class="drop-zone__input">
                                                                 </div>
@@ -541,7 +727,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="snd-sarf" class="drop-zone__input">
                                                                 </div>
@@ -550,7 +736,22 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                       
+                                                        <div class="col-md-auto">
+                                                            <div class="dropzone-Card">
+                                                                <div class="drop-zone">
+                                                                    <div class="layer" style="display: none;">
+                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
+                                                                    </div>
+                                                                    <span class="drop-zone__prompt">
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
+                                                                    </span>
+                                                                    <input type="file" name="Sale" class="drop-zone__input">
+                                                                </div>
+                                                                <div class="fileNameDiv">
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">عرض البيع</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
  
                                                     </div>
                                                     <div class="row g-4  Images-section" id="EImages">
@@ -561,12 +762,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page1" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 1</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 1</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -577,12 +778,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page2" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 2</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 2</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -593,12 +794,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page3" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 3</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 3</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -609,12 +810,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page4" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 4</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 4</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -625,12 +826,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page5" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 5</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 5</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -641,15 +842,15 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page6" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 6</p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 6,7,8 </p>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> 
                                                         <div class="col-md-auto">
                                                             <div class="dropzone-Card">
                                                                 <div class="drop-zone">
@@ -657,44 +858,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Page7" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 7</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
-                                                                    </span>
-                                                                    <input type="file" name="Page8" class="drop-zone__input">
-                                                                </div>
-                                                                <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP">صفحة 8 </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-auto">
-                                                            <div class="dropzone-Card">
-                                                                <div class="drop-zone">
-                                                                    <div class="layer" style="display: none;">
-                                                                        <i class="fa-regular fa-circle-xmark removeImage"></i>
-                                                                    </div>
-                                                                    <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page9" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 9  </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 9  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -705,12 +874,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page10" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 10  </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 10  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -721,12 +890,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page11" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 11  </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 11  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -737,12 +906,12 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page12" class="drop-zone__input">
                                                                 </div>
                                                                 <div class="fileNameDiv">
-                                                                     <p class="text-center pt-1 mb-1 fileNameP"> صفحة 12  </p>
+                                                                     <p class="text-center pt-1 mb-1 fileNameP">العقد صفحة 12,13,14  </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -756,7 +925,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page1_Terms" class="drop-zone__input">
                                                                 </div>
@@ -772,7 +941,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page2_Terms" class="drop-zone__input">
                                                                 </div>
@@ -788,7 +957,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page3_Terms" class="drop-zone__input">
                                                                 </div>
@@ -804,7 +973,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page4_Terms" class="drop-zone__input">
                                                                 </div>
@@ -820,7 +989,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page5_Terms" class="drop-zone__input">
                                                                 </div>
@@ -836,7 +1005,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Page6_Terms" class="drop-zone__input">
                                                                 </div>
@@ -854,7 +1023,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="Daily" class="drop-zone__input">
                                                                 </div>
@@ -870,7 +1039,7 @@
                                                                         <i class="fa-regular fa-circle-xmark removeImage"></i>
                                                                     </div>
                                                                     <span class="drop-zone__prompt">
-                                                                        <img src="../../../images/upload icon.svg" class="mb-3"> <br>قم بسحب وإسقاط صورة أو اختر صورة
+                                                                        <img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة
                                                                     </span>
                                                                     <input type="file" name="En-Daily" class="drop-zone__input">
                                                                 </div>
@@ -882,19 +1051,20 @@
                                                     </div>
 
                                                 </div>
-                                              
                                             </div>
-                                        </div>
+                                           </div>
+                                        </main>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-                
-            </div>
+            </main>
 
         </div>
+       
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -906,25 +1076,222 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../../scripts/Scripts.js"></script>
-    <script src="../../../scripts/DragDropImage.js"></script>
-
-    <!-- local script  -->
-     <script>
-        const dataSelector = document.getElementById("ImagesSelector");
-            const dataSections = document.querySelectorAll(".Images-section");
-
-            dataSelector.addEventListener("change", () => {
-                dataSections.forEach(section => section.style.display = 'none');
-
-                const selectedValue = dataSelector.value;
-
-                const selectedDataSection = document.getElementById(`${selectedValue}Images`);
-                if (selectedDataSection) {
-                    selectedDataSection.style.display = 'flex';
-                }
-            });
-
+    <!-- <script src="../../../scripts/DragDropImage.js"></script> -->
+    <script>
+        document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+         const dropZoneElement = inputElement.closest(".drop-zone");
+         const dropZoneCard = inputElement.closest(".dropzone-Card");
+         const layerElement = dropZoneElement.querySelector(".layer");
+         const removeImageButton = dropZoneElement.querySelector(".removeImage");
+         const fileNameP = dropZoneCard.querySelector(".fileNameP");
+     
+         if (fileNameP) fileNameP.dataset.originalText = fileNameP.innerHTML;
+     
+         layerElement.addEventListener("mouseenter", (e) => {
+             e.stopPropagation();
+             if (!removeImageButton.hasAttribute("data-listener")) {
+                 removeImageButton.setAttribute("data-listener", "true");
+                 removeImageButton.addEventListener("click", (e) => {
+                     e.stopPropagation();
+                     removeImage(dropZoneElement, dropZoneCard, inputElement);
+                     console.log("removed");
+                 });
+             }
+         });
+     
+         dropZoneElement.addEventListener("click", (e) => {
+             if (!layerElement.contains(e.target)) {
+                 inputElement.click();
+             }
+         });
+     
+         inputElement.addEventListener("change", (e) => {
+             if (inputElement.files.length) {
+                 updateThumbnail(dropZoneElement, dropZoneCard, inputElement.files[0]);
+             }
+         });
+     
+         dropZoneElement.addEventListener("dragover", (e) => {
+             e.preventDefault();
+             dropZoneElement.classList.add("drop-zone--over");
+         });
+     
+         ["dragleave", "dragend"].forEach((type) => {
+             dropZoneElement.addEventListener(type, (e) => {
+                 dropZoneElement.classList.remove("drop-zone--over");
+             });
+         });
+     
+         dropZoneElement.addEventListener("drop", (e) => {
+             e.preventDefault();
+     
+             if (e.dataTransfer.files.length) {
+                 inputElement.files = e.dataTransfer.files;
+                 updateThumbnail(dropZoneElement, dropZoneCard, e.dataTransfer.files[0]);
+             }
+     
+             dropZoneElement.classList.remove("drop-zone--over");
+         });
+     
+         dropZoneElement.addEventListener("mouseenter", () => {
+             if (inputElement.files.length) {
+                 layerElement.style.display = "flex";
+             }
+         });
+     
+         dropZoneElement.addEventListener("mouseleave", () => {
+             layerElement.style.display = "none";
+         });
+     });
+     
+     function removeImage(dropZoneElement, dropZoneCard, inputElement) {
+         inputElement.value = "";
+         const layerElement = dropZoneElement.querySelector(".layer");
+         layerElement.style.display = "none";
+         const thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+         if (thumbnailElement) {
+             thumbnailElement.remove();
+         }
+         const promptElement = dropZoneElement.querySelector(".drop-zone__prompt");
+         if (!promptElement) {
+             const newPromptElement = document.createElement("span");
+             newPromptElement.classList.add("drop-zone__prompt");
+             newPromptElement.innerHTML = `<img src="../../../images/Static/upload icon.svg" class="mb-3">قم بسحب وإسقاط صورة أو اختر صورة`;
+             dropZoneElement.appendChild(newPromptElement);
+         }
+     
+         var fileNameP = dropZoneCard.querySelector(".fileNameP");
+         if (fileNameP) fileNameP.innerHTML = fileNameP.dataset.originalText;
+     
+         dropZoneElement.style.border = "";
+         var fileNameDiv = dropZoneCard.querySelector(".fileNameDiv");
+         if (fileNameDiv) fileNameDiv.style.background = "";
+     }
+     
+     function updateThumbnail(dropZoneElement, dropZoneCard, file) {
+         let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+     
+         const promptElement = dropZoneElement.querySelector(".drop-zone__prompt");
+         if (promptElement) {
+             promptElement.remove();
+         }
+     
+         if (!thumbnailElement) {
+             thumbnailElement = document.createElement("div");
+             thumbnailElement.classList.add("drop-zone__thumb");
+             dropZoneElement.appendChild(thumbnailElement);
+             dropZoneElement.style.border = "none";
+         }
+     
+         // const fileNameP = dropZoneCard.querySelector(".fileNameP");
+         const fileNameDiv = dropZoneCard.querySelector(".fileNameDiv");
+     
+         // if (fileNameP) {
+         //     fileNameP.innerHTML = file.name;
+         // }
+         if (fileNameDiv) {
+             fileNameDiv.style.background = "#39629C";
+         }
+     
+         if (file.type.startsWith("image/")) {
+             const reader = new FileReader();
+             reader.readAsDataURL(file);
+             reader.onload = () => {
+                 thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+             };
+         } else {
+             thumbnailElement.style.backgroundImage = null;
+         }
+     }
+     
+     function AddThumbnail() {
+         document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+             const dropZoneElement = inputElement.closest(".drop-zone");
+             const dropZoneCard = inputElement.closest(".dropzone-Card");
+             const layerElement = dropZoneElement.querySelector(".layer");
+             const removeImageButton = dropZoneElement.querySelector(".removeImage");
+             const fileNameP = dropZoneCard.querySelector(".fileNameP");
+             const fileNameDiv = dropZoneCard.querySelector(".fileNameDiv");
+             let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+     
+             // الحصول على مسار الصورة من البيانات المدخلة
+             const imagePath = inputElement.dataset.path;
+             // const imageName = fileNameP.textContent;
+     
+             // إذا كان المسار فارغًا أو غير موجود، يمكن أن نعرض صورة افتراضية
+             if (!imagePath) {
+                 thumbnailElement = document.createElement("div");
+                 thumbnailElement.classList.remove("drop-zone__thumb");
+                 return;
+             }
+     
+             // إذا كانت الصورة موجودة في المسار المحدد
+             const promptElement = dropZoneElement.querySelector(".drop-zone__prompt");
+             if (promptElement) {
+                 promptElement.remove();
+             }
+     
+             if (!thumbnailElement) {
+                 thumbnailElement = document.createElement("div");
+                 thumbnailElement.classList.add("drop-zone__thumb");
+                 dropZoneElement.appendChild(thumbnailElement);
+                 dropZoneElement.style.border = "none";
+             }
+     
+             // تعيين الخلفية للصورة
+             // fileNameP.innerHTML = imageName || "Image"; // يمكن تعديل النص ليكون أكثر ديناميكية
+             fileNameDiv.style.background = "#39629C";
+             thumbnailElement.style.backgroundImage = `url('${imagePath}')`;
+     
+             // إضافة أحداث للمؤشر
+             dropZoneElement.addEventListener("mouseenter", () => {
+                 if (thumbnailElement.style.backgroundImage) {
+                     layerElement.style.display = 'flex';
+                 }
+             });
+     
+             dropZoneElement.addEventListener("mouseleave", () => {
+                 layerElement.style.display = 'none';
+             });
+     
+             const removeIcon = layerElement.querySelector("i");
+             removeIcon.addEventListener("click", () => {
+                 thumbnailElement.style.backgroundImage = '';
+                 fileNameP.innerHTML = '';
+                 fileNameDiv.style.background = '';
+                 layerElement.style.display = 'none';
+             });
+         });
+     }
+     
+     window.onload = () => {
+         AddThumbnail();
+     };
+     
      </script>
+     
+
+
+<!-- local script -->
+<script>
+    const dataSelector = document.getElementById("ImagesSelector");
+    const dataSections = document.querySelectorAll(".Images-section");
+
+    function updateImagesSection() {
+        dataSections.forEach(section => section.style.display = 'none');
+
+        const selectedValue = dataSelector.value;
+        const selectedDataSection = document.getElementById(`${selectedValue}Images`);
+
+        if (selectedDataSection) {
+            selectedDataSection.style.display = 'flex';
+        }
+    }
+
+    dataSelector.addEventListener("change", updateImagesSection);
+
+    updateImagesSection();
+</script>
 </body>
 
 </html>
