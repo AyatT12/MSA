@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> نظام بنان -  بيانات المستأجر</title>
+    <title> بنان - المستأجرين - بيانات المستأجرين </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="../../../style/Layout.css">
     <link rel="stylesheet" href="../../../style/content.css">
-     <!-- <link rel="stylesheet" href="../../../style/english.css">  -->
+    <!-- <link rel="stylesheet" href="../../../style/english.css">  -->
 
 </head>
 
@@ -24,10 +24,11 @@
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="nav-container container-fluid">
                 <!-- Company Logo -->
-                <div class="navbar-brand d-flex align-items-center gap-4" >
-                    <a href="../../../index.html" class="Company-Logo"><img src="../../../images/C 1.svg" alt="Company Logo" class="Company-Logo-img" ></a>
+                <div class="navbar-brand d-flex align-items-center gap-4">
+                    <a data-bs-target="#" class="Company-Logo"><img src="../../../images/Static/GyoumLogo.svg"
+                            alt="Company Logo" class="Company-Logo-img"></a>
                     <p class="m-0 Company-name">شركة غيوم الودق لتقنية المعلومات</p>
-                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon"></i>
+                    <i class="fa-solid fa-bars toggle4 mobile-icon nav-icon" onclick="toggleSidebar('right')"></i>
                 </div>
 
                 <!-- User Information -->
@@ -35,32 +36,45 @@
                     <div class="d-flex">
                         <div class="navbar-nav">
                             <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="ms-2  text-start">
-                                        <span style="font-weight: 700;"> عيسي هاني مبروك عزام </span>
-                                        <p class="m-0">مشرف علي الفروع</p>
+                                <a class="nav-link dropdown-toggle d-flex align-items-center py-0 gap-2"
+                                    data-bs-target="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <div class="userName text-start d-flex flex-column text-dark">
+                                        <span style="font-weight: 700;"> عيسى هاني مبروك عزام </span>
+                                        <span style="font-weight: 400;">مشرف على الفروع</span>
                                     </div>
-                                    <img src="../../../images/pic (3).svg" alt="User Avatar"
+                                    <img src="../../../images/Demo/Employee_Picture.svg" alt="User Avatar"
                                         class="rounded-circle User-Avatar">
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/Account.html">حسابي <img src="../../../images/Frame (2).svg"/></a></li>
-                                    <li><a class="dropdown-item userDropdown-options" href="../../../Pages/Account/NewPassword.html">تغيير كلمة السر <img src="../../../images/Frame (1).svg"/></a></li>
-                                    <li><a class="dropdown-item userDropdown-options" href="https://ayatt12.github.io/test-page/"> الأنظمه <img src="../../../images/Frame (3).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="../../Account/Account.html">حسابي
+                                            <img src="../../../images/Static/Topbar/AccountNavIcon.svg" /></a></li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="../../Account/NewPassword.html">تغيير
+                                            كلمة السر <img
+                                                src="../../../images/Static/Topbar/PasswordNavIcon.svg" /></a>
+                                    </li>
+                                    <li><a class="dropdown-item userDropdown-options"
+                                            href="https://ayatt12.github.io/login_v2/Systems.html"> الأنظمه <img
+                                                src="../../../images/Static/Topbar/SystemsNavIcon.svg" /></a></li>
 
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item userDropdown-options " href="https://ayatt12.github.io/test-page/login.html">تسجيل الخروج <img class="logout" src="../../../images/Frame (4).svg"/></a></li>
+                                    <li><a class="dropdown-item userDropdown-options "
+                                            href="https://ayatt12.github.io/login_v2/index.html">تسجيل الخروج <img
+                                                class="logout"
+                                                src="../../../images/Static/Topbar/LogoutNavIcon.svg" /></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center" style="gap:15px">
+                    <div class="d-flex align-items-center">
                         <div class="col lang-button-col">
                             <input type="checkbox" id="myCheckbox" class="d-none">
-                            <h5 for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> En </h5>
+                            <h5 for="myCheckbox" class="lang-button mx-2" id="checkboxLabel"> En</h5>
                         </div>
                     </div>
 
@@ -68,440 +82,618 @@
 
             </div>
         </nav>
-        <!-- end of tobar -->
-        <div class="container-fluid h-100 main-container-fluid">
-            <div class="row h-100 flex-nowrap">
-                <div class="col-auto sidebar1-col close" id="sidebar1-col-mainScreen">
-                    <!-- Sidebar -->
-                    <nav class="sidebar close">
-                        <header>
-                            <i class='bx bx-chevron-right toggle'></i>
-                        </header>
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Right Sidebar (Navigation) -->
+            <aside class="sidebar-right closed" id="rightSidebar">
+                <div class="toggle-btn" id="toggle-RightSide-Btn">
+                    <i class="bx bx-chevron-right toggle"></i>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Comanies.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#company-items" aria-expanded="false"
+                                        aria-controls="#company-items">الشركات </span>
+                                </a>
+                            </li>
+                            <div id="company-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/CompaniesData/CompaniesData.html"> بيانات الشركات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">
+                                        صور مساندة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html">
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/companies_Invoices/CompaniesInvoices.html">
+                                        الفواتير <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Companies/Receipt Voucher/Receipt Voucher.html"> سند قبض <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href=""> سند صرف <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessageComanies.html"> رسائل الشركات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item "
+                                        href="../../../Pages/Companies/Messages/MessagesSent.html"> الرسائل المرسلة<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                        <div class="menu-bar">
-                            <div class="menu">
-                                <ul class="menu-links">
-                                    <li class="nav-link" >
-                                        <a>
-                                            <img src="../../../images/Comanies.svg"  data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items"  class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#company-items" aria-expanded="false" aria-controls="#company-items" >الشركات </span>
-                                        </a>
-                                    </li>
-                                     <div id="company-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Companies/CompaniesData/CompaniesData.html">  بيانات الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                       <a class="collapse-item" href="../../../Pages/Companies/Supporting pictures/Supporting pictures.html">  صور مساندة  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Contracts/Contracts.html"> عقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="">  المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                         <a class="collapse-item" href="">  تسديد المستحقات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Companies/Messages/MessageComanies.html">  رسائل الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
-                                   </div>
-                                   <li class="nav-link">
-                                    <a>
-                                        <img src="../../../images/Bnan.svg" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Bnan-list-items" aria-expanded="false" aria-controls="#Bnan-list-items">  بنان </span>
-                                    </a>
-                                </li>
-                                <div id="Bnan-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Bnan/Marketing companies/Marketing companies.html">   الشركات التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-list-items" aria-expanded="false" aria-controls="#tenant-list-items">  المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-list-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item active" href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html">   عقود المستأجرين  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Bnan.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Bnan-list-items" aria-expanded="false"
+                                        aria-controls="#Bnan-list-items"> بنان </span>
+                                </a>
+                            </li>
+                            <div id="Bnan-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Supporting Companies/Supporting Company.html"> الشركات
+                                        المساندة<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Marketing companies/Marketing companies.html"> الشركات
+                                        التسويقية <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Bnan/Service prices/Service prices.html"> أسعار الخدمات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/reports.svg" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#reports-items" aria-expanded="false" aria-controls="#reports-items">  التقارير </span>
-                                    </a>
-                                </li>
-                                <div id="reports-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                       <a class="collapse-item" href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html">  العقود القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">   العقود المحفوظة و الملغاه <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Car Contracts/Car Contracts.html">  عقود السيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html"> الحركة المالية للموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html"> الحركة المالية للمستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-
-
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-list-items"
+                                        aria-expanded="false" aria-controls="#tenant-list-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-list-items" aria-expanded="false"
+                                        aria-controls="#tenant-list-items"> المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-list-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Data/Tenants Data.html"> بيانات المستأجرين
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Tenants/Tenants Contracts/Tenants Contracts.html"> عقود
+                                        المستأجرين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/stat.svg" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#stat-items" aria-expanded="false" aria-controls="#stat-items">  الإحصائيات </span>
-                                    </a>
-                                </li>
-                                <div id="stat-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">  إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html"> إحصائيات عقود المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/reports.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#reports-items" aria-expanded="false"
+                                        aria-controls="#reports-items"> التقارير </span>
+                                </a>
+                            </li>
+                            <div id="reports-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Staff procedures/Staff procedures.html"> إجراءات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Existing Contracts/Existing Contracts.html"> العقود
+                                        القائمة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Closed Contracts/Closed Contracts.html"> العقود
+                                        المغلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Saved and cancelled contracts/Saved and cancelled contracts.html">
+                                        العقود المحفوظة و الملغاه <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Pending Contracts/Pending Contracts.html"> العقود
+                                        المعلقة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Car Contracts/Car Contracts.html"> عقود السيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Shmoos  Contracts/Shmoos Contracts.html"> عقود
+                                        شموس<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Employee Financial movement/Employee Financial movement.html">
+                                        الحركة المالية للموظفين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Reports/Tenant Financial movement/Tenant Financial movement.html">
+                                        الحركة المالية للمستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
                                 </div>
-                                <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/employees.svg" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#employes-items" aria-expanded="false" aria-controls="#employes-items">  الموظفين </span>
-                                    </a>
-                                </li>
-                                <div id="employes-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات الموظفين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                    </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/statics.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#stat-items" aria-expanded="false"
+                                        aria-controls="#stat-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#stat-items" aria-expanded="false" aria-controls="#stat-items">
+                                        الإحصائيات </span>
+                                </a>
+                            </li>
+                            <div id="stat-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants statistics.html"> إحصائيات
+                                        المستأجرين<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Statistics/stats/Car statistics.html">
+                                        إحصائيات السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Contracts statistics.html"> إحصائيات
+                                        العقود<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Tenants Contracts statistics.html">
+                                        إحصائيات عقود المستأجرين<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Statistics/stats/Car Contracts statistics.html"> إحصائيات
+                                        عقود السيارات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
                                 </div>
-                                   <li class="nav-link">
-                                    <a >
-                                        <img src="../../../images/tenants2.svg" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items" class="icon"/> 
-                                        <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#tenant-items" aria-expanded="false" aria-controls="#tenant-items"> خدمات المستأجرين </span>
-                                    </a>
-                                </li>
-                                <div id="tenant-items" class="collapse" >
-                                    <div class="bg-white gap-3 collapse-inner rounded">
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Identities/Identities.html">   الهويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Nationalities/Nationalities.html">   الجنسيات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html"> الجنس  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Professions/Professions.html">   المهن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Workplace/Workplace.html">   جهات العمل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Membership/Membership.html">   العضويات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">   القطاعات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/employees.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#employes-items" aria-expanded="false"
+                                        aria-controls="#employes-items"> الموظفين </span>
+                                </a>
+                            </li>
+                            <div id="employes-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Employees Data/EmployeesData.html"> بيانات
+                                        الموظفين <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/System permissions/EmployeesData.html"> صلاحيات
+                                        النظام<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Employees/Comapnys Employees/EmployeesData.html"> موظفي
+                                        الشركات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
 
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/tenants.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#tenant-items" aria-expanded="false"
+                                        aria-controls="#tenant-items"> خدمات المستأجرين </span>
+                                </a>
+                            </li>
+                            <div id="tenant-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Identities/Identities.html"> الهويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/DrivingLicence/DrivingLicences.html"> رخص
+                                        القيادة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Nationalities/Nationalities.html"> الجنسيات
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Gender/Gender.html">
+                                        الجنس <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Professions/Professions.html"> المهن <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Workplace/Workplace.html"> جهات العمل <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/TenantsServices/Membership/Membership.html"> العضويات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/TenantsServices/Sectors/Sectors.html">
+                                        القطاعات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    </div>
-                                   </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/cars.svg" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"> خدمات السيارات </span>
-                                        </a>
-                                    </li>
-                                    <div id="Cars-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Registration type/Registration type.html"> التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">  الوقود  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/transporter type/Transporter type.html">   الناقل  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">   الماركات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html">   الطراز  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories/Categories.html">   الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">   توزيع الفئات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Additional features/Additional features.html">   المميزات  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">   الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/cars.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Cars-items" aria-expanded="false" aria-controls="#Cars-items">
+                                        خدمات السيارات </span>
+                                </a>
+                            </li>
+                            <div id="Cars-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Registration type/Registration type.html">
+                                        التسجيل <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Fuel type/Fuel type.html">
+                                        الوقود <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Oil type/Oil type.html">
+                                        الزيوت <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/transporter type/Transporter type.html"> الناقل
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Brands/Brand.html">
+                                        الماركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Model/Models.html"> الطراز
+                                        <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories/Categories.html"> الفئات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Categories distribution/Categories distribution.html">
+                                        توزيع الفئات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/CarServices/Additional features/Additional features.html">
+                                        المميزات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/CarServices/Colors/Colors.html">
+                                        الألوان <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/Mail.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items"
+                                        class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">
+                                        خدمات البريد </span>
+                                </a>
+                            </li>
+                            <div id="Mail-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Postal services/Countries/Countries.html"> الدول <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">
+                                        المناطق <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html">
+                                        المدن <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a >
-                                            <img src="../../../images/Mail (2).svg" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Mail-items" aria-expanded="false" aria-controls="#Mail-items">  خدمات البريد </span>
-                                        </a>
-                                    </li>
-                                    <div id="Mail-items" class="collapse" >
-                                       <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Countries/Countries.html">  الدول  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Areas/Areas.html">  المناطق  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Postal services/Cities/Cities.html"> المدن  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-        
-                                        </div>
-                                       </div>
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/calc.svg" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Financial-items" aria-expanded="false" aria-controls="#Financial-items"> الخدمات المالية </span>
-                                        </a>
-                                    </li>
-                                    <div id="Financial-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">  البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Payment Method/Payment Methods.html">  طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                          
-                                        </div>
-                                       </div>
-       
-                                       <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/ContractIcon.svg" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#Contract-items" aria-expanded="false" aria-controls="#Contract-items">خدمات العقود </span>
-                                        </a>
-                                    </li>
-                                    <div id="Contract-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                             <a class="collapse-item" href="../../../Pages/Contract services/Additions/Additions.html">  الإضافات<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Options/Options.html">  الخيارات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/calc.svg" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Financial-items" aria-expanded="false"
+                                        aria-controls="#Financial-items"> الخدمات المالية </span>
+                                </a>
+                            </li>
+                            <div id="Financial-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item" href="../../../Pages/Financial services/Banks/Banks.html">
+                                        البنوك<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Payment Method/Payment Methods.html">
+                                        طرق الدفع<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Financial services/Reference/Reference.html"> المراجع<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
 
-                                    <li class="nav-link">
-                                        <a>
-                                            <img src="../../../images/services.svg" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items" class="icon"/> 
-                                            <span class="text nav-text collapsed" data-bs-toggle="collapse" href="#services-items" aria-expanded="false" aria-controls="#services-items">الخدمات</span>
-                                        </a>
-                                    </li>
-                                    <div id="services-items" class="collapse" >
-                                        <div class="bg-white gap-3 collapse-inner rounded">
-                                            <a class="collapse-item" href="../../../Pages/Services/techncal-connect/techncal-connect.html">  الربط التقني  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Countries Classification/Countries-Classification .html"> تصنيف الدول    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Companies Classification/Companies-Classification .html"> تصنيف الشركات    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم    <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">  العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html">  الأسئلة الأكثر شيوعًا  <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
-                                            
-                                           
-                                        </div>
-                                       </div>
-                                
+                                </div>
+                            </div>
 
-                                </ul>
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/ContractIcon.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#Contract-items" aria-expanded="false"
+                                        aria-controls="#Contract-items">خدمات العقود </span>
+                                </a>
+                            </li>
+                            <div id="Contract-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Additions/Additions.html"> الإضافات<i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Options/Options.html"> الخيارات <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check/Virtual-check.html"> الفحص
+                                        الظاهري<i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Contract services/Virtual Check Details/Virtual-checkDetails.html">تفاصيل
+                                        الفحص الظاهري <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
+                            </div>
+
+                            <li class="nav-link">
+                                <a>
+                                    <img src="../../../images/Static/Sidebar_icons/services.svg"
+                                        data-bs-toggle="collapse" data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items" class="icon" />
+                                    <span class="text nav-text collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#services-items" aria-expanded="false"
+                                        aria-controls="#services-items">الخدمات</span>
+                                </a>
+                            </li>
+                            <div id="services-items" class="collapse">
+                                <div class="bg-white gap-3 collapse-inner rounded">
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/techncal-connect/techncal-connect.html"> الربط
+                                        التقني <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Countries Classification/Countries-Classification .html">
+                                        تصنيف الدول <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item"
+                                        href="../../../Pages/Services/Companies Classification/Companies-Classification .html">
+                                        تصنيف الشركات <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Rate/Rate.html"> التقييم <i
+                                            class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/Currency/Currency.html">
+                                        العملة <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+                                    <a class="collapse-item" href="../../../Pages/Services/FAQ/FAQ.html"> الأسئلة الأكثر
+                                        شيوعًا <i class="fa-solid fa-arrow-left inner-collapse-arrow"></i></a>
+
+                                </div>
                             </div>
 
 
-                        </div>
+                        </ul>
+                    </div>
 
-                    </nav>
+
                 </div>
+            </aside>
 
-                <div class="col my-2 d-flex align-items-center justify-content-center">
-                    <div class="container NewUpdate-container">
-                        <form action="" class="needs-validation" novalidate>
-                            <div class="row mt-3 g-3">
-                               
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-9">
-                                       <div class="row g-3 mt-1">
-                                        <div class="col">
-                                            <h3>بيانات المستأجر  </h3>
+            <!-- Main Content Area -->
+            <main class="content-area px-3">
+                <div class="container d-flex flex-column InputsPageContainer">
+                    <div class="row flex-column min-h-0 flex-1 position-relative">
+                        <div class="col-xxl-9 Data-container ">
+                            <form class="ContentForm needs-validation" novalidate>
+                                <input hidden type="text" data-val="true"
+                                    data-val-required="The CrMasLessorCountryClassificationCode field is required."
+                                    id="CrMasLessorCountryClassificationCode"
+                                    name="CrMasLessorCountryClassificationCode" value="2" />
+                                <div class="row justify-content-center flex-1 min-h-0">
+                                    <div class="col-lg-12 d-flex flex-column h-100">
+                                        <div class="row my-2">
+                                            <div class="col-md-6">
+                                                <h3> بيانات المستأجر </h3>
+                                            </div>
+                                            <div class="col-md-6 save-col">
+                                                <button type="button" class="custom-img-btn"> <a
+                                                        href="Tenants Data.html"><img class="Chevron"
+                                                            src="../../../images/Static/States/Chevron_Left.svg" /></a></button>
+                                            </div>
                                         </div>
-                                        <div class="col-auto save-col">
-                                            <button type="button" class="custom-img-btn"> <a href="Tenants Data.html"><img class="Chevron" src="../../../images/Chevron_Left.svg" /></a></button>
-                                        </div>
-                                       </div>
-                                        <div class="row g-2">
-                                            <div class="col-md-12 mt-3 mb-2">
-                                                <h4 class="subtitle"> فواز سعيد فهد العضيبي</h4>
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
-                                                        <p class="m-0">8002176700215983</p>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div class="row align-items-center justify-content-end">
-                                                        <div class="col-auto">
-                                                            <div class="signatureee">
-                                                                <img src="../../../images/توقيع.svg" 
-                                                                id="previewSignature">
+                                        <main class="inputs-accordion-container">
+                                            <div class="container-fluid">
+                                                <div class="row g-2">
+                                                    <div class="row g-2">
+                                                        <div class="col-md-12 mb-2">
+                                                            <h4 class="subtitle">عبدالملك ظافر سهل اللحيدان</h4>
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <p class="m-0">1991266262</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div
+                                                                        class="row align-items-center justify-content-end">
+                                                                        <div class="col-auto">
+                                                                            <div class="signatureee">
+                                                                                <img src="../../../images/Demo/signature.svg"
+                                                                                    id="previewSignature">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">تاريخ الميلاد</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">08‏/08‏/2002</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">نوع الهوية</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">وطنية</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">نهايتها</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">الجنس</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">ذكر</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">الجنسية</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">سعودي</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">المهنة</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">طبيب/ ة</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">جهة العمل</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">شركة التصنيع الوطنية
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">رخصة القيادة</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">خاصة</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">رقمها</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">1991266262</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">نهايتها</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data">15‏/06‏/2039</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">البنـك</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data"> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <p class="DataTitle">رقم الحساب</p>
+                                                                        </div>
+                                                                        <div class="col-auto ">
+                                                                            <p class="Saved-data"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <p class="DataTitle">العنوان</p>
+                                                                </div>
+                                                                <div class="col-auto ">
+                                                                    <p class="Saved-data">جازان - صبياء - حي الوادي -
+                                                                        شارع رقم 9601</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <div class="innerCard">
+                                                                        <div class="Imagecard">
+                                                                            <img src="../../../images/Static/id-card.svg"
+                                                                                class="w-100">
+                                                                        </div>
+                                                                        <p class="text-center m-1">نوع الهوية</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="innerCard">
+                                                                        <div class="Imagecard">
+                                                                            <img src="../../../images/Static/driving-license.svg"
+                                                                                class="w-100">
+                                                                        </div>
+                                                                        <p class="text-center m-1">رخصة القيادة</p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">تاريخ الميلاد  </p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">15/02/1998</p>
-                                                       </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">نوع الهوية</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">تصريح</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">نهايتها</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">27/03/2026</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">الجنس</p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">ذكر</p>
-                                                       </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">الجنسية</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">سعودي</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">المهنة</p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">متقاعد</p>
-                                                       </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">جهة العمل</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">غير متوفرة</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">رخصة القيادة</p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">خاصة</p>
-                                                       </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">رقمها</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">231186523102</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">نهايتها</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">27/03/2026</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">البنك</p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">اسم البنك </p>
-                                                       </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="row">
-                                                          <div class="col-auto">
-                                                              <p class="DataTitle">رقم الحساب</p>
-                                                         </div>
-                                                         <div class="col-auto ">
-                                                           <p class="Saved-data">رقم الحساب</p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                      <div class="row">
-                                                        <div class="col-auto">
-                                                            <p class="DataTitle">العنوان</p>
-                                                       </div>
-                                                       <div class="col-auto ">
-                                                         <p class="Saved-data">المدينة المنورة - ينبع</p>
-                                                       </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                  <div class="col-auto">
-                                                    <div class="innerCard">
-                                                       <div class="Imagecard">
-                                                        <img src="../../../images/id-card_8518288 1.svg" class="w-100">
-                                                       </div>
-                                                        <p class="text-center m-1">الهوية</p>
-                                                    </div>
-                                                 </div>
-                                                 <div class="col-auto">
-                                                    <div class="innerCard">
-                                                       <div class="Imagecard">
-                                                        <img src="../../../images/driving-license_7830866 1.svg" class="w-100">
-                                                       </div>
-                                                        <p class="text-center m-1">رخصة القيادة</p>
-                                                    </div>
-                                                 </div>
-                                           </div>
-                                         </div>
-                                        </div>
+                                        </main>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-             
-            </div>
-
+            </main>
 
         </div>
-         
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -512,10 +704,7 @@
         crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../../../scripts/Scripts.js"></script>  
- 
-    <!-- local scripts  -->
-
+    <script src="../../../scripts/Scripts.js"></script>
 </body>
 
 </html>
